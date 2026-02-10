@@ -1,12 +1,4 @@
-export interface Project {
-  id: string
-  title: string
-  domain: string
-  shortDescription: string
-  fullDescription: string
-  deadline: string
-  deliveryInstructions?: string
-}
+import type { Project, ProjectApiResponse } from '../types/project'
 
 export const mockProjects: Project[] = [
   {
@@ -37,9 +29,22 @@ export const mockProjects: Project[] = [
     fullDescription:
       'Create a reusable checklist (and optionally a simple report template) for auditing small websites for accessibility. It should cover: keyboard navigation, focus visibility, contrast, headings and landmarks, images and alt text, forms and labels. The deliverable should be easy to use by non-experts and compatible with WCAG 2.1 Level A/AA where applicable.',
     deadline: '2026-03-31',
-    deliveryInstructions: 'Deliver a Markdown or PDF checklist and, if you like, a short “how to use” guide.',
+    deliveryInstructions: 'Deliver a Markdown or PDF checklist and, if you like, a short "how to use" guide.',
   },
 ]
+
+/** Convert a Project (camelCase) to API response shape for mocking fetch in tests */
+export function toProjectApiResponse(p: Project): ProjectApiResponse {
+  return {
+    id: p.id,
+    title: p.title,
+    domain: p.domain,
+    short_description: p.shortDescription,
+    full_description: p.fullDescription,
+    deadline: p.deadline,
+    delivery_instructions: p.deliveryInstructions ?? null,
+  }
+}
 
 export function getProjectById(id: string): Project | undefined {
   return mockProjects.find((p) => p.id === id)
