@@ -6,9 +6,23 @@
     "name": "ToolMe",
     "tagline": "Le bac à sable où tes projets comptent."
   },
+  "landingHighlight": {
+    "heading": "Pourquoi ToolMe",
+    "title": "De vrais projets. Du travail utile. Les vôtres.",
+    "lead": "Découvrez et contribuez à de vrais projets, gratuitement.",
+    "value1": "De vrais projets",
+    "value2": "Du travail utile",
+    "value3": "Pour tous",
+    "value4": "Entièrement gratuit",
+    "metaphor": "Un bac à sable avec vous, pas au-dessus de vous."
+  },
   "intro": {
     "heading": "Introduction",
     "body": "Sans but lucratif · Pour les particuliers uniquement · Entièrement gratuit. ToolMe est l’endroit où partager et découvrir des projets."
+  },
+  "projects": {
+    "heading": "Projets",
+    "deadlineLabel": "Date limite"
   },
   "comingSoon": {
     "heading": "Bientôt",

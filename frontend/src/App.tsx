@@ -2,6 +2,9 @@ import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Translate } from './components/Translate'
 import { LanguageSelector } from './components/LanguageSelector'
+import { LandingHighlight } from './components/LandingHighlight'
+import { ProjectCard } from './components/ProjectCard'
+import { mockProjects } from './data/mockProjects'
 
 function useDocumentLang() {
   const { i18n } = useTranslation()
@@ -55,32 +58,22 @@ export default function App() {
           role="main"
           tabIndex={-1}
         >
-          <section aria-labelledby="intro-heading">
-            <Translate
-              tid="intro.heading"
-              as="h2"
-              id="intro-heading"
-              className="sr-only"
-            />
-            <Translate
-              tid="intro.body"
-              as="p"
-              className="text-stone-700 leading-relaxed"
-            />
-          </section>
+          <LandingHighlight />
 
-          <section className="mt-12" aria-labelledby="coming-soon-heading">
+          <section className="mt-12" aria-labelledby="projects-heading">
             <Translate
-              tid="comingSoon.heading"
+              tid="projects.heading"
               as="h2"
-              id="coming-soon-heading"
-              className="text-lg font-medium text-stone-600"
+              id="projects-heading"
+              className="text-xl font-semibold text-stone-900 mb-6"
             />
-            <Translate
-              tid="comingSoon.body"
-              as="p"
-              className="mt-2 text-stone-500"
-            />
+            <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 list-none p-0 m-0">
+              {mockProjects.map((project) => (
+                <li key={project.id}>
+                  <ProjectCard project={project} />
+                </li>
+              ))}
+            </ul>
           </section>
         </main>
 

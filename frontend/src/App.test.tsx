@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import App from './App'
+import { mockProjects } from './data/mockProjects'
 
 describe('App', () => {
   it('renders ToolMe identity', () => {
@@ -13,5 +14,21 @@ describe('App', () => {
     render(<App />)
     const skip = screen.getByRole('link', { name: /skip to main content/i })
     expect(skip).toHaveAttribute('href', '#main')
+  })
+
+  it('renders landing highlight block with title and metaphor', () => {
+    render(<App />)
+    expect(screen.getByRole('heading', { level: 3, name: 'Real projects. Useful work. Yours.' })).toBeInTheDocument()
+    expect(screen.getByText('A sandbox with you, not above you.')).toBeInTheDocument()
+  })
+
+  it('renders projects section with all mock project cards', () => {
+    render(<App />)
+    expect(screen.getByRole('heading', { level: 2, name: 'Projects' })).toBeInTheDocument()
+    expect(screen.getAllByRole('article')).toHaveLength(mockProjects.length)
+    mockProjects.forEach((project) => {
+      expect(screen.getByRole('heading', { level: 3, name: project.title })).toBeInTheDocument()
+      expect(screen.getByText(project.shortDescription)).toBeInTheDocument()
+    })
   })
 })

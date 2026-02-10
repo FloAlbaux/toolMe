@@ -6,9 +6,23 @@
     "name": "ToolMe",
     "tagline": "The sandbox where your projects matter."
   },
+  "landingHighlight": {
+    "heading": "Why ToolMe",
+    "title": "Real projects. Useful work. Yours.",
+    "lead": "Discover and contribute to real projects, for free.",
+    "value1": "Real projects",
+    "value2": "Useful work",
+    "value3": "For everyone",
+    "value4": "Fully free",
+    "metaphor": "A sandbox with you, not above you."
+  },
   "intro": {
     "heading": "Introduction",
     "body": "Non-profit · For individuals only · Fully free. ToolMe is your place to share and discover projects."
+  },
+  "projects": {
+    "heading": "Projects",
+    "deadlineLabel": "Deadline"
   },
   "comingSoon": {
     "heading": "Coming soon",
