@@ -1,0 +1,33 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: toolme-db
+    environment:
+      POSTGRES_USER: toolme
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: toolme
+    ports:
+      - "5432:5432"
+    volumes:
+      - toolme_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U toolme -d toolme"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: toolme-api
+    environment:
+      DATABASE_URL: postgresql+asyncpg://toolme:${POSTGRES_PASSWORD}@db:5432/toolme
+    ports:
+      - "8030:8030"
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  toolme_pgdata:
