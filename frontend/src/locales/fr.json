@@ -6,9 +6,40 @@
     "name": "ToolMe",
     "tagline": "Le bac à sable où tes projets comptent."
   },
+  "landingHighlight": {
+    "heading": "Pourquoi ToolMe",
+    "title": "De vrais projets. Du travail utile. Les vôtres.",
+    "lead": "Découvrez et contribuez à de vrais projets, gratuitement.",
+    "value1": "De vrais projets",
+    "value2": "Du travail utile",
+    "value3": "Pour tous",
+    "value4": "Entièrement gratuit",
+    "metaphor": "Un bac à sable avec vous, pas au-dessus de vous."
+  },
   "intro": {
     "heading": "Introduction",
     "body": "Sans but lucratif · Pour les particuliers uniquement · Entièrement gratuit. ToolMe est l’endroit où partager et découvrir des projets."
+  },
+  "projects": {
+    "heading": "Projets",
+    "deadlineLabel": "Date limite",
+    "publishCta": "Créer une annonce"
+  },
+  "publishPage": {
+    "comingSoonTitle": "Publier un projet",
+    "comingSoonBody": "Le formulaire pour créer et publier ton projet arrivera bientôt (Epic 3)."
+  },
+  "projectDetail": {
+    "backToProjects": "Retour aux projets",
+    "domainLabel": "Domaine",
+    "deliveryInstructionsLabel": "Comment livrer",
+    "notFound": "Projet introuvable",
+    "applyCta": "Propose un rendu"
+  },
+  "applyPage": {
+    "comingSoonTitle": "Proposer un rendu",
+    "comingSoonBody": "Le formulaire pour soumettre ton rendu arrivera bientôt (Epic 4).",
+    "backToProject": "Retour au projet"
   },
   "comingSoon": {
     "heading": "Bientôt",
