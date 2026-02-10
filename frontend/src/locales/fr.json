@@ -24,6 +24,12 @@
     "heading": "Projets",
     "deadlineLabel": "Date limite"
   },
+  "projectDetail": {
+    "backToProjects": "Retour aux projets",
+    "domainLabel": "Domaine",
+    "deliveryInstructionsLabel": "Comment livrer",
+    "notFound": "Projet introuvable"
+  },
   "comingSoon": {
     "heading": "Bientôt",
     "body": "La liste des projets et les coups de cœur apparaîtront ici (Epic 2)."

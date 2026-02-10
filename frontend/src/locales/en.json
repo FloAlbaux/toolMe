@@ -24,6 +24,12 @@
     "heading": "Projects",
     "deadlineLabel": "Deadline"
   },
+  "projectDetail": {
+    "backToProjects": "Back to projects",
+    "domainLabel": "Domain",
+    "deliveryInstructionsLabel": "How to deliver",
+    "notFound": "Project not found"
+  },
   "comingSoon": {
     "heading": "Coming soon",
     "body": "Project list and highlights will appear here (Epic 2)."
