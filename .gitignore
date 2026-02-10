@@ -1,0 +1,11 @@
+_bmad
+_bmad-output
+.cursor
+.vscode
+node_modules
+.venv
+dist
+__pycache__
+*.pyc
+.env
+.env.local
