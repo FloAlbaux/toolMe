@@ -2,6 +2,24 @@
   "common": {
     "skipToMainContent": "Skip to main content"
   },
+  "auth": {
+    "email": "Email",
+    "password": "Password",
+    "login": "Log in",
+    "loginComingSoon": "Log in will be available soon.",
+    "backToHome": "Back to home",
+    "signUp": {
+      "createAccount": "Create account",
+      "title": "Create an account",
+      "confirmPassword": "Confirm password",
+      "submit": "Create account",
+      "hasAccount": "Already have an account?",
+      "passwordHint": "At least 8 characters.",
+      "passwordTooShort": "Password must be at least 8 characters.",
+      "passwordsDoNotMatch": "Passwords do not match.",
+      "error": "Something went wrong. Try again."
+    }
+  },
   "brand": {
     "name": "ToolMe",
     "tagline": "The sandbox where your projects matter."

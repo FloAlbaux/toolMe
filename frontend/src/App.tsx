@@ -6,6 +6,8 @@ import { HomePage } from './pages/HomePage'
 import { ProjectDetailPage } from './pages/ProjectDetailPage'
 import { PublishPage } from './pages/PublishPage'
 import { ProjectApplyPage } from './pages/ProjectApplyPage'
+import { SignUpPage } from './pages/SignUpPage'
+import { LoginPage } from './pages/LoginPage'
 
 function useDocumentLang() {
   const { i18n } = useTranslation()
@@ -29,6 +31,8 @@ export default function App() {
         <Route path="/project/:id" element={<ProjectDetailPage />} />
         <Route path="/project/:id/apply" element={<ProjectApplyPage />} />
         <Route path="/publish" element={<PublishPage />} />
+        <Route path="/signup" element={<SignUpPage />} />
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
     </Layout>
   )
