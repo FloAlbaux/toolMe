@@ -26,8 +26,18 @@
     "publishCta": "Créer une annonce"
   },
   "publishPage": {
-    "comingSoonTitle": "Publier un projet",
-    "comingSoonBody": "Le formulaire pour créer et publier ton projet arrivera bientôt (Epic 3)."
+    "title": "Publier un projet",
+    "titleLabel": "Titre",
+    "domainLabel": "Domaine",
+    "shortDescriptionLabel": "Description courte",
+    "fullDescriptionLabel": "Description complète",
+    "deadlineLabel": "Date limite",
+    "deliveryInstructionsLabel": "Instructions de livraison (optionnel)",
+    "submit": "Publier le projet",
+    "backToProjects": "Retour aux projets",
+    "success": "Projet publié.",
+    "viewProject": "Voir le projet",
+    "error": "Échec de la publication du projet."
   },
   "projectDetail": {
     "backToProjects": "Retour aux projets",
