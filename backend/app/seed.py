@@ -5,7 +5,6 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.models.project import Project
 
-
 SEED_PROJECTS = [
     {
         "id": "1",

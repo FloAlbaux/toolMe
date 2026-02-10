@@ -1,6 +1,6 @@
 BACKEND_PORT ?= 8030
 
-.PHONY: help install install-frontend install-backend dev dev-frontend dev-backend db-up db-down up down test test-frontend test-backend build clean
+.PHONY: help install install-frontend install-backend dev dev-frontend dev-backend db-up db-down up down test test-frontend test-backend isort coverage build clean
 
 help:
 	@echo "ToolMe — Makefile"
@@ -17,7 +17,9 @@ help:
 	@echo "  down             Stop all containers"
 	@echo "  test             Run all tests (frontend + backend)"
 	@echo "  test-frontend    Vitest in frontend/"
-	@echo "  test-backend     (add pytest when you have tests)"
+	@echo "  test-backend     Pytest in backend/ (needs Postgres: make db-up)"
+	@echo "  isort            Sort backend imports (app/ tests/)"
+	@echo "  coverage         Backend pytest with coverage report"
 	@echo "  build            Build frontend for production"
 	@echo "  clean            Remove build artifacts and caches"
 
@@ -52,14 +54,19 @@ dev-frontend:
 dev-backend:
 	cd backend && uv run uvicorn app.main:app --reload --host 0.0.0.0 --port $(BACKEND_PORT)
 
-test: test-frontend
+test: test-frontend test-backend
 
 test-frontend:
 	cd frontend && npm run test:run
 
 test-backend:
-	@echo "No backend tests yet."
-	# cd backend && uv run pytest
+	cd backend && uv sync --extra dev && uv run pytest -v
+
+isort:
+	cd backend && uv run isort app tests
+
+coverage:
+	cd backend && uv sync --extra dev && uv run pytest --cov=app --cov-report=term-missing
 
 build:
 	cd frontend && npm run build

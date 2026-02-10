@@ -1,13 +1,11 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.crud.projects import (
-    create_project as crud_create_project,
-    delete_project as crud_delete_project,
-    get_project as crud_get_project,
-    list_projects as crud_list_projects,
-    update_project as crud_update_project,
-)
+from app.crud.projects import create_project as crud_create_project
+from app.crud.projects import delete_project as crud_delete_project
+from app.crud.projects import get_project as crud_get_project
+from app.crud.projects import list_projects as crud_list_projects
+from app.crud.projects import update_project as crud_update_project
 from app.database import get_db
 from app.schemas.project import ProjectCreate, ProjectResponse, ProjectUpdate
 
