@@ -1,6 +1,6 @@
 BACKEND_PORT ?= 8030
 
-.PHONY: help install install-frontend install-backend dev dev-frontend dev-backend test test-frontend test-backend build clean
+.PHONY: help install install-frontend install-backend dev dev-frontend dev-backend db-up db-down up down test test-frontend test-backend build clean
 
 help:
 	@echo "ToolMe — Makefile"
@@ -10,12 +10,28 @@ help:
 	@echo "  install-backend  uv sync in backend/"
 	@echo "  dev              Run frontend + backend (dev servers)"
 	@echo "  dev-frontend     Run Vite dev server (http://localhost:5173)"
-	@echo "  dev-backend      Run FastAPI (port $(BACKEND_PORT)); use BACKEND_PORT=8001 if 8000 is taken"
+	@echo "  dev-backend      Run FastAPI (port $(BACKEND_PORT)); needs Postgres (make db-up)"
+	@echo "  db-up            Start PostgreSQL with Docker Compose (port 5432)"
+	@echo "  db-down          Stop PostgreSQL"
+	@echo "  up               Start db + api in Docker (ports 5432, 8030)"
+	@echo "  down             Stop all containers"
 	@echo "  test             Run all tests (frontend + backend)"
 	@echo "  test-frontend    Vitest in frontend/"
 	@echo "  test-backend     (add pytest when you have tests)"
 	@echo "  build            Build frontend for production"
 	@echo "  clean            Remove build artifacts and caches"
+
+db-up:
+	docker compose up -d db
+
+db-down:
+	docker compose down
+
+up:
+	docker compose up -d
+
+down:
+	docker compose down
 
 install: install-frontend install-backend
 
