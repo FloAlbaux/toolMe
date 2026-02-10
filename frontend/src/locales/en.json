@@ -22,13 +22,24 @@
   },
   "projects": {
     "heading": "Projects",
-    "deadlineLabel": "Deadline"
+    "deadlineLabel": "Deadline",
+    "publishCta": "Publish a project"
+  },
+  "publishPage": {
+    "comingSoonTitle": "Publish a project",
+    "comingSoonBody": "The form to create and publish your project will be available soon (Epic 3)."
   },
   "projectDetail": {
     "backToProjects": "Back to projects",
     "domainLabel": "Domain",
     "deliveryInstructionsLabel": "How to deliver",
-    "notFound": "Project not found"
+    "notFound": "Project not found",
+    "applyCta": "Propose a deliverable"
+  },
+  "applyPage": {
+    "comingSoonTitle": "Propose a deliverable",
+    "comingSoonBody": "The form to submit your deliverable will be available soon (Epic 4).",
+    "backToProject": "Back to project"
   },
   "comingSoon": {
     "heading": "Coming soon",

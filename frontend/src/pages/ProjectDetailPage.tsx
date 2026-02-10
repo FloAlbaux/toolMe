@@ -71,6 +71,15 @@ export function ProjectDetailPage() {
           </p>
         </div>
       )}
+
+      <div className="mt-8 pt-6 border-t border-stone-200">
+        <Link
+          to={`/project/${project.id}/apply`}
+          className="inline-flex items-center justify-center rounded-md bg-[var(--color-toolme-primary)] px-5 py-2.5 text-white font-medium hover:bg-[var(--color-toolme-primary-hover)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-toolme-primary)] focus-visible:ring-offset-2"
+        >
+          <Translate tid="projectDetail.applyCta" />
+        </Link>
+      </div>
     </article>
   )
 }

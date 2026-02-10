@@ -4,6 +4,8 @@ import { Routes, Route } from 'react-router-dom'
 import { Layout } from './components/Layout'
 import { HomePage } from './pages/HomePage'
 import { ProjectDetailPage } from './pages/ProjectDetailPage'
+import { PublishPage } from './pages/PublishPage'
+import { ProjectApplyPage } from './pages/ProjectApplyPage'
 
 function useDocumentLang() {
   const { i18n } = useTranslation()
@@ -25,6 +27,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/project/:id" element={<ProjectDetailPage />} />
+        <Route path="/project/:id/apply" element={<ProjectApplyPage />} />
+        <Route path="/publish" element={<PublishPage />} />
       </Routes>
     </Layout>
   )

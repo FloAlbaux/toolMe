@@ -22,13 +22,24 @@
   },
   "projects": {
     "heading": "Projets",
-    "deadlineLabel": "Date limite"
+    "deadlineLabel": "Date limite",
+    "publishCta": "Créer une annonce"
+  },
+  "publishPage": {
+    "comingSoonTitle": "Publier un projet",
+    "comingSoonBody": "Le formulaire pour créer et publier ton projet arrivera bientôt (Epic 3)."
   },
   "projectDetail": {
     "backToProjects": "Retour aux projets",
     "domainLabel": "Domaine",
     "deliveryInstructionsLabel": "Comment livrer",
-    "notFound": "Projet introuvable"
+    "notFound": "Projet introuvable",
+    "applyCta": "Propose un rendu"
+  },
+  "applyPage": {
+    "comingSoonTitle": "Proposer un rendu",
+    "comingSoonBody": "Le formulaire pour soumettre ton rendu arrivera bientôt (Epic 4).",
+    "backToProject": "Retour au projet"
   },
   "comingSoon": {
     "heading": "Bientôt",
