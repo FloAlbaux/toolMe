@@ -8,7 +8,9 @@ const project: Project = {
   title: 'Test project',
   domain: 'Testing',
   shortDescription: 'A test project for unit tests.',
+  fullDescription: '',
   deadline: '2026-06-15',
+  createdAt: '2026-02-10T12:00:00.000Z',
 }
 
 describe('ProjectCard', () => {

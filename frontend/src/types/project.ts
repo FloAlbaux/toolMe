@@ -6,6 +6,7 @@ export type Project = {
   fullDescription: string
   deadline: string
   deliveryInstructions?: string
+  createdAt: string
 }
 
 /** API response shape (snake_case from backend) */
@@ -17,6 +18,7 @@ export type ProjectApiResponse = {
   full_description: string
   deadline: string
   delivery_instructions?: string | null
+  created_at: string
 }
 
 /** Payload for creating a project (camelCase, frontend) */
@@ -48,5 +50,6 @@ export function mapProjectFromApi(raw: ProjectApiResponse): Project {
     fullDescription: raw.full_description,
     deadline: raw.deadline,
     deliveryInstructions: raw.delivery_instructions ?? undefined,
+    createdAt: raw.created_at,
   }
 }

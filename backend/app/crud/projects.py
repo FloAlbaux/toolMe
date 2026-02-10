@@ -14,11 +14,14 @@ def _row_to_response(row: Project) -> ProjectResponse:
         full_description=row.full_description,
         deadline=row.deadline,
         delivery_instructions=row.delivery_instructions,
+        created_at=row.created_at,
     )
 
 
 async def list_projects(db: AsyncSession) -> list[ProjectResponse]:
-    result = await db.execute(select(Project).order_by(Project.title))
+    result = await db.execute(
+        select(Project).order_by(Project.created_at.desc())
+    )
     rows = result.scalars().all()
     return [_row_to_response(r) for r in rows]
 
