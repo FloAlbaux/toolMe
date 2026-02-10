@@ -1,0 +1,20 @@
+{
+  "common": {
+    "skipToMainContent": "Skip to main content"
+  },
+  "brand": {
+    "name": "ToolMe",
+    "tagline": "The sandbox where your projects matter."
+  },
+  "intro": {
+    "heading": "Introduction",
+    "body": "Non-profit · For individuals only · Fully free. ToolMe is your place to share and discover projects."
+  },
+  "comingSoon": {
+    "heading": "Coming soon",
+    "body": "Project list and highlights will appear here (Epic 2)."
+  },
+  "footer": {
+    "tagline": "ToolMe — The sandbox where your projects matter."
+  }
+}

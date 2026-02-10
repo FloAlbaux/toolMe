@@ -1,0 +1,20 @@
+{
+  "common": {
+    "skipToMainContent": "Aller au contenu principal"
+  },
+  "brand": {
+    "name": "ToolMe",
+    "tagline": "Le bac à sable où tes projets comptent."
+  },
+  "intro": {
+    "heading": "Introduction",
+    "body": "Sans but lucratif · Pour les particuliers uniquement · Entièrement gratuit. ToolMe est l’endroit où partager et découvrir des projets."
+  },
+  "comingSoon": {
+    "heading": "Bientôt",
+    "body": "La liste des projets et les coups de cœur apparaîtront ici (Epic 2)."
+  },
+  "footer": {
+    "tagline": "ToolMe — Le bac à sable où tes projets comptent."
+  }
+}
