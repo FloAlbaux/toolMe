@@ -13,6 +13,10 @@ vi.mock('../api/projects', async (importOriginal) => {
   }
 })
 
+vi.mock('../context/useAuth', () => ({
+  useAuth: () => ({ userId: null }),
+}))
+
 function renderDetail(id: string) {
   return render(
     <MemoryRouter initialEntries={[`/project/${id}`]}>

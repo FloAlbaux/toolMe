@@ -3,6 +3,8 @@ import type { Project } from '../types/project'
 
 type ProjectCardProps = {
   project: Project
+  /** When true, show a "My ad" tag (owner viewing their own project). */
+  isOwner?: boolean
 }
 
 function formatDeadline(iso: string): string {
@@ -18,7 +20,7 @@ function formatDeadline(iso: string): string {
  * Displays a project as a card (title, domain, short description, deadline).
  * Not clickable for now — detail page will come in Ticket 3.
  */
-export function ProjectCard({ project }: ProjectCardProps) {
+export function ProjectCard({ project, isOwner }: Readonly<ProjectCardProps>) {
   return (
     <article
       className="rounded-xl border border-stone-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md"
@@ -32,6 +34,11 @@ export function ProjectCard({ project }: ProjectCardProps) {
           {project.title}
         </h3>
         <span className="text-sm text-stone-500">{project.domain}</span>
+        {isOwner && (
+          <span className="ml-auto rounded-full bg-[var(--color-toolme-primary)]/15 px-2.5 py-0.5 text-xs font-medium text-[var(--color-toolme-primary)]">
+            <Translate tid="projects.myAdTag" />
+          </span>
+        )}
       </div>
       <p className="mt-2 text-stone-600 leading-relaxed">
         {project.shortDescription}

@@ -33,6 +33,7 @@ class ProjectUpdate(BaseModel):
 
 class ProjectResponse(ProjectBase):
     id: str
+    user_id: str  # owner, for "my ad" and edit/delete
     created_at: datetime  # serialized as ISO string in JSON
 
     model_config = {"from_attributes": True}

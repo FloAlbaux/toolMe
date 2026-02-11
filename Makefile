@@ -12,8 +12,9 @@ help:
 	@echo "  dev              Run frontend + backend (dev servers)"
 	@echo "  dev-frontend     Run Vite dev server (http://localhost:5173)"
 	@echo "  dev-backend      Run FastAPI (port $(BACKEND_PORT)); needs Postgres (make db-up)"
-	@echo "  db-up            Start PostgreSQL with Docker Compose (port 5432)"
-	@echo "  db-down          Stop PostgreSQL"
+	@echo "  db-up            Start PostgreSQL in Docker (port 5432). Run this before make dev-backend."
+	@echo "  docker-up        Alias for db-up"
+	@echo "  docker-down      Stop PostgreSQL"
 	@echo "  db-clean         Stop PostgreSQL and remove data volume (fresh DB on next db-up)"
 	@echo "  up               Start db + api in Docker (ports 5432, 8030)"
 	@echo "  down             Stop all containers"
@@ -29,10 +30,10 @@ help:
 	@echo "  fuzz-auth-sqli   Run SQLi fuzzing on auth login (email + password; needs API on $(BACKEND_PORT))"
 	@echo "  fuzz-xss        Run XSS fuzzing on homepage ?q= (dev only; needs frontend on 5173)"
 
-db-up:
+docker-up:
 	docker compose up -d db
 
-db-down:
+docker-down:
 	docker compose down
 
 db-clean:

@@ -2,6 +2,7 @@ import { createContext } from 'react'
 import type { LoginInput } from '../api/auth'
 
 export type AuthState = {
+  userId: string | null
   email: string | null
   isAuthenticated: boolean
   loading: boolean

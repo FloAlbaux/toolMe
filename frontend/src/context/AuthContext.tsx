@@ -16,6 +16,7 @@ import type { AuthContextValue, AuthState } from './authContext'
 
 export function AuthProvider({ children }: Readonly<{ children: ReactNode }>) {
   const [state, setState] = useState<AuthState>({
+    userId: null,
     email: null,
     isAuthenticated: false,
     loading: true,
@@ -25,13 +26,14 @@ export function AuthProvider({ children }: Readonly<{ children: ReactNode }>) {
     me()
       .then((user) => {
         setState({
+          userId: user?.id ?? null,
           email: user?.email ?? null,
           isAuthenticated: !!user,
           loading: false,
         })
       })
       .catch(() => {
-        setState({ email: null, isAuthenticated: false, loading: false })
+        setState({ userId: null, email: null, isAuthenticated: false, loading: false })
       })
   }, [])
 
@@ -39,6 +41,7 @@ export function AuthProvider({ children }: Readonly<{ children: ReactNode }>) {
     await apiLogin(input)
     const user = await me()
     setState({
+      userId: user?.id ?? null,
       email: user?.email ?? null,
       isAuthenticated: !!user,
       loading: false,
@@ -47,7 +50,7 @@ export function AuthProvider({ children }: Readonly<{ children: ReactNode }>) {
 
   const logout = useCallback(async () => {
     await apiLogout()
-    setState({ email: null, isAuthenticated: false, loading: false })
+    setState({ userId: null, email: null, isAuthenticated: false, loading: false })
   }, [])
 
   const value = useMemo<AuthContextValue>(

@@ -5,6 +5,7 @@ from app.crud.projects import create_project as crud_create_project
 from app.crud.projects import delete_project as crud_delete_project
 from app.crud.projects import get_project as crud_get_project
 from app.crud.projects import list_projects as crud_list_projects
+from app.crud.projects import list_projects_by_owner as crud_list_projects_by_owner
 from app.crud.projects import update_project as crud_update_project
 from app.database import get_db
 from app.dependencies import get_current_user
@@ -18,6 +19,15 @@ router = APIRouter(prefix="/projects", tags=["projects"])
 async def read_projects(db: AsyncSession = Depends(get_db)):
     """List all projects (public discovery)."""
     return await crud_list_projects(db)
+
+
+@router.get("/me", response_model=list[ProjectResponse])
+async def read_my_projects(
+    db: AsyncSession = Depends(get_db),
+    current_user: User = Depends(get_current_user),
+):
+    """List projects owned by the current user."""
+    return await crud_list_projects_by_owner(db, current_user.id)
 
 
 @router.get("/{project_id}", response_model=ProjectResponse)

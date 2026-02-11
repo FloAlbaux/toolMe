@@ -14,6 +14,7 @@ def _row_to_response(row: Project) -> ProjectResponse:
         full_description=row.full_description,
         deadline=row.deadline,
         delivery_instructions=row.delivery_instructions,
+        user_id=row.user_id,
         created_at=row.created_at,
     )
 
@@ -21,6 +22,18 @@ def _row_to_response(row: Project) -> ProjectResponse:
 async def list_projects(db: AsyncSession) -> list[ProjectResponse]:
     result = await db.execute(
         select(Project).order_by(Project.created_at.desc())
+    )
+    rows = result.scalars().all()
+    return [_row_to_response(r) for r in rows]
+
+
+async def list_projects_by_owner(
+    db: AsyncSession, user_id: str
+) -> list[ProjectResponse]:
+    result = await db.execute(
+        select(Project)
+        .where(Project.user_id == user_id)
+        .order_by(Project.created_at.desc())
     )
     rows = result.scalars().all()
     return [_row_to_response(r) for r in rows]

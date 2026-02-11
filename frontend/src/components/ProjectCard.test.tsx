@@ -11,6 +11,7 @@ const project: Project = {
   fullDescription: '',
   deadline: '2026-06-15',
   createdAt: '2026-02-10T12:00:00.000Z',
+  ownerId: 'owner-1',
 }
 
 describe('ProjectCard', () => {
