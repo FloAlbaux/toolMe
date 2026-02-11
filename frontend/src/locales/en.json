@@ -11,6 +11,38 @@
     "noAccount": "Don't have an account?",
     "loginComingSoon": "Log in will be available soon.",
     "backToHome": "Back to home",
+    "backToLogin": "Back to login",
+    "orSignInWith": "Or sign in with",
+    "loginGoogle": {
+      "error": "Google sign-in failed. Try again.",
+      "notConfigured": "Google sign-in is not configured. Set VITE_GOOGLE_CLIENT_ID in your .env to enable."
+    },
+    "forgotPassword": {
+      "title": "Forgot password",
+      "link": "Forgot password?",
+      "hint": "Enter your email and we'll send you a link to set a new password (valid 1 hour).",
+      "submit": "Send reset link",
+      "sent": "If an account exists for this email, you will receive a reset link.",
+      "devNoMail": "No email sent (SMTP not configured). Use this link to reset your password:",
+      "requestNew": "Request a new link",
+      "error": "Something went wrong. Try again."
+    },
+    "resetPassword": {
+      "title": "Set new password",
+      "newPassword": "New password",
+      "submit": "Set new password",
+      "missingToken": "Invalid or missing reset link.",
+      "error": "Something went wrong. Try again."
+    },
+    "verifyEmail": {
+      "title": "Activate your account",
+      "checkInbox": "Account created. Check your email to activate it (link valid 24 hours), then you can log in.",
+      "devNoMail": "No email sent (SMTP not configured). Use this link to activate:",
+      "activating": "Activating your account…",
+      "success": "Your account is activated. You are now logged in.",
+      "missingToken": "Invalid or missing activation link.",
+      "error": "Something went wrong. The link may have expired."
+    },
     "signUp": {
       "createAccount": "Create account",
       "title": "Create an account",
@@ -27,7 +59,13 @@
   "account": {
     "title": "My listings",
     "empty": "You haven't published any listing yet.",
-    "backToHome": "Back to home"
+    "backToHome": "Back to home",
+    "dangerZone": "Danger zone",
+    "deleteDescription": "Permanently delete your account and all your data. This cannot be undone.",
+    "deleteAccount": "Delete my account",
+    "deleteError": "Failed to delete account.",
+    "deletePasswordPlaceholder": "Your password",
+    "deleteConfirmPlaceholder": "Type DELETE to confirm"
   },
   "brand": {
     "name": "ToolMe",

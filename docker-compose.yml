@@ -16,6 +16,14 @@ services:
       timeout: 5s
       retries: 5
 
+  # SMTP de dev : capture tous les mails, interface web sur http://localhost:8025
+  mailpit:
+    image: axllent/mailpit:latest
+    container_name: toolme-mailpit
+    ports:
+      - "8025:8025"   # Web UI
+      - "1025:1025"   # SMTP
+
   api:
     build:
       context: ./backend
@@ -23,16 +31,23 @@ services:
     container_name: toolme-api
     environment:
       DATABASE_URL: postgresql+asyncpg://toolme:${POSTGRES_PASSWORD}@db:5432/toolme
-      # Required: set in .env or host env. For production, ENVIRONMENT=production and a strong SECRET_KEY are mandatory.
       ENVIRONMENT: ${ENVIRONMENT:-development}
       SECRET_KEY: ${SECRET_KEY}
       JWT_ALGORITHM: ${JWT_ALGORITHM:-HS256}
       ACCESS_TOKEN_EXPIRE_MINUTES: ${ACCESS_TOKEN_EXPIRE_MINUTES:-60}
+      # Envoi des mails vers Mailpit en dev (SMTP en clair, pas de STARTTLS)
+      SMTP_HOST: ${SMTP_HOST:-mailpit}
+      SMTP_PORT: ${SMTP_PORT:-1025}
+      SMTP_SKIP_STARTTLS: ${SMTP_SKIP_STARTTLS:-true}
+      SMTP_FROM: ${SMTP_FROM:-noreply@toolme.local}
+      FRONTEND_URL: ${FRONTEND_URL:-http://localhost:5173}
     ports:
       - "8030:8030"
     depends_on:
       db:
         condition: service_healthy
+      mailpit:
+        condition: service_started
 
 volumes:
   toolme_pgdata:

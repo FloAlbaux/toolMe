@@ -11,14 +11,46 @@
     "noAccount": "Pas encore de compte ?",
     "loginComingSoon": "La connexion sera bientôt disponible.",
     "backToHome": "Retour à l'accueil",
+    "backToLogin": "Retour à la connexion",
+    "orSignInWith": "Ou se connecter avec",
+    "loginGoogle": {
+      "error": "Échec de la connexion Google. Réessayez.",
+      "notConfigured": "Connexion Google non configurée. Définissez VITE_GOOGLE_CLIENT_ID dans votre .env pour l'activer."
+    },
+    "forgotPassword": {
+      "title": "Mot de passe oublié",
+      "link": "Mot de passe oublié ?",
+      "hint": "Indiquez votre email pour recevoir un lien pour définir un nouveau mot de passe (valable 1 h).",
+      "submit": "Envoyer le lien",
+      "sent": "Si un compte existe pour cet email, vous recevrez un lien de réinitialisation.",
+      "devNoMail": "Aucun email envoyé (SMTP non configuré). Utilisez ce lien pour réinitialiser :",
+      "requestNew": "Demander un nouveau lien",
+      "error": "Une erreur s'est produite. Réessayez."
+    },
+    "resetPassword": {
+      "title": "Nouveau mot de passe",
+      "newPassword": "Nouveau mot de passe",
+      "submit": "Définir le mot de passe",
+      "missingToken": "Lien de réinitialisation invalide ou manquant.",
+      "error": "Une erreur s'est produite. Réessayez."
+    },
+    "verifyEmail": {
+      "title": "Activez votre compte",
+      "checkInbox": "Compte créé. Consultez votre email pour l'activer (lien valable 24 h), puis connectez-vous.",
+      "devNoMail": "Aucun email envoyé (SMTP non configuré). Utilisez ce lien pour activer :",
+      "activating": "Activation de votre compte…",
+      "success": "Votre compte est activé. Vous êtes connecté.",
+      "missingToken": "Lien d'activation invalide ou manquant.",
+      "error": "Une erreur s'est produite. Le lien a peut-être expiré."
+    },
     "signUp": {
       "createAccount": "Créer un compte",
       "title": "Créer un compte",
       "confirmPassword": "Confirmer le mot de passe",
       "submit": "Créer mon compte",
       "hasAccount": "Vous avez déjà un compte ?",
-      "passwordHint": "Au moins 8 caractères.",
-      "passwordTooShort": "Le mot de passe doit faire au moins 8 caractères.",
+      "passwordHint": "Au moins 12 caractères.",
+      "passwordTooShort": "Le mot de passe doit faire au moins 12 caractères.",
       "invalidEmail": "Veuillez entrer une adresse email valide.",
       "passwordsDoNotMatch": "Les mots de passe ne correspondent pas.",
       "error": "Une erreur s'est produite. Réessayez."
@@ -27,7 +59,13 @@
   "account": {
     "title": "Mes annonces",
     "empty": "Vous n'avez pas encore publié d'annonce.",
-    "backToHome": "Retour à l'accueil"
+    "backToHome": "Retour à l'accueil",
+    "dangerZone": "Zone dangereuse",
+    "deleteDescription": "Supprimer définitivement votre compte et toutes vos données. Cette action est irréversible.",
+    "deleteAccount": "Supprimer mon compte",
+    "deleteError": "Échec de la suppression du compte.",
+    "deletePasswordPlaceholder": "Votre mot de passe",
+    "deleteConfirmPlaceholder": "Tapez DELETE pour confirmer"
   },
   "brand": {
     "name": "ToolMe",

@@ -1,25 +1,22 @@
 import { useState } from 'react'
-import { Link, useNavigate, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { Translate } from '../components/Translate'
 import { signUp } from '../api/auth'
-import { useAuth } from '../context/useAuth'
 import { isValidEmail } from '../utils'
 
 const MIN_PASSWORD_LENGTH = 12
 
 /**
- * Create account (sign up). Part 1 of auth flow.
+ * Create account (sign up). User must verify email before they can log in.
  */
 export function SignUpPage() {
-  const navigate = useNavigate()
-  const location = useLocation()
-  const { login } = useAuth()
-  const from = (location.state as { from?: { pathname: string } })?.from?.pathname ?? '/'
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [success, setSuccess] = useState(false)
+  const [verificationLink, setVerificationLink] = useState<string | null>(null)
 
   const emailValid = isValidEmail(email)
   const passwordsMatch = password === confirmPassword
@@ -48,11 +45,13 @@ export function SignUpPage() {
     }
 
     setLoading(true)
+    setSuccess(false)
+    setVerificationLink(null)
     const trimmedEmail = email.trim()
     signUp({ email: trimmedEmail, password, password_confirm: confirmPassword })
-      .then(() => login({ email: trimmedEmail, password }))
-      .then(() => {
-        navigate(from, { replace: true })
+      .then((data) => {
+        setSuccess(true)
+        if (data.verification_link) setVerificationLink(data.verification_link)
       })
       .catch((err) => {
         setError(err instanceof Error ? err.message : 'auth.signUp.error')
@@ -72,6 +71,26 @@ export function SignUpPage() {
         <Translate tid="auth.signUp.title" />
       </h2>
 
+      {success ? (
+        <div
+          className="mb-6 rounded-md border border-green-200 bg-green-50 p-4 text-green-800 space-y-2"
+          role="status"
+        >
+          <p><Translate tid="auth.verifyEmail.checkInbox" /></p>
+          {verificationLink && (
+            <p className="text-sm mt-2">
+              <Translate tid="auth.verifyEmail.devNoMail" />
+              <a
+                href={verificationLink}
+                className="block mt-1 break-all text-[var(--color-toolme-primary)] font-medium hover:underline"
+              >
+                {verificationLink}
+              </a>
+            </p>
+          )}
+        </div>
+      ) : (
+        <>
       {error && (
         <div
           className="mb-6 rounded-md border border-red-200 bg-red-50 p-4 text-red-800"
@@ -154,13 +173,15 @@ export function SignUpPage() {
           </p>
         </div>
       </form>
+        </>
+      )}
 
       <p className="mt-6 text-center">
         <Link
-          to="/"
+          to={success ? '/login' : '/'}
           className="text-sm text-[var(--color-toolme-primary)] font-medium hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-toolme-primary)] focus-visible:ring-offset-2 rounded"
         >
-          ← <Translate tid="auth.backToHome" />
+          {success ? <><Translate tid="auth.login" /> →</> : <>← <Translate tid="auth.backToHome" /></>}
         </Link>
       </p>
     </div>

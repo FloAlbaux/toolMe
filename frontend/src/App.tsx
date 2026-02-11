@@ -12,6 +12,9 @@ import { ProjectApplyPage } from './pages/ProjectApplyPage'
 import { PublishPage } from './pages/PublishPage'
 import { SignUpPage } from './pages/SignUpPage'
 import { LoginPage } from './pages/LoginPage'
+import { ForgotPasswordPage } from './pages/ForgotPasswordPage'
+import { ResetPasswordPage } from './pages/ResetPasswordPage'
+import { VerifyEmailPage } from './pages/VerifyEmailPage'
 import { ProjectEditPage } from './pages/ProjectEditPage'
 import { SubmissionDetailPage } from './pages/SubmissionDetailPage'
 
@@ -58,6 +61,9 @@ export default function App() {
           />
           <Route path="/signup" element={<SignUpPage />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+          <Route path="/reset-password" element={<ResetPasswordPage />} />
+          <Route path="/verify-email" element={<VerifyEmailPage />} />
         </Routes>
       </Layout>
     </AuthProvider>

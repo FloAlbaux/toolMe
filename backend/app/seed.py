@@ -1,5 +1,7 @@
 """Seed default projects if the table is empty (M-3: password from SEED_PASSWORD)."""
 
+from datetime import datetime, timezone
+
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -49,6 +51,7 @@ async def _get_or_create_seed_user(db: AsyncSession) -> User:
     user = User(
         email=SEED_USER_EMAIL,
         password_hash=hash_password(SEED_PASSWORD),
+        email_verified_at=datetime.now(timezone.utc),  # seed user is pre-verified
     )
     db.add(user)
     await db.flush()

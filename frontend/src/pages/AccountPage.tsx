@@ -2,6 +2,7 @@ import { useEffect, useState, useTransition } from 'react'
 import { Link } from 'react-router-dom'
 import { Translate } from '../components/Translate'
 import { ProjectCard } from '../components/ProjectCard'
+import { DeleteAccountSection } from '../components/DeleteAccountSection'
 import { useAuth } from '../context/useAuth'
 import { fetchMyProjects } from '../api/projects'
 import type { Project } from '../types/project'
@@ -89,6 +90,8 @@ export function AccountPage() {
           ))}
         </ul>
       )}
+
+      <DeleteAccountSection />
 
       <p className="mt-6">
         <Link

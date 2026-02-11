@@ -5,13 +5,17 @@ import uuid
 import pytest
 from fastapi.testclient import TestClient
 
+from tests.conftest import verify_user_for_tests
+
 
 def _auth_headers_for(client: TestClient, email: str, password: str):
-    """Sign up and log in, return Authorization headers."""
-    client.post(
+    """Sign up, verify email, log in, return Authorization headers."""
+    r = client.post(
         "/auth/signup",
         json={"email": email, "password": password, "password_confirm": password},
     )
+    assert r.status_code == 201
+    verify_user_for_tests(client, email, r.json())
     r = client.post("/auth/login", json={"email": email, "password": password})
     assert r.status_code == 200
     token = r.json()["access_token"]

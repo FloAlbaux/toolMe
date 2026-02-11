@@ -43,6 +43,27 @@ AUTH_COOKIE_SAMESITE = "lax"
 AUTH_COOKIE_HTTPONLY = True
 AUTH_COOKIE_PATH = "/"
 
+# Password reset: token validity 1h; email via SMTP
+PASSWORD_RESET_TOKEN_EXPIRE_MINUTES = 60
+# Email verification: link validity (hours)
+EMAIL_VERIFICATION_EXPIRE_HOURS = 24
+SMTP_HOST = os.getenv("SMTP_HOST", "")
+SMTP_PORT = int(os.getenv("SMTP_PORT", "587"))
+SMTP_USER = os.getenv("SMTP_USER", "")
+SMTP_PASSWORD = os.getenv("SMTP_PASSWORD", "")
+SMTP_FROM = os.getenv("SMTP_FROM", "noreply@toolme.example")
+# Use SSL from the start (e.g. port 465). If false, uses STARTTLS on port 587 (unless SMTP_SKIP_STARTTLS).
+SMTP_USE_SSL = os.getenv("SMTP_USE_SSL", "false").lower() in ("true", "1", "yes")
+# Skip STARTTLS (plain SMTP). Set true for Mailpit and other dev catch-all servers that don't support TLS.
+SMTP_SKIP_STARTTLS = os.getenv("SMTP_SKIP_STARTTLS", "false").lower() in ("true", "1", "yes")
+# In dev when SMTP not configured: write last email link to this file (optional)
+EMAIL_DEV_FILE = os.getenv("EMAIL_DEV_FILE", "")
+# Frontend base URL for reset link (e.g. http://localhost:5173 or https://app.toolme.example)
+FRONTEND_URL = os.getenv("FRONTEND_URL", "http://localhost:5173")
+
+# Lockout after N failed login attempts
+MAX_LOGIN_ATTEMPTS = 5
+
 # In production, refuse to start if SECRET_KEY is missing or still the dev default
 if _ENV == "production":
     if SECRET_KEY == DEV_SECRET:

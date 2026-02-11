@@ -1,9 +1,11 @@
-"""API tests: signup, login."""
+"""API tests: signup, login, email verification."""
 
 import uuid
 
 import pytest
 from fastapi.testclient import TestClient
+
+from tests.conftest import verify_user_for_tests
 
 
 def test_signup(client: TestClient):
@@ -63,7 +65,7 @@ def test_signup_invalid_email(client: TestClient):
 def test_login(client: TestClient):
     email = f"loginuser-{uuid.uuid4().hex}@example.com"
     password = "mypass123456"
-    client.post(
+    r = client.post(
         "/auth/signup",
         json={
             "email": email,
@@ -71,6 +73,7 @@ def test_login(client: TestClient):
             "password_confirm": password,
         },
     )
+    verify_user_for_tests(client, email, r.json())
     r = client.post("/auth/login", json={"email": email, "password": password})
     assert r.status_code == 200
     data = r.json()
@@ -80,7 +83,7 @@ def test_login(client: TestClient):
 
 def test_login_invalid_password(client: TestClient):
     email = f"wrongpass-{uuid.uuid4().hex}@example.com"
-    client.post(
+    r = client.post(
         "/auth/signup",
         json={
             "email": email,
@@ -88,10 +91,32 @@ def test_login_invalid_password(client: TestClient):
             "password_confirm": "correct12345",
         },
     )
+    verify_user_for_tests(client, email, r.json())
     r = client.post("/auth/login", json={"email": email, "password": "wrongpass12345"})
     assert r.status_code == 401
     detail = r.json().get("detail", "").lower()
     assert "invalid" in detail or "password" in detail
+
+
+def test_login_lockout_after_five_failures(client: TestClient):
+    """After 5 failed attempts, account is locked; correct password on 6th attempt returns 403."""
+    email = f"lockout-{uuid.uuid4().hex}@example.com"
+    password = "correctpass1234"
+    r = client.post(
+        "/auth/signup",
+        json={
+            "email": email,
+            "password": password,
+            "password_confirm": password,
+        },
+    )
+    verify_user_for_tests(client, email, r.json())
+    for _ in range(5):
+        r = client.post("/auth/login", json={"email": email, "password": "wrongpass1234"})
+        assert r.status_code in (401, 403), r.json()
+    r = client.post("/auth/login", json={"email": email, "password": password})
+    assert r.status_code == 403
+    assert "locked" in r.json().get("detail", "").lower()
 
 
 def test_create_project_requires_auth(client: TestClient):

@@ -2,6 +2,8 @@ import os
 
 # Relax rate limit in tests so auth endpoints don't throttle (E-1)
 os.environ.setdefault("RATE_LIMIT_AUTH", "1000/minute")
+# So signup returns verification_token in response (tests only)
+os.environ.setdefault("ENVIRONMENT", "test")
 
 import uuid
 
@@ -19,6 +21,15 @@ from app.models.project import Project  # noqa: F401 - register with Base
 from app.models.submission import Submission  # noqa: F401 - register with Base
 from app.models.user import User  # noqa: F401 - register with Base
 from app.seed import seed_if_empty
+
+
+def verify_user_for_tests(client: TestClient, email: str, signup_response: dict | None = None) -> None:
+    """After signup, verify the user so they can log in (tests only). Uses token from signup response when ENVIRONMENT=test."""
+    token = signup_response.get("verification_token") if signup_response else None
+    if not token:
+        raise ValueError("No verification_token in signup response; set ENVIRONMENT=test in conftest")
+    r = client.post("/auth/verify-email", json={"token": token})
+    assert r.status_code == 200, r.text
 
 
 @pytest.fixture
@@ -46,7 +57,7 @@ async def db_session(ensure_tables):
 
 @pytest.fixture
 def auth_headers(client: TestClient):
-    """Create a user, log in, return headers with Bearer token for protected routes."""
+    """Create a user, verify email, log in, return headers with Bearer token for protected routes."""
     email = f"test-{uuid.uuid4().hex}@example.com"
     password = "testpass1234"  # backend requires >= 12 chars
     r = client.post(
@@ -54,6 +65,7 @@ def auth_headers(client: TestClient):
         json={"email": email, "password": password, "password_confirm": password},
     )
     assert r.status_code == 201, r.text
+    verify_user_for_tests(client, email, r.json())
     r2 = client.post("/auth/login", json={"email": email, "password": password})
     assert r2.status_code == 200, r.text
     token = r2.json()["access_token"]

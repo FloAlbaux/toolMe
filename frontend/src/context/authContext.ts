@@ -11,6 +11,7 @@ export type AuthState = {
 export type AuthContextValue = AuthState & {
   login: (input: LoginInput) => Promise<void>
   logout: () => Promise<void>
+  refreshUser: () => Promise<void>
 }
 
 export const AuthContext = createContext<AuthContextValue | null>(null)
