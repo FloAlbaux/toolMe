@@ -1,0 +1,3 @@
+# Robot Framework + Browser library (Playwright) for E2E QA
+robotframework>=7.0
+robotframework-browser>=19.0

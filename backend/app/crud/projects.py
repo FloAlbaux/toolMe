@@ -34,7 +34,9 @@ async def get_project(db: AsyncSession, project_id: str) -> ProjectResponse | No
     return _row_to_response(row)
 
 
-async def create_project(db: AsyncSession, payload: ProjectCreate) -> ProjectResponse:
+async def create_project(
+    db: AsyncSession, payload: ProjectCreate, user_id: str
+) -> ProjectResponse:
     project = Project(
         title=payload.title,
         domain=payload.domain,
@@ -42,6 +44,7 @@ async def create_project(db: AsyncSession, payload: ProjectCreate) -> ProjectRes
         full_description=payload.full_description,
         deadline=payload.deadline,
         delivery_instructions=payload.delivery_instructions,
+        user_id=user_id,
     )
     db.add(project)
     await db.flush()
@@ -50,11 +53,11 @@ async def create_project(db: AsyncSession, payload: ProjectCreate) -> ProjectRes
 
 
 async def update_project(
-    db: AsyncSession, project_id: str, payload: ProjectUpdate
+    db: AsyncSession, project_id: str, payload: ProjectUpdate, user_id: str
 ) -> ProjectResponse | None:
     result = await db.execute(select(Project).where(Project.id == project_id))
     row = result.scalar_one_or_none()
-    if not row:
+    if not row or row.user_id != user_id:
         return None
     data = payload.model_dump(exclude_unset=True)
     for key, value in data.items():
@@ -64,10 +67,12 @@ async def update_project(
     return _row_to_response(row)
 
 
-async def delete_project(db: AsyncSession, project_id: str) -> bool:
+async def delete_project(
+    db: AsyncSession, project_id: str, user_id: str
+) -> bool:
     result = await db.execute(select(Project).where(Project.id == project_id))
     row = result.scalar_one_or_none()
-    if not row:
+    if not row or row.user_id != user_id:
         return False
     await db.delete(row)
     return True

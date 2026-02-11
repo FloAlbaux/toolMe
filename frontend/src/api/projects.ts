@@ -9,6 +9,11 @@ import {
 
 const base = () => getApiBaseUrl() + '/projects'
 
+const fetchOpts: RequestInit = {
+  credentials: 'include', // Send HTTP-only auth cookie (E-2)
+  headers: { 'Content-Type': 'application/json' },
+}
+
 function toCreatePayload(input: ProjectCreateInput) {
   return {
     title: input.title,
@@ -32,7 +37,7 @@ function toUpdatePayload(input: ProjectUpdateInput) {
 }
 
 export async function fetchProjects(): Promise<Project[]> {
-  const res = await fetch(base())
+  const res = await fetch(base(), fetchOpts)
   if (!res.ok) {
     throw new Error(`Failed to fetch projects: ${res.status}`)
   }
@@ -41,7 +46,7 @@ export async function fetchProjects(): Promise<Project[]> {
 }
 
 export async function fetchProjectById(id: string): Promise<Project | null> {
-  const res = await fetch(`${base()}/${id}`)
+  const res = await fetch(`${base()}/${id}`, fetchOpts)
   if (res.status === 404) {
     return null
   }
@@ -54,8 +59,8 @@ export async function fetchProjectById(id: string): Promise<Project | null> {
 
 export async function createProject(input: ProjectCreateInput): Promise<Project> {
   const res = await fetch(base(), {
+    ...fetchOpts,
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(toCreatePayload(input)),
   })
   if (!res.ok) {
@@ -67,8 +72,8 @@ export async function createProject(input: ProjectCreateInput): Promise<Project>
 
 export async function updateProject(id: string, input: ProjectUpdateInput): Promise<Project | null> {
   const res = await fetch(`${base()}/${id}`, {
+    ...fetchOpts,
     method: 'PUT',
-    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(toUpdatePayload(input)),
   })
   if (res.status === 404) {
@@ -82,7 +87,10 @@ export async function updateProject(id: string, input: ProjectUpdateInput): Prom
 }
 
 export async function deleteProject(id: string): Promise<boolean> {
-  const res = await fetch(`${base()}/${id}`, { method: 'DELETE' })
+  const res = await fetch(`${base()}/${id}`, {
+    ...fetchOpts,
+    method: 'DELETE',
+  })
   if (res.status === 404) {
     return false
   }

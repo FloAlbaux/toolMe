@@ -12,3 +12,8 @@ __pycache__
 .pytest_cache
 htmlcov
 .coverage
+# Robot Framework
+robot/output.xml
+robot/log.html
+robot/report.html
+robot/playwright-log.txt
