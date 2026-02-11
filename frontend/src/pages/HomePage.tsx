@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useTransition } from 'react'
 import { Link } from 'react-router-dom'
 import { Translate } from '../components/Translate'
 import { LandingHighlight } from '../components/LandingHighlight'
@@ -10,15 +10,18 @@ export function HomePage() {
   const [projects, setProjects] = useState<Project[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+  const [, startTransition] = useTransition()
 
   useEffect(() => {
     let cancelled = false
-    setLoading(true)
-    setError(null)
-    fetchProjects()
-      .then((data) => {
+    startTransition(() => {
+      setLoading(true)
+      setError(null)
+    })
+
+    fetchProjects().then((projects) => {
         if (!cancelled) {
-          const byNewest = [...data].sort(
+          const byNewest = [...projects].sort(
             (a, b) =>
               new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
           )

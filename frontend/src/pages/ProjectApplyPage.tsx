@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useTransition } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { Translate } from '../components/Translate'
 import { fetchProjectById } from '../api/projects'
@@ -12,16 +12,21 @@ export function ProjectApplyPage() {
   const [project, setProject] = useState<Project | null | undefined>(undefined)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+  const [, startTransition] = useTransition()
 
   useEffect(() => {
     if (!id) {
-      setProject(null)
-      setLoading(false)
+      startTransition(() => {
+        setProject(null)
+        setLoading(false)
+      })
       return
     }
     let cancelled = false
-    setLoading(true)
-    setError(null)
+    startTransition(() => {
+      setLoading(true)
+      setError(null)
+    })
     fetchProjectById(id)
       .then((data) => {
         if (!cancelled) {
