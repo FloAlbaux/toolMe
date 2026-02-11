@@ -49,8 +49,8 @@ def test_get_project_not_found(client: TestClient):
     assert r.json()["detail"] == "Project not found"
 
 
-def test_create_project_db_error_triggers_rollback(client: TestClient, auth_headers):
-    """Title > 500 chars triggers DB constraint; get_db rollback path is exercised."""
+def test_create_project_title_too_long_rejected(client: TestClient, auth_headers):
+    """Title > 500 chars is rejected by Pydantic (422) before hitting DB."""
     payload = {
         "title": "x" * 501,
         "domain": "D",
@@ -63,7 +63,7 @@ def test_create_project_db_error_triggers_rollback(client: TestClient, auth_head
         json=payload,
         headers=auth_headers,
     )
-    assert r.status_code == 500
+    assert r.status_code == 422
 
 
 def test_create_project(client: TestClient, auth_headers):

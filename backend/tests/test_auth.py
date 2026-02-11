@@ -26,8 +26,8 @@ def test_signup(client: TestClient):
 def test_signup_duplicate_email(client: TestClient):
     payload = {
         "email": "dup@example.com",
-        "password": "pass12345",
-        "password_confirm": "pass12345",
+        "password": "pass123456789",
+        "password_confirm": "pass123456789",
     }
     client.post("/auth/signup", json=payload)
     r = client.post("/auth/signup", json=payload)
@@ -40,8 +40,8 @@ def test_signup_passwords_do_not_match(client: TestClient):
         "/auth/signup",
         json={
             "email": "nomatch@example.com",
-            "password": "pass12345",
-            "password_confirm": "otherpass99",
+            "password": "pass123456789",
+            "password_confirm": "otherpass123",
         },
     )
     assert r.status_code == 401
@@ -53,8 +53,8 @@ def test_signup_invalid_email(client: TestClient):
         "/auth/signup",
         json={
             "email": "not-an-email",
-            "password": "pass12345",
-            "password_confirm": "pass12345",
+            "password": "pass123456789",
+            "password_confirm": "pass123456789",
         },
     )
     assert r.status_code == 422
@@ -62,15 +62,16 @@ def test_signup_invalid_email(client: TestClient):
 
 def test_login(client: TestClient):
     email = f"loginuser-{uuid.uuid4().hex}@example.com"
+    password = "mypass123456"
     client.post(
         "/auth/signup",
         json={
             "email": email,
-            "password": "mypass123",
-            "password_confirm": "mypass123",
+            "password": password,
+            "password_confirm": password,
         },
     )
-    r = client.post("/auth/login", json={"email": email, "password": "mypass123"})
+    r = client.post("/auth/login", json={"email": email, "password": password})
     assert r.status_code == 200
     data = r.json()
     assert data["token_type"] == "bearer"
@@ -83,11 +84,11 @@ def test_login_invalid_password(client: TestClient):
         "/auth/signup",
         json={
             "email": email,
-            "password": "correct123",
-            "password_confirm": "correct123",
+            "password": "correct12345",
+            "password_confirm": "correct12345",
         },
     )
-    r = client.post("/auth/login", json={"email": email, "password": "wrongpass123"})
+    r = client.post("/auth/login", json={"email": email, "password": "wrongpass12345"})
     assert r.status_code == 401
     detail = r.json().get("detail", "").lower()
     assert "invalid" in detail or "password" in detail

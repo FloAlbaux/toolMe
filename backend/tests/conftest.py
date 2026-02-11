@@ -46,7 +46,7 @@ async def db_session(ensure_tables):
 def auth_headers(client: TestClient):
     """Create a user, log in, return headers with Bearer token for protected routes."""
     email = f"test-{uuid.uuid4().hex}@example.com"
-    password = "testpass123"
+    password = "testpass1234"  # backend requires >= 12 chars
     r = client.post(
         "/auth/signup",
         json={"email": email, "password": password, "password_confirm": password},

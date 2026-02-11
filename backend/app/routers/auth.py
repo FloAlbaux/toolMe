@@ -14,7 +14,7 @@ from app.config import (
 from app.crud.users import create_user, get_user_by_email
 from app.database import get_db
 from app.dependencies import get_current_user
-from app.limiter import limiter, AUTH_RATE_LIMIT
+from app.limiter import AUTH_RATE_LIMIT, limiter
 from app.models.user import User
 from app.schemas.user import EMAIL_REGEX, Token, UserCreate, UserResponse, UserSignUp
 
