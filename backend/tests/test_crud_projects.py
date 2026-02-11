@@ -17,17 +17,20 @@ from app.schemas.project import ProjectCreate, ProjectUpdate
 async def test_list_projects(db_session: AsyncSession):
     result = await list_projects(db_session)
     await db_session.commit()
-    assert isinstance(result, list)
-    assert len(result) >= 1
-    assert result[0].title
-    assert result[0].id
+    assert hasattr(result, "items")
+    assert hasattr(result, "total")
+    assert result.total >= 0
+    if result.items:
+        assert result.items[0].title
+        assert result.items[0].id
 
 
 @pytest.mark.asyncio
 async def test_get_project_exists(db_session: AsyncSession):
-    projects = await list_projects(db_session)
+    result = await list_projects(db_session)
     await db_session.commit()
-    project_id = projects[0].id
+    assert len(result.items) >= 1
+    project_id = result.items[0].id
     out = await get_project(db_session, project_id)
     await db_session.commit()
     assert out is not None

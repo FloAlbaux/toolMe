@@ -31,6 +31,12 @@ export function Header() {
           {isAuthenticated ? (
             <>
               <Link
+                to="/my-submissions"
+                className="text-[var(--color-toolme-primary)] font-medium hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-toolme-primary)] focus-visible:ring-offset-2 rounded"
+              >
+                <Translate tid="mySubmissions.title" />
+              </Link>
+              <Link
                 to="/account"
                 className="text-[var(--color-toolme-primary)] font-medium hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-toolme-primary)] focus-visible:ring-offset-2 rounded"
               >

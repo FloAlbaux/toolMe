@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link, useNavigate, useLocation } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { Translate } from '../components/Translate'
 import { useAuth } from '../context/useAuth'
 
@@ -8,14 +8,11 @@ import { useAuth } from '../context/useAuth'
  */
 export function LoginPage() {
   const navigate = useNavigate()
-  const location = useLocation()
   const { login } = useAuth()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
-
-  const from = (location.state as { from?: { pathname: string } })?.from?.pathname ?? '/'
 
   function handleSubmit(e: { preventDefault: () => void }) {
     e.preventDefault()
@@ -23,7 +20,7 @@ export function LoginPage() {
     setLoading(true)
     login({ email: email.trim(), password })
       .then(() => {
-        navigate(from, { replace: true })
+        navigate('/', { replace: true })
       })
       .catch((err) => {
         setError(err instanceof Error ? err.message : 'auth.loginError')

@@ -37,3 +37,10 @@ class ProjectResponse(ProjectBase):
     created_at: datetime  # serialized as ISO string in JSON
 
     model_config = {"from_attributes": True}
+
+
+class ProjectListResponse(BaseModel):
+    """Paginated list of projects (home page)."""
+
+    items: list[ProjectResponse]
+    total: int

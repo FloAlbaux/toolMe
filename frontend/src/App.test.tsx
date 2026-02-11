@@ -23,7 +23,10 @@ function renderApp() {
 
 describe('App', () => {
   beforeEach(() => {
-    vi.mocked(projectsApi.fetchProjects).mockResolvedValue(mockProjects)
+    vi.mocked(projectsApi.fetchProjects).mockResolvedValue({
+    projects: mockProjects,
+    total: mockProjects.length,
+  })
   })
 
   it('renders ToolMe identity', () => {

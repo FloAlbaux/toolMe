@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { Translate } from '../components/Translate'
 import { signUp } from '../api/auth'
 import { useAuth } from '../context/useAuth'
@@ -12,7 +12,9 @@ const MIN_PASSWORD_LENGTH = 12
  */
 export function SignUpPage() {
   const navigate = useNavigate()
+  const location = useLocation()
   const { login } = useAuth()
+  const from = (location.state as { from?: { pathname: string } })?.from?.pathname ?? '/'
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
@@ -50,7 +52,7 @@ export function SignUpPage() {
     signUp({ email: trimmedEmail, password, password_confirm: confirmPassword })
       .then(() => login({ email: trimmedEmail, password }))
       .then(() => {
-        navigate('/', { replace: true })
+        navigate(from, { replace: true })
       })
       .catch((err) => {
         setError(err instanceof Error ? err.message : 'auth.signUp.error')

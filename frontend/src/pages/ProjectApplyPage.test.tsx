@@ -4,6 +4,7 @@ import { MemoryRouter, Route, Routes } from 'react-router-dom'
 import { ProjectApplyPage } from './ProjectApplyPage'
 import { mockProjects } from '../data/mockProjects'
 import * as projectsApi from '../api/projects'
+import * as submissionsApi from '../api/submissions'
 
 vi.mock('../api/projects', async (importOriginal) => {
   const actual = await importOriginal<typeof projectsApi>()
@@ -12,6 +13,19 @@ vi.mock('../api/projects', async (importOriginal) => {
     fetchProjectById: vi.fn(),
   }
 })
+
+vi.mock('../api/submissions', async (importOriginal) => {
+  const actual = await importOriginal<typeof submissionsApi>()
+  return {
+    ...actual,
+    fetchMySubmissionForProject: vi.fn(),
+  }
+})
+
+const mockUseAuth = vi.fn()
+vi.mock('../context/useAuth', () => ({
+  useAuth: () => mockUseAuth(),
+}))
 
 function renderApply(id: string) {
   return render(
@@ -25,17 +39,22 @@ function renderApply(id: string) {
 
 describe('ProjectApplyPage', () => {
   beforeEach(() => {
+    mockUseAuth.mockReturnValue({ userId: 'user-1' })
     vi.mocked(projectsApi.fetchProjectById).mockImplementation(async (projectId: string) => {
       const p = mockProjects.find((x) => x.id === projectId)
       return p ?? null
     })
+    vi.mocked(submissionsApi.fetchMySubmissionForProject).mockResolvedValue(null)
   })
 
-  it('shows loading then coming soon content when project exists', async () => {
+  it('shows loading then submission form when project exists and no existing submission', async () => {
     renderApply(mockProjects[0].id)
     expect(screen.getByText(/loading/i)).toBeInTheDocument()
-    expect(await screen.findByRole('heading', { level: 2, name: /propose a deliverable/i })).toBeInTheDocument()
-    expect(screen.getByText(/form to submit your deliverable will be available soon/i)).toBeInTheDocument()
+    expect(
+      await screen.findByRole('heading', { level: 2, name: /submit a solution/i }),
+    ).toBeInTheDocument()
+    expect(screen.getByLabelText(/message/i)).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /submit/i })).toBeInTheDocument()
     const backLinks = screen.getAllByRole('link', { name: /back to project/i })
     expect(backLinks[0]).toHaveAttribute('href', `/project/${mockProjects[0].id}`)
   })

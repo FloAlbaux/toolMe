@@ -14,7 +14,9 @@ from app.auth import create_access_token
 from app.database import AsyncSessionLocal, engine
 from app.main import app
 from app.models.base import Base
+from app.models.message import Message  # noqa: F401 - register with Base
 from app.models.project import Project  # noqa: F401 - register with Base
+from app.models.submission import Submission  # noqa: F401 - register with Base
 from app.models.user import User  # noqa: F401 - register with Base
 from app.seed import seed_if_empty
 

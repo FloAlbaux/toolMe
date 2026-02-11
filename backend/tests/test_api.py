@@ -22,22 +22,25 @@ def test_list_projects(client: TestClient):
     r = client.get("/projects")
     assert r.status_code == 200
     data = r.json()
-    assert isinstance(data, list)
-    assert len(data) >= 1
-    project = data[0]
-    assert "id" in project
-    assert "title" in project
-    assert "domain" in project
-    assert "short_description" in project
-    assert "deadline" in project
+    assert "items" in data
+    assert "total" in data
+    assert isinstance(data["items"], list)
+    assert data["total"] >= 0
+    if data["items"]:
+        project = data["items"][0]
+        assert "id" in project
+        assert "title" in project
+        assert "domain" in project
+        assert "short_description" in project
+        assert "deadline" in project
 
 
 def test_get_project(client: TestClient):
     r = client.get("/projects")
     assert r.status_code == 200
-    projects = r.json()
-    assert len(projects) >= 1
-    project_id = projects[0]["id"]
+    data = r.json()
+    assert len(data["items"]) >= 1
+    project_id = data["items"][0]["id"]
     r2 = client.get(f"/projects/{project_id}")
     assert r2.status_code == 200
     assert r2.json()["id"] == project_id
@@ -47,6 +50,14 @@ def test_get_project_not_found(client: TestClient):
     r = client.get("/projects/00000000-0000-0000-0000-000000000000")
     assert r.status_code == 404
     assert r.json()["detail"] == "Project not found"
+
+
+def test_list_projects_pagination(client: TestClient):
+    r = client.get("/projects?skip=0&limit=2")
+    assert r.status_code == 200
+    data = r.json()
+    assert len(data["items"]) <= 2
+    assert data["total"] >= 0
 
 
 def test_create_project_title_too_long_rejected(client: TestClient, auth_headers):

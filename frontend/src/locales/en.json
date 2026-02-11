@@ -51,7 +51,9 @@
     "heading": "Projects",
     "deadlineLabel": "Deadline",
     "publishCta": "Publish a project",
-    "myAdTag": "My ad"
+    "myAdTag": "My ad",
+    "loadMore": "Load more",
+    "loadingMore": "Loading…"
   },
   "publishPage": {
     "title": "Publish a project",
@@ -73,6 +75,8 @@
     "deliveryInstructionsLabel": "How to deliver",
     "notFound": "Project not found",
     "applyCta": "Propose a deliverable",
+    "submissionsHeading": "Submissions",
+    "submissionLink": "View thread",
     "edit": "Edit",
     "delete": "Delete",
     "deleteConfirm": "Delete this listing?",
@@ -82,7 +86,40 @@
   "applyPage": {
     "comingSoonTitle": "Propose a deliverable",
     "comingSoonBody": "The form to submit your deliverable will be available soon (Epic 4).",
-    "backToProject": "Back to project"
+    "backToProject": "Back to project",
+    "formTitle": "Submit a solution",
+    "formHint": "Describe your solution or ask a question. You can add an optional link to your deliverable.",
+    "messageLabel": "Message",
+    "linkLabel": "Link to your deliverable (optional)",
+    "linkInvalid": "Link must start with http:// or https://",
+    "submit": "Submit",
+    "successTitle": "Submission sent",
+    "successBody": "Your solution has been submitted. The project owner can review it and mark it as coherent (theme match).",
+    "mySubmissions": "My submissions",
+    "alreadySubmittedTitle": "You already have a submission for this project",
+    "alreadySubmittedBody": "You can only have one submission per project. Use the message thread to send corrections or updates based on the owner's feedback — it still counts as one submission.",
+    "viewThread": "View thread"
+  },
+  "mySubmissions": {
+    "title": "My submissions",
+    "lead": "Submissions you sent for projects.",
+    "empty": "You have not submitted any solution yet.",
+    "projectSubmission": "Submission",
+    "messages": "messages",
+    "coherent": "coherent",
+    "notCoherent": "not coherent",
+    "unreadCount_one": "1 unread message",
+    "unreadCount_other": "{{count}} unread messages"
+  },
+  "submissionDetail": {
+    "link": "Link",
+    "thread": "Message thread",
+    "markCoherent": "Mark coherent",
+    "markNotCoherent": "Mark not coherent",
+    "you": "You",
+    "other": "Owner",
+    "reply": "Reply",
+    "send": "Send"
   },
   "comingSoon": {
     "heading": "Coming soon",

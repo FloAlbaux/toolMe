@@ -51,11 +51,15 @@ robot/
 ├── README.md
 ├── resources/
 │   ├── variables.robot   # BASE_URL, sélecteurs, textes EN
-│   └── auth.resource.robot  # Keywords (Open App, Fill Signup, …)
+│   ├── auth.resource.robot  # Keywords (Open App, Fill Signup, …)
+│   ├── project.resource.robot
+│   └── submission.resource.robot  # Apply form, My submissions, thread
 └── tests/
     ├── auth_signup.robot    # Inscription, bouton disabled, duplicate email
     ├── auth_login.robot     # Login, logout, erreur mauvais mot de passe
-    └── auth_protected.robot # /publish → /login, retour après login
+    ├── auth_protected.robot # /publish → /login, retour après login
+    ├── submission_workflow.robot  # Apply → success → My submissions → thread
+    └── …
 ```
 
 ## Correspondance avec la checklist QA
@@ -69,5 +73,6 @@ robot/
 | Login: succès, logout, mauvaise mot de passe | `auth_login.robot` |
 | /publish sans auth → /login | `auth_protected.robot` |
 | Après login depuis /publish → retour sur /publish | `auth_protected.robot` |
+| Submission: apply → success → My submissions → thread | `submission_workflow.robot` |
 
 Les tests utilisent l’UI en **anglais** (sélecteurs sur "Log in", "Create account", etc.). Pour le français, adapter les variables dans `resources/variables.robot`.

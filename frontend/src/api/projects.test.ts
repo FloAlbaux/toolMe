@@ -16,26 +16,30 @@ describe('projects api', () => {
     mockFetch.mockReset()
   })
 
-  it('fetchProjects returns mapped projects', async () => {
+  it('fetchProjects returns mapped projects and total', async () => {
     mockFetch.mockResolvedValue({
       ok: true,
       json: () =>
-        Promise.resolve([
-          {
-            id: '1',
-            title: 'P',
-            domain: 'D',
-            short_description: 'S',
-            full_description: 'F',
-            deadline: '2026-01-01',
-            created_at: '2026-01-01T00:00:00Z',
-            user_id: 'u1',
-          },
-        ]),
+        Promise.resolve({
+          items: [
+            {
+              id: '1',
+              title: 'P',
+              domain: 'D',
+              short_description: 'S',
+              full_description: 'F',
+              deadline: '2026-01-01',
+              created_at: '2026-01-01T00:00:00Z',
+              user_id: 'u1',
+            },
+          ],
+          total: 1,
+        }),
     })
-    const projects = await fetchProjects()
+    const { projects, total } = await fetchProjects()
     expect(projects).toHaveLength(1)
     expect(projects[0]).toMatchObject({ id: '1', title: 'P', ownerId: 'u1' })
+    expect(total).toBe(1)
   })
 
   it('fetchProjects throws on non-ok response', async () => {

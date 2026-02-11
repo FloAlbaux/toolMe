@@ -36,13 +36,33 @@ function toUpdatePayload(input: ProjectUpdateInput) {
   return payload
 }
 
-export async function fetchProjects(): Promise<Project[]> {
-  const res = await fetch(base(), fetchOpts)
+export type FetchProjectsParams = {
+  skip?: number
+  limit?: number
+}
+
+export type FetchProjectsResult = {
+  projects: Project[]
+  total: number
+}
+
+/** Fetch projects with pagination (for home page). Default limit 12. */
+export async function fetchProjects(
+  params: FetchProjectsParams = {}
+): Promise<FetchProjectsResult> {
+  const { skip = 0, limit = 12 } = params
+  const url = new URL(base())
+  url.searchParams.set('skip', String(skip))
+  url.searchParams.set('limit', String(limit))
+  const res = await fetch(String(url), fetchOpts)
   if (!res.ok) {
     throw new Error(`Failed to fetch projects: ${res.status}`)
   }
-  const raw: ProjectApiResponse[] = await res.json()
-  return raw.map(mapProjectFromApi)
+  const raw: { items: ProjectApiResponse[]; total: number } = await res.json()
+  return {
+    projects: raw.items.map(mapProjectFromApi),
+    total: raw.total,
+  }
 }
 
 /** Projects owned by the current user (requires auth). */

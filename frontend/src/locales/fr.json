@@ -51,7 +51,9 @@
     "heading": "Projets",
     "deadlineLabel": "Date limite",
     "publishCta": "Créer une annonce",
-    "myAdTag": "Mon annonce"
+    "myAdTag": "Mon annonce",
+    "loadMore": "Charger plus",
+    "loadingMore": "Chargement…"
   },
   "publishPage": {
     "title": "Publier un projet",
@@ -73,6 +75,8 @@
     "deliveryInstructionsLabel": "Comment livrer",
     "notFound": "Projet introuvable",
     "applyCta": "Propose un rendu",
+    "submissionsHeading": "Soumissions",
+    "submissionLink": "Voir le fil",
     "edit": "Modifier",
     "delete": "Supprimer",
     "deleteConfirm": "Supprimer cette annonce ?",
@@ -82,7 +86,40 @@
   "applyPage": {
     "comingSoonTitle": "Proposer un rendu",
     "comingSoonBody": "Le formulaire pour soumettre ton rendu arrivera bientôt (Epic 4).",
-    "backToProject": "Retour au projet"
+    "backToProject": "Retour au projet",
+    "formTitle": "Soumettre une solution",
+    "formHint": "Décris ta solution ou pose une question. Tu peux ajouter un lien vers ton rendu (optionnel).",
+    "messageLabel": "Message",
+    "linkLabel": "Lien vers ton rendu (optionnel)",
+    "linkInvalid": "Le lien doit commencer par http:// ou https://",
+    "submit": "Envoyer",
+    "successTitle": "Soumission envoyée",
+    "successBody": "Ta solution a été enregistrée. L'auteur du projet peut la consulter et la marquer comme cohérente (thème respecté).",
+    "mySubmissions": "Mes soumissions",
+    "alreadySubmittedTitle": "Tu as déjà une soumission pour ce projet",
+    "alreadySubmittedBody": "Une seule soumission par projet est possible. Utilise le fil de messages pour envoyer des corrections ou mises à jour selon les retours de l'auteur — ça compte toujours pour une soumission.",
+    "viewThread": "Voir le fil"
+  },
+  "mySubmissions": {
+    "title": "Mes soumissions",
+    "lead": "Soumissions que tu as envoyées pour des projets.",
+    "empty": "Tu n'as encore soumis aucune solution.",
+    "projectSubmission": "Soumission",
+    "messages": "messages",
+    "coherent": "cohérent",
+    "notCoherent": "pas cohérent",
+    "unreadCount_one": "1 message non lu",
+    "unreadCount_other": "{{count}} messages non lus"
+  },
+  "submissionDetail": {
+    "link": "Lien",
+    "thread": "Fil de messages",
+    "markCoherent": "Marquer cohérent",
+    "markNotCoherent": "Marquer pas cohérent",
+    "you": "Toi",
+    "other": "Auteur",
+    "reply": "Répondre",
+    "send": "Envoyer"
   },
   "comingSoon": {
     "heading": "Bientôt",
