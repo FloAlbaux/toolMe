@@ -1,6 +1,6 @@
 BACKEND_PORT ?= 8030
 
-.PHONY: help install install-frontend install-backend dev dev-frontend dev-backend db-up db-down db-clean up down test test-frontend test-backend isort coverage build clean
+.PHONY: help install install-frontend install-backend install-robot dev dev-frontend dev-backend db-up db-down db-clean up down test test-frontend test-backend test-robot isort coverage build clean fuzz-sqli fuzz-auth-sqli fuzz-xss
 
 help:
 	@echo "ToolMe — Makefile"
@@ -8,6 +8,7 @@ help:
 	@echo "  install          Install frontend + backend deps"
 	@echo "  install-frontend npm install in frontend/"
 	@echo "  install-backend  uv sync in backend/"
+	@echo "  install-robot    Install Robot Framework + Browser (Playwright) for E2E QA"
 	@echo "  dev              Run frontend + backend (dev servers)"
 	@echo "  dev-frontend     Run Vite dev server (http://localhost:5173)"
 	@echo "  dev-backend      Run FastAPI (port $(BACKEND_PORT)); needs Postgres (make db-up)"
@@ -19,10 +20,14 @@ help:
 	@echo "  test             Run all tests (frontend + backend)"
 	@echo "  test-frontend    Vitest in frontend/"
 	@echo "  test-backend     Pytest in backend/ (needs Postgres: make db-up)"
+	@echo "  test-robot       Robot Framework E2E (needs frontend + backend running)"
 	@echo "  isort            Sort backend imports (app/ tests/)"
 	@echo "  coverage         Backend pytest with coverage report"
 	@echo "  build            Build frontend for production"
 	@echo "  clean            Remove build artifacts and caches"
+	@echo "  fuzz-sqli        Run SQLi fuzzing on /projects (dev only; needs API on $(BACKEND_PORT))"
+	@echo "  fuzz-auth-sqli   Run SQLi fuzzing on auth login (email + password; needs API on $(BACKEND_PORT))"
+	@echo "  fuzz-xss        Run XSS fuzzing on homepage ?q= (dev only; needs frontend on 5173)"
 
 db-up:
 	docker compose up -d db
@@ -67,6 +72,12 @@ test-frontend:
 
 test-backend:
 	cd backend && uv sync --extra dev && uv run pytest -v
+
+install-robot:
+	cd robot && uv sync && uv run rfbrowser init
+
+test-robot:
+	cd robot && uv run robot tests/
 
 isort:
 	cd backend && uv run isort app tests
