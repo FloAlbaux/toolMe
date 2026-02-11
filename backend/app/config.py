@@ -2,7 +2,8 @@
 
 import os
 
-DEV_SECRET = "dev-secret-change-in-production"
+# At least 32 bytes for HS256 (RFC 7518); dev default for local/Docker only
+DEV_SECRET = "dev-secret-change-in-production-32b"
 # Empty or unset → use dev default (e.g. Docker dev without SECRET_KEY in .env)
 SECRET_KEY: str = os.getenv("SECRET_KEY") or DEV_SECRET
 ALGORITHM: str = os.getenv("JWT_ALGORITHM", "HS256")

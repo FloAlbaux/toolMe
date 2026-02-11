@@ -52,6 +52,14 @@ def test_get_project_not_found(client: TestClient):
     assert r.json()["detail"] == "Project not found"
 
 
+def test_list_projects_pagination(client: TestClient):
+    r = client.get("/projects?skip=0&limit=2")
+    assert r.status_code == 200
+    data = r.json()
+    assert len(data["items"]) <= 2
+    assert data["total"] >= 0
+
+
 def test_create_project_title_too_long_rejected(client: TestClient, auth_headers):
     """Title > 500 chars is rejected by Pydantic (422) before hitting DB."""
     payload = {
