@@ -25,6 +25,11 @@ jobs:
         run: npm ci
         working-directory: frontend
 
+      # P3: fail on high/critical vulnerabilities
+      - name: Audit dependencies
+        run: npm audit --audit-level=high
+        working-directory: frontend
+
       - name: Lint
         run: npm run lint
         working-directory: frontend
@@ -88,6 +93,11 @@ jobs:
 
       - name: Install dependencies
         run: uv sync --extra dev
+        working-directory: backend
+
+      # P3: fail on any known vulnerability (pip-audit has no severity filter)
+      - name: Audit dependencies
+        run: uv run pip-audit
         working-directory: backend
 
       - name: Isort

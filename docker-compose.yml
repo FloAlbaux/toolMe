@@ -23,6 +23,11 @@ services:
     container_name: toolme-api
     environment:
       DATABASE_URL: postgresql+asyncpg://toolme:${POSTGRES_PASSWORD}@db:5432/toolme
+      # Required: set in .env or host env. For production, ENVIRONMENT=production and a strong SECRET_KEY are mandatory.
+      ENVIRONMENT: ${ENVIRONMENT:-development}
+      SECRET_KEY: ${SECRET_KEY}
+      JWT_ALGORITHM: ${JWT_ALGORITHM:-HS256}
+      ACCESS_TOKEN_EXPIRE_MINUTES: ${ACCESS_TOKEN_EXPIRE_MINUTES:-60}
     ports:
       - "8030:8030"
     depends_on:

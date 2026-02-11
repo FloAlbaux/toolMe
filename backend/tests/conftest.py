@@ -1,3 +1,8 @@
+import os
+
+# Relax rate limit in tests so auth endpoints don't throttle (E-1)
+os.environ.setdefault("RATE_LIMIT_AUTH", "1000/minute")
+
 import uuid
 
 import pytest

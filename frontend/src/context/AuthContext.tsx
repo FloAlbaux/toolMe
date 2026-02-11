@@ -8,78 +8,64 @@ import {
   type ReactNode,
 } from 'react'
 import {
-  getStoredToken,
-  clearStoredToken,
-  setStoredToken,
-  decodeTokenPayload,
   login as apiLogin,
+  logout as apiLogout,
+  me,
   type LoginInput,
 } from '../api/auth'
 
 type AuthState = {
-  token: string | null
   email: string | null
   isAuthenticated: boolean
+  loading: boolean
 }
 
 type AuthContextValue = AuthState & {
   login: (input: LoginInput) => Promise<void>
-  logout: () => void
-  setToken: (token: string) => void
+  logout: () => Promise<void>
 }
 
 const AuthContext = createContext<AuthContextValue | null>(null)
 
-function readStoredAuth(): AuthState {
-  const token = getStoredToken()
-  if (!token) {
-    return { token: null, email: null, isAuthenticated: false }
-  }
-  const payload = decodeTokenPayload(token)
-  const email = payload?.email ?? null
-  return { token, email, isAuthenticated: true }
-}
-
 export function AuthProvider({ children }: Readonly<{ children: ReactNode }>) {
-  const [state, setState] = useState<AuthState>(readStoredAuth)
+  const [state, setState] = useState<AuthState>({
+    email: null,
+    isAuthenticated: false,
+    loading: true,
+  })
 
   useEffect(() => {
-    const token = getStoredToken()
-    if (token) {
-      const payload = decodeTokenPayload(token)
-      setState({ token, email: payload?.email ?? null, isAuthenticated: true })
-    }
+    me()
+      .then((user) => {
+        setState({
+          email: user?.email ?? null,
+          isAuthenticated: !!user,
+          loading: false,
+        })
+      })
+      .catch(() => {
+        setState({ email: null, isAuthenticated: false, loading: false })
+      })
   }, [])
 
   const login = useCallback(async (input: LoginInput) => {
-    const { access_token } = await apiLogin(input)
-    setStoredToken(access_token)
-    const payload = decodeTokenPayload(access_token)
+    await apiLogin(input)
+    const user = await me()
     setState({
-      token: access_token,
-      email: payload?.email ?? null,
-      isAuthenticated: true,
+      email: user?.email ?? null,
+      isAuthenticated: !!user,
+      loading: false,
     })
   }, [])
 
-  const logout = useCallback(() => {
-    clearStoredToken()
-    setState({ token: null, email: null, isAuthenticated: false })
-  }, [])
-
-  const setToken = useCallback((token: string) => {
-    setStoredToken(token)
-    const payload = decodeTokenPayload(token)
-    setState({
-      token,
-      email: payload?.email ?? null,
-      isAuthenticated: true,
-    })
+  const logout = useCallback(async () => {
+    await apiLogout()
+    setState({ email: null, isAuthenticated: false, loading: false })
   }, [])
 
   const value = useMemo<AuthContextValue>(
-    () => ({ ...state, login, logout, setToken }),
-    [state.token, state.email, state.isAuthenticated, login, logout, setToken]
+    () => ({ ...state, login, logout }),
+    [state.email, state.isAuthenticated, state.loading, login, logout]
   )
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>

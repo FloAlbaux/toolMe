@@ -2,9 +2,14 @@ from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from slowapi import _rate_limit_exceeded_handler
+from slowapi.errors import RateLimitExceeded
+from slowapi.middleware import SlowAPIMiddleware
 from sqlalchemy import text
 
+from app.config import CORS_ORIGINS, RUN_SEED
 from app.database import AsyncSessionLocal, engine
+from app.limiter import limiter
 from app.models.base import Base
 from app.models.project import Project  # noqa: F401 - register with Base
 from app.models.user import User  # noqa: F401 - register with Base
@@ -31,29 +36,32 @@ async def lifespan(app: FastAPI):
                 "VARCHAR(36) REFERENCES users(id) ON DELETE CASCADE"
             )
         )
-    # Backfill user_id for existing projects: create seed user and assign
-    async with AsyncSessionLocal() as db:
-        from sqlalchemy import select, update
+    # Backfill user_id for existing projects and seed (M-3: only when RUN_SEED)
+    if RUN_SEED:
+        async with AsyncSessionLocal() as db:
+            from sqlalchemy import select, update
 
-        result = await db.execute(
-            select(Project).where(Project.user_id.is_(None)).limit(1)
-        )
-        if result.scalar_one_or_none() is not None:
             from app.auth import hash_password
+            from app.config import SEED_PASSWORD
+            from app.seed import SEED_USER_EMAIL
 
-            seed_user = User(
-                email="seed@toolme.local",
-                password_hash=hash_password("seed-change-me"),
+            result = await db.execute(
+                select(Project).where(Project.user_id.is_(None)).limit(1)
             )
-            db.add(seed_user)
-            await db.flush()
-            await db.execute(
-                update(Project)
-                .where(Project.user_id.is_(None))
-                .values(user_id=seed_user.id)
-            )
-            await db.commit()
-        await seed_if_empty(db)
+            if result.scalar_one_or_none() is not None:
+                seed_user = User(
+                    email=SEED_USER_EMAIL,
+                    password_hash=hash_password(SEED_PASSWORD),
+                )
+                db.add(seed_user)
+                await db.flush()
+                await db.execute(
+                    update(Project)
+                    .where(Project.user_id.is_(None))
+                    .values(user_id=seed_user.id)
+                )
+                await db.commit()
+            await seed_if_empty(db)
     # Enforce user_id NOT NULL after backfill
     async with engine.begin() as conn:
         await conn.execute(
@@ -71,10 +79,13 @@ app = FastAPI(
     version="0.1.0",
     lifespan=lifespan,
 )
+app.state.limiter = limiter
+app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
+app.add_middleware(SlowAPIMiddleware)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=CORS_ORIGINS,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

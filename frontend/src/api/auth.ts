@@ -2,7 +2,9 @@ import { getApiBaseUrl } from './config'
 
 const base = () => getApiBaseUrl() + '/auth'
 
-const TOKEN_STORAGE_KEY = 'toolme_access_token'
+const fetchOpts: RequestInit = {
+  credentials: 'include', // Send/receive HTTP-only cookie (E-2)
+}
 
 export type SignUpInput = {
   email: string
@@ -20,6 +22,11 @@ export type TokenResponse = {
   token_type: string
 }
 
+export type MeResponse = {
+  id: string
+  email: string
+}
+
 function parseErrorResponse(res: Response, body: Record<string, unknown>): string {
   const detail = body.detail
   if (typeof detail === 'string') return detail
@@ -34,6 +41,7 @@ function parseErrorResponse(res: Response, body: Record<string, unknown>): strin
  */
 export async function signUp(input: SignUpInput): Promise<{ id: string; email: string }> {
   const res = await fetch(`${base()}/signup`, {
+    ...fetchOpts,
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -50,10 +58,11 @@ export async function signUp(input: SignUpInput): Promise<{ id: string; email: s
 }
 
 /**
- * Log in with email and password. Returns JWT and stores it in localStorage.
+ * Log in with email and password. Backend sets HTTP-only cookie (E-2); token is not stored in JS.
  */
 export async function login(input: LoginInput): Promise<TokenResponse> {
   const res = await fetch(`${base()}/login`, {
+    ...fetchOpts,
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ email: input.email.trim(), password: input.password }),
@@ -62,33 +71,22 @@ export async function login(input: LoginInput): Promise<TokenResponse> {
   if (!res.ok) {
     throw new Error(parseErrorResponse(res, body))
   }
-  const data = body as TokenResponse
-  setStoredToken(data.access_token)
-  return data
-}
-
-export function getStoredToken(): string | null {
-  return localStorage.getItem(TOKEN_STORAGE_KEY)
-}
-
-export function setStoredToken(token: string): void {
-  localStorage.setItem(TOKEN_STORAGE_KEY, token)
-}
-
-export function clearStoredToken(): void {
-  localStorage.removeItem(TOKEN_STORAGE_KEY)
+  return body as TokenResponse
 }
 
 /**
- * Decode JWT payload without verification (for display only; backend verifies).
+ * Return current user from session cookie. 401 if not authenticated.
  */
-export function decodeTokenPayload(token: string): { sub?: string; email?: string } | null {
-  try {
-    const parts = token.split('.')
-    if (parts.length !== 3) return null
-    const payload = JSON.parse(atob(parts[1]))
-    return payload
-  } catch {
-    return null
-  }
+export async function me(): Promise<MeResponse | null> {
+  const res = await fetch(`${base()}/me`, { ...fetchOpts })
+  if (res.status === 401) return null
+  if (!res.ok) throw new Error(`Failed to get user: ${res.status}`)
+  return res.json()
+}
+
+/**
+ * Clear auth cookie (must be called with credentials so cookie is sent).
+ */
+export async function logout(): Promise<void> {
+  await fetch(`${base()}/logout`, { ...fetchOpts, method: 'POST' })
 }

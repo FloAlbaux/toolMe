@@ -1,257 +1,257 @@
-{"level":30,"time":"2026-02-11T08:28:55.392Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Listening on 127.0.0.1:58421"}
-{"level":30,"time":"2026-02-11T08:28:55.488Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method newBrowser"}
-{"level":30,"time":"2026-02-11T08:28:55.546Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Adding browser to stack: chromium, version: 145.0.7632.6"}
-{"level":30,"time":"2026-02-11T08:28:55.546Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Adding 0 contexts to browser"}
-{"level":30,"time":"2026-02-11T08:28:55.546Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method newBrowser"}
-{"level":30,"time":"2026-02-11T08:28:55.549Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method newPage"}
-{"level":30,"time":"2026-02-11T08:28:55.549Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@c4d8022f33592aeda78c54caa837a07d\"},\"headless\":true,\"_contextStack\":[],\"id\":\"browser=7bf273a1-fb15-4dc3-a592-af424cc76831\"}"}
-{"level":30,"time":"2026-02-11T08:28:55.554Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Setting default timeout for context context=1c3dd6fd-0ddc-4d83-a7d6-7aa66b03d2c8 to 10000"}
-{"level":30,"time":"2026-02-11T08:28:55.554Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Changed active context: context=1c3dd6fd-0ddc-4d83-a7d6-7aa66b03d2c8"}
-{"level":30,"time":"2026-02-11T08:28:55.583Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Video path: undefined"}
-{"level":30,"time":"2026-02-11T08:28:55.583Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Changed active page"}
-{"level":30,"time":"2026-02-11T08:28:55.685Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method newPage"}
-{"level":30,"time":"2026-02-11T08:28:55.688Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method goTo"}
-{"level":30,"time":"2026-02-11T08:28:55.751Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method goTo"}
-{"level":30,"time":"2026-02-11T08:28:55.753Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getElement"}
-{"level":30,"time":"2026-02-11T08:28:55.753Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"login-email\"] in page."}
-{"level":30,"time":"2026-02-11T08:28:55.784Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getElement"}
-{"level":30,"time":"2026-02-11T08:28:55.787Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getElement"}
-{"level":30,"time":"2026-02-11T08:28:55.787Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"login-password\"] in page."}
-{"level":30,"time":"2026-02-11T08:28:55.789Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getElement"}
-{"level":30,"time":"2026-02-11T08:28:55.795Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:28:55.796Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:28:55.797Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:28:55.798Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:28:55.800Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:28:55.801Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:28:55.803Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:28:55.804Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:28:55.806Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Changed active context: context=1c3dd6fd-0ddc-4d83-a7d6-7aa66b03d2c8"}
-{"level":30,"time":"2026-02-11T08:28:55.806Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Changing current active page: page=e958d23e-6882-4d74-b080-9d854f597470"}
-{"level":30,"time":"2026-02-11T08:28:55.806Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Changed active page"}
-{"level":30,"time":"2026-02-11T08:28:55.808Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method closeContext"}
-{"level":30,"time":"2026-02-11T08:28:55.811Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Removed page=07c968ed-e071-4cb8-963f-b6c902c5cf20 from context=1c3dd6fd-0ddc-4d83-a7d6-7aa66b03d2c8 page stack"}
-{"level":30,"time":"2026-02-11T08:28:55.812Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method closeContext"}
-{"level":30,"time":"2026-02-11T08:28:55.814Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:28:55.814Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:28:55.818Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method switchBrowser"}
-{"level":30,"time":"2026-02-11T08:28:55.818Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method switchBrowser"}
-{"level":30,"time":"2026-02-11T08:28:55.820Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method newPage"}
-{"level":30,"time":"2026-02-11T08:28:55.820Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@c4d8022f33592aeda78c54caa837a07d\"},\"headless\":true,\"_contextStack\":[],\"id\":\"browser=7bf273a1-fb15-4dc3-a592-af424cc76831\"}"}
-{"level":30,"time":"2026-02-11T08:28:55.822Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Setting default timeout for context context=12ecbfd5-cafb-4dcf-9bd4-457668bd4988 to 10000"}
-{"level":30,"time":"2026-02-11T08:28:55.823Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Changed active context: context=12ecbfd5-cafb-4dcf-9bd4-457668bd4988"}
-{"level":30,"time":"2026-02-11T08:28:55.841Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Video path: undefined"}
-{"level":30,"time":"2026-02-11T08:28:55.841Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Changed active page"}
-{"level":30,"time":"2026-02-11T08:28:55.941Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method newPage"}
-{"level":30,"time":"2026-02-11T08:28:55.943Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method goTo"}
-{"level":30,"time":"2026-02-11T08:28:55.992Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method goTo"}
-{"level":30,"time":"2026-02-11T08:28:55.995Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method waitForElementState"}
-{"level":30,"time":"2026-02-11T08:28:55.995Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-email\"] in page."}
-{"level":30,"time":"2026-02-11T08:28:56.023Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method waitForElementState"}
-{"level":30,"time":"2026-02-11T08:28:56.026Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
-{"level":30,"time":"2026-02-11T08:28:56.026Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-email\"] in page."}
-{"level":30,"time":"2026-02-11T08:28:56.037Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
-{"level":30,"time":"2026-02-11T08:28:56.040Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
-{"level":30,"time":"2026-02-11T08:28:56.040Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-password\"] in page."}
-{"level":30,"time":"2026-02-11T08:28:56.048Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
-{"level":30,"time":"2026-02-11T08:28:56.050Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
-{"level":30,"time":"2026-02-11T08:28:56.050Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-confirm\"] in page."}
-{"level":30,"time":"2026-02-11T08:28:56.059Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
-{"level":30,"time":"2026-02-11T08:28:56.062Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method waitForElementState"}
-{"level":30,"time":"2026-02-11T08:28:56.062Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Create account\"] in page."}
-{"level":30,"time":"2026-02-11T08:28:56.089Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method waitForElementState"}
-{"level":30,"time":"2026-02-11T08:28:56.092Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method click"}
-{"level":30,"time":"2026-02-11T08:28:56.092Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Create account\"] in page."}
-{"level":30,"time":"2026-02-11T08:28:56.127Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method click"}
-{"level":30,"time":"2026-02-11T08:28:56.132Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method WaitForPageLoadState"}
-{"level":30,"time":"2026-02-11T08:28:56.132Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"timeout: 10000 state: networkidle"}
-{"level":30,"time":"2026-02-11T08:28:57.149Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method WaitForPageLoadState"}
-{"level":30,"time":"2026-02-11T08:28:57.153Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method click"}
-{"level":30,"time":"2026-02-11T08:28:57.153Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Log out\"] in page."}
-{"level":30,"time":"2026-02-11T08:28:57.176Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method click"}
-{"level":30,"time":"2026-02-11T08:28:57.178Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method WaitForPageLoadState"}
-{"level":30,"time":"2026-02-11T08:28:57.178Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"timeout: 10000 state: networkidle"}
-{"level":30,"time":"2026-02-11T08:28:57.178Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method WaitForPageLoadState"}
-{"level":30,"time":"2026-02-11T08:28:57.180Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getElement"}
-{"level":30,"time":"2026-02-11T08:28:57.180Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=link[name=\"Log in\"] in page."}
-{"level":30,"time":"2026-02-11T08:28:57.186Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getElement"}
-{"level":30,"time":"2026-02-11T08:28:57.188Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getElement"}
-{"level":30,"time":"2026-02-11T08:28:57.188Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=link[name=\"Create account\"] in page."}
-{"level":30,"time":"2026-02-11T08:28:57.193Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getElement"}
-{"level":30,"time":"2026-02-11T08:28:57.195Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method goTo"}
-{"level":30,"time":"2026-02-11T08:28:57.228Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method goTo"}
-{"level":30,"time":"2026-02-11T08:28:57.233Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
-{"level":30,"time":"2026-02-11T08:28:57.233Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"login-email\"] in page."}
-{"level":30,"time":"2026-02-11T08:28:57.251Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
-{"level":30,"time":"2026-02-11T08:28:57.253Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
-{"level":30,"time":"2026-02-11T08:28:57.253Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"login-password\"] in page."}
-{"level":30,"time":"2026-02-11T08:28:57.259Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
-{"level":30,"time":"2026-02-11T08:28:57.261Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method click"}
-{"level":30,"time":"2026-02-11T08:28:57.261Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Log in\"] in page."}
-{"level":30,"time":"2026-02-11T08:28:57.304Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method click"}
-{"level":30,"time":"2026-02-11T08:28:57.308Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method WaitForPageLoadState"}
-{"level":30,"time":"2026-02-11T08:28:57.308Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"timeout: 10000 state: networkidle"}
-{"level":30,"time":"2026-02-11T08:28:58.051Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method WaitForPageLoadState"}
-{"level":30,"time":"2026-02-11T08:28:58.061Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getElement"}
-{"level":30,"time":"2026-02-11T08:28:58.061Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=banner >> text=/login-476060@example.com/ in page."}
-{"level":30,"time":"2026-02-11T08:28:58.068Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getElement"}
-{"level":30,"time":"2026-02-11T08:28:58.072Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getElement"}
-{"level":30,"time":"2026-02-11T08:28:58.072Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Log out\"] in page."}
-{"level":30,"time":"2026-02-11T08:28:58.078Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getElement"}
-{"level":30,"time":"2026-02-11T08:28:58.082Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:28:58.084Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:28:58.086Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:28:58.087Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:28:58.089Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:28:58.090Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:28:58.093Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:28:58.095Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:28:58.098Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Changed active context: context=12ecbfd5-cafb-4dcf-9bd4-457668bd4988"}
-{"level":30,"time":"2026-02-11T08:28:58.098Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Changing current active page: page=9504206e-9cc1-480a-b823-b752f038c7c4"}
-{"level":30,"time":"2026-02-11T08:28:58.098Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Changed active page"}
-{"level":30,"time":"2026-02-11T08:28:58.100Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method closeContext"}
-{"level":30,"time":"2026-02-11T08:28:58.102Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Removed page=9c389b4a-aa02-4562-91f5-8a986b600037 from context=12ecbfd5-cafb-4dcf-9bd4-457668bd4988 page stack"}
-{"level":30,"time":"2026-02-11T08:28:58.104Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method closeContext"}
-{"level":30,"time":"2026-02-11T08:28:58.107Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:28:58.107Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:28:58.111Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method switchBrowser"}
-{"level":30,"time":"2026-02-11T08:28:58.111Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method switchBrowser"}
-{"level":30,"time":"2026-02-11T08:28:58.114Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method newPage"}
-{"level":30,"time":"2026-02-11T08:28:58.114Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@c4d8022f33592aeda78c54caa837a07d\"},\"headless\":true,\"_contextStack\":[],\"id\":\"browser=7bf273a1-fb15-4dc3-a592-af424cc76831\"}"}
-{"level":30,"time":"2026-02-11T08:28:58.117Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Setting default timeout for context context=473991f9-798a-4de6-9d0b-a52ff908add0 to 10000"}
-{"level":30,"time":"2026-02-11T08:28:58.117Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Changed active context: context=473991f9-798a-4de6-9d0b-a52ff908add0"}
-{"level":30,"time":"2026-02-11T08:28:58.144Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Video path: undefined"}
-{"level":30,"time":"2026-02-11T08:28:58.144Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Changed active page"}
-{"level":30,"time":"2026-02-11T08:28:58.246Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method newPage"}
-{"level":30,"time":"2026-02-11T08:28:58.248Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method goTo"}
-{"level":30,"time":"2026-02-11T08:28:58.312Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method goTo"}
-{"level":30,"time":"2026-02-11T08:28:58.315Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method waitForElementState"}
-{"level":30,"time":"2026-02-11T08:28:58.316Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-email\"] in page."}
-{"level":30,"time":"2026-02-11T08:28:58.344Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method waitForElementState"}
-{"level":30,"time":"2026-02-11T08:28:58.346Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
-{"level":30,"time":"2026-02-11T08:28:58.346Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-email\"] in page."}
-{"level":30,"time":"2026-02-11T08:28:58.362Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
-{"level":30,"time":"2026-02-11T08:28:58.364Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
-{"level":30,"time":"2026-02-11T08:28:58.364Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-password\"] in page."}
-{"level":30,"time":"2026-02-11T08:28:58.374Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
-{"level":30,"time":"2026-02-11T08:28:58.377Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
-{"level":30,"time":"2026-02-11T08:28:58.377Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-confirm\"] in page."}
-{"level":30,"time":"2026-02-11T08:28:58.387Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
-{"level":30,"time":"2026-02-11T08:28:58.390Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method waitForElementState"}
-{"level":30,"time":"2026-02-11T08:28:58.390Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Create account\"] in page."}
-{"level":30,"time":"2026-02-11T08:28:58.420Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method waitForElementState"}
-{"level":30,"time":"2026-02-11T08:28:58.424Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method click"}
-{"level":30,"time":"2026-02-11T08:28:58.424Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Create account\"] in page."}
-{"level":30,"time":"2026-02-11T08:28:58.473Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method click"}
-{"level":30,"time":"2026-02-11T08:28:58.476Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method WaitForPageLoadState"}
-{"level":30,"time":"2026-02-11T08:28:58.476Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"timeout: 10000 state: networkidle"}
-{"level":30,"time":"2026-02-11T08:28:59.510Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method WaitForPageLoadState"}
-{"level":30,"time":"2026-02-11T08:28:59.514Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method click"}
-{"level":30,"time":"2026-02-11T08:28:59.514Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Log out\"] in page."}
-{"level":30,"time":"2026-02-11T08:28:59.546Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method click"}
-{"level":30,"time":"2026-02-11T08:28:59.548Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method WaitForPageLoadState"}
-{"level":30,"time":"2026-02-11T08:28:59.548Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"timeout: 10000 state: networkidle"}
-{"level":30,"time":"2026-02-11T08:28:59.548Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method WaitForPageLoadState"}
-{"level":30,"time":"2026-02-11T08:28:59.549Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method goTo"}
-{"level":30,"time":"2026-02-11T08:28:59.580Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method goTo"}
-{"level":30,"time":"2026-02-11T08:28:59.584Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
-{"level":30,"time":"2026-02-11T08:28:59.584Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"login-email\"] in page."}
-{"level":30,"time":"2026-02-11T08:28:59.600Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
-{"level":30,"time":"2026-02-11T08:28:59.602Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
-{"level":30,"time":"2026-02-11T08:28:59.602Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"login-password\"] in page."}
-{"level":30,"time":"2026-02-11T08:28:59.607Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
-{"level":30,"time":"2026-02-11T08:28:59.609Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method click"}
-{"level":30,"time":"2026-02-11T08:28:59.609Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Log in\"] in page."}
-{"level":30,"time":"2026-02-11T08:28:59.642Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method click"}
-{"level":30,"time":"2026-02-11T08:28:59.644Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method WaitForPageLoadState"}
-{"level":30,"time":"2026-02-11T08:28:59.644Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"timeout: 10000 state: networkidle"}
-{"level":30,"time":"2026-02-11T08:29:00.372Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method WaitForPageLoadState"}
-{"level":30,"time":"2026-02-11T08:29:00.374Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getText"}
-{"level":30,"time":"2026-02-11T08:29:00.374Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=alert in page."}
-{"level":30,"time":"2026-02-11T08:29:00.389Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Retrieved text for element role=alert containing Invalid email or password"}
-{"level":30,"time":"2026-02-11T08:29:00.389Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getText"}
-{"level":30,"time":"2026-02-11T08:29:00.392Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:00.392Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:00.393Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:00.394Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:00.395Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:00.395Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:00.397Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:00.397Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:00.398Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Changed active context: context=473991f9-798a-4de6-9d0b-a52ff908add0"}
-{"level":30,"time":"2026-02-11T08:29:00.398Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Changing current active page: page=aad01519-31e1-44c0-9847-fe6d51b7d920"}
-{"level":30,"time":"2026-02-11T08:29:00.398Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Changed active page"}
-{"level":30,"time":"2026-02-11T08:29:00.399Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method closeContext"}
-{"level":30,"time":"2026-02-11T08:29:00.401Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Removed page=07b76a6b-ee03-4662-a98e-e13ef72d84a6 from context=473991f9-798a-4de6-9d0b-a52ff908add0 page stack"}
-{"level":30,"time":"2026-02-11T08:29:00.402Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method closeContext"}
-{"level":30,"time":"2026-02-11T08:29:00.404Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:00.404Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:00.406Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method switchBrowser"}
-{"level":30,"time":"2026-02-11T08:29:00.406Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method switchBrowser"}
-{"level":30,"time":"2026-02-11T08:29:00.408Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method newPage"}
-{"level":30,"time":"2026-02-11T08:29:00.408Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@c4d8022f33592aeda78c54caa837a07d\"},\"headless\":true,\"_contextStack\":[],\"id\":\"browser=7bf273a1-fb15-4dc3-a592-af424cc76831\"}"}
-{"level":30,"time":"2026-02-11T08:29:00.409Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Setting default timeout for context context=532e6c29-3087-4c09-9ea1-c1769762b3a1 to 10000"}
-{"level":30,"time":"2026-02-11T08:29:00.409Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Changed active context: context=532e6c29-3087-4c09-9ea1-c1769762b3a1"}
-{"level":30,"time":"2026-02-11T08:29:00.425Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Video path: undefined"}
-{"level":30,"time":"2026-02-11T08:29:00.425Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Changed active page"}
-{"level":30,"time":"2026-02-11T08:29:00.506Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method newPage"}
-{"level":30,"time":"2026-02-11T08:29:00.508Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method goTo"}
-{"level":30,"time":"2026-02-11T08:29:00.562Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method goTo"}
-{"level":30,"time":"2026-02-11T08:29:00.564Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method waitForElementState"}
-{"level":30,"time":"2026-02-11T08:29:00.564Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-email\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:00.593Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method waitForElementState"}
-{"level":30,"time":"2026-02-11T08:29:00.596Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:00.596Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-email\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:00.607Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:00.610Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:00.610Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-password\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:00.616Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:00.618Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:00.618Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-confirm\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:00.629Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:00.631Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method waitForElementState"}
-{"level":30,"time":"2026-02-11T08:29:00.631Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Create account\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:00.661Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method waitForElementState"}
-{"level":30,"time":"2026-02-11T08:29:00.663Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method click"}
-{"level":30,"time":"2026-02-11T08:29:00.664Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Create account\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:00.688Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method click"}
-{"level":30,"time":"2026-02-11T08:29:00.692Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method WaitForPageLoadState"}
-{"level":30,"time":"2026-02-11T08:29:00.692Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"timeout: 10000 state: networkidle"}
-{"level":30,"time":"2026-02-11T08:29:01.712Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method WaitForPageLoadState"}
-{"level":30,"time":"2026-02-11T08:29:01.717Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getElement"}
-{"level":30,"time":"2026-02-11T08:29:01.717Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=banner >> text=/logout-464323@example.com/ in page."}
-{"level":30,"time":"2026-02-11T08:29:01.725Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getElement"}
-{"level":30,"time":"2026-02-11T08:29:01.730Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getElement"}
-{"level":30,"time":"2026-02-11T08:29:01.730Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Log out\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:01.735Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getElement"}
-{"level":30,"time":"2026-02-11T08:29:01.739Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method click"}
-{"level":30,"time":"2026-02-11T08:29:01.739Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Log out\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:01.764Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method click"}
-{"level":30,"time":"2026-02-11T08:29:01.768Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method WaitForPageLoadState"}
-{"level":30,"time":"2026-02-11T08:29:01.768Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"timeout: 10000 state: networkidle"}
-{"level":30,"time":"2026-02-11T08:29:01.768Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method WaitForPageLoadState"}
-{"level":30,"time":"2026-02-11T08:29:01.772Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getElement"}
-{"level":30,"time":"2026-02-11T08:29:01.772Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=link[name=\"Log in\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:01.780Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getElement"}
-{"level":30,"time":"2026-02-11T08:29:01.783Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getElement"}
-{"level":30,"time":"2026-02-11T08:29:01.783Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=link[name=\"Create account\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:01.789Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getElement"}
-{"level":30,"time":"2026-02-11T08:29:01.798Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:01.799Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:01.801Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:01.802Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:01.804Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:01.805Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:01.807Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:01.808Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:01.810Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Changed active context: context=532e6c29-3087-4c09-9ea1-c1769762b3a1"}
-{"level":30,"time":"2026-02-11T08:29:01.810Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Changing current active page: page=c0c76c57-6855-4ae8-9623-520125a31cad"}
-{"level":30,"time":"2026-02-11T08:29:01.810Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Changed active page"}
-{"level":30,"time":"2026-02-11T08:29:01.812Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method closeContext"}
-{"level":30,"time":"2026-02-11T08:29:01.814Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Removed page=4fc03bac-f3b1-4429-9db2-df6a5bf684a9 from context=532e6c29-3087-4c09-9ea1-c1769762b3a1 page stack"}
-{"level":30,"time":"2026-02-11T08:29:01.816Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method closeContext"}
-{"level":30,"time":"2026-02-11T08:29:01.820Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method closeBrowser"}
-{"level":30,"time":"2026-02-11T08:29:01.843Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method closeBrowser"}
+{"level":30,"time":"2026-02-11T09:01:20.846Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Listening on 127.0.0.1:34451"}
+{"level":30,"time":"2026-02-11T09:01:20.913Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2026-02-11T09:01:21.007Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Adding browser to stack: chromium, version: 145.0.7632.6"}
+{"level":30,"time":"2026-02-11T09:01:21.008Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2026-02-11T09:01:21.008Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method newBrowser"}
+{"level":30,"time":"2026-02-11T09:01:21.012Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method newPage"}
+{"level":30,"time":"2026-02-11T09:01:21.012Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@3e49fdfeb861cfb5a0c7bc6b32d8e5bb\"},\"headless\":true,\"_contextStack\":[],\"id\":\"browser=43a52002-2e99-4b81-af0e-60495583921b\"}"}
+{"level":30,"time":"2026-02-11T09:01:21.020Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Setting default timeout for context context=6fce5834-564a-4602-9f04-dbc891b15ffc to 10000"}
+{"level":30,"time":"2026-02-11T09:01:21.020Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Changed active context: context=6fce5834-564a-4602-9f04-dbc891b15ffc"}
+{"level":30,"time":"2026-02-11T09:01:21.058Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Video path: undefined"}
+{"level":30,"time":"2026-02-11T09:01:21.058Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Changed active page"}
+{"level":30,"time":"2026-02-11T09:01:21.202Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method newPage"}
+{"level":30,"time":"2026-02-11T09:01:21.205Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method goTo"}
+{"level":30,"time":"2026-02-11T09:01:21.344Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method goTo"}
+{"level":30,"time":"2026-02-11T09:01:21.350Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getElement"}
+{"level":30,"time":"2026-02-11T09:01:21.350Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"login-email\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:21.392Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getElement"}
+{"level":30,"time":"2026-02-11T09:01:21.395Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getElement"}
+{"level":30,"time":"2026-02-11T09:01:21.395Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"login-password\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:21.398Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getElement"}
+{"level":30,"time":"2026-02-11T09:01:21.413Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:21.416Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:21.418Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:21.420Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:21.421Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:21.422Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:21.425Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:21.425Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:21.427Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Changed active context: context=6fce5834-564a-4602-9f04-dbc891b15ffc"}
+{"level":30,"time":"2026-02-11T09:01:21.427Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Changing current active page: page=50626e81-5b05-43e6-bcb0-e757cd0e9d8f"}
+{"level":30,"time":"2026-02-11T09:01:21.427Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Changed active page"}
+{"level":30,"time":"2026-02-11T09:01:21.428Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method closeContext"}
+{"level":30,"time":"2026-02-11T09:01:21.431Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Removed page=772c77fb-c4ca-4f1e-a16a-67a10b7c8898 from context=6fce5834-564a-4602-9f04-dbc891b15ffc page stack"}
+{"level":30,"time":"2026-02-11T09:01:21.433Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method closeContext"}
+{"level":30,"time":"2026-02-11T09:01:21.437Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:21.437Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:21.443Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2026-02-11T09:01:21.443Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2026-02-11T09:01:21.445Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method newPage"}
+{"level":30,"time":"2026-02-11T09:01:21.445Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@3e49fdfeb861cfb5a0c7bc6b32d8e5bb\"},\"headless\":true,\"_contextStack\":[],\"id\":\"browser=43a52002-2e99-4b81-af0e-60495583921b\"}"}
+{"level":30,"time":"2026-02-11T09:01:21.447Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Setting default timeout for context context=a701dc6a-b6e6-4c34-8e7e-c07d60f0f0bc to 10000"}
+{"level":30,"time":"2026-02-11T09:01:21.447Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Changed active context: context=a701dc6a-b6e6-4c34-8e7e-c07d60f0f0bc"}
+{"level":30,"time":"2026-02-11T09:01:21.466Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Video path: undefined"}
+{"level":30,"time":"2026-02-11T09:01:21.467Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Changed active page"}
+{"level":30,"time":"2026-02-11T09:01:21.593Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method newPage"}
+{"level":30,"time":"2026-02-11T09:01:21.597Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method goTo"}
+{"level":30,"time":"2026-02-11T09:01:21.650Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method goTo"}
+{"level":30,"time":"2026-02-11T09:01:21.653Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-02-11T09:01:21.653Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-email\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:21.689Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-02-11T09:01:21.692Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:21.692Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-email\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:21.703Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:21.706Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:21.706Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-password\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:21.714Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:21.717Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:21.717Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-confirm\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:21.726Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:21.730Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-02-11T09:01:21.730Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Create account\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:21.749Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-02-11T09:01:21.752Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method click"}
+{"level":30,"time":"2026-02-11T09:01:21.752Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Create account\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:21.772Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method click"}
+{"level":30,"time":"2026-02-11T09:01:21.777Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-02-11T09:01:21.777Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"timeout: 10000 state: networkidle"}
+{"level":30,"time":"2026-02-11T09:01:22.833Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-02-11T09:01:22.837Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method click"}
+{"level":30,"time":"2026-02-11T09:01:22.837Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Log out\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:22.864Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method click"}
+{"level":30,"time":"2026-02-11T09:01:22.867Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-02-11T09:01:22.867Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"timeout: 10000 state: networkidle"}
+{"level":30,"time":"2026-02-11T09:01:22.867Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-02-11T09:01:22.870Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getElement"}
+{"level":30,"time":"2026-02-11T09:01:22.870Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=link[name=\"Log in\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:22.884Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getElement"}
+{"level":30,"time":"2026-02-11T09:01:22.887Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getElement"}
+{"level":30,"time":"2026-02-11T09:01:22.887Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=link[name=\"Create account\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:22.894Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getElement"}
+{"level":30,"time":"2026-02-11T09:01:22.896Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method goTo"}
+{"level":30,"time":"2026-02-11T09:01:22.929Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method goTo"}
+{"level":30,"time":"2026-02-11T09:01:22.933Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:22.933Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"login-email\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:22.966Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:22.968Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:22.968Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"login-password\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:22.975Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:22.978Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method click"}
+{"level":30,"time":"2026-02-11T09:01:22.978Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Log in\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:23.020Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method click"}
+{"level":30,"time":"2026-02-11T09:01:23.023Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-02-11T09:01:23.023Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"timeout: 10000 state: networkidle"}
+{"level":30,"time":"2026-02-11T09:01:23.770Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-02-11T09:01:23.785Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getElement"}
+{"level":30,"time":"2026-02-11T09:01:23.785Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=banner >> text=/login-777916@example.com/ in page."}
+{"level":30,"time":"2026-02-11T09:01:23.793Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getElement"}
+{"level":30,"time":"2026-02-11T09:01:23.798Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getElement"}
+{"level":30,"time":"2026-02-11T09:01:23.798Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Log out\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:23.804Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getElement"}
+{"level":30,"time":"2026-02-11T09:01:23.808Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:23.810Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:23.814Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:23.817Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:23.821Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:23.823Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:23.828Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:23.830Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:23.833Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Changed active context: context=a701dc6a-b6e6-4c34-8e7e-c07d60f0f0bc"}
+{"level":30,"time":"2026-02-11T09:01:23.833Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Changing current active page: page=031a3a46-3881-4c47-a6d3-d92418557548"}
+{"level":30,"time":"2026-02-11T09:01:23.833Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Changed active page"}
+{"level":30,"time":"2026-02-11T09:01:23.835Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method closeContext"}
+{"level":30,"time":"2026-02-11T09:01:23.838Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Removed page=7ae872b3-0761-4d02-9376-f6d20a320587 from context=a701dc6a-b6e6-4c34-8e7e-c07d60f0f0bc page stack"}
+{"level":30,"time":"2026-02-11T09:01:23.841Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method closeContext"}
+{"level":30,"time":"2026-02-11T09:01:23.845Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:23.845Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:23.854Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2026-02-11T09:01:23.854Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2026-02-11T09:01:23.860Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method newPage"}
+{"level":30,"time":"2026-02-11T09:01:23.860Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@3e49fdfeb861cfb5a0c7bc6b32d8e5bb\"},\"headless\":true,\"_contextStack\":[],\"id\":\"browser=43a52002-2e99-4b81-af0e-60495583921b\"}"}
+{"level":30,"time":"2026-02-11T09:01:23.866Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Setting default timeout for context context=0701500a-931f-4fff-a58d-b3e57c5995fe to 10000"}
+{"level":30,"time":"2026-02-11T09:01:23.866Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Changed active context: context=0701500a-931f-4fff-a58d-b3e57c5995fe"}
+{"level":30,"time":"2026-02-11T09:01:23.891Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Video path: undefined"}
+{"level":30,"time":"2026-02-11T09:01:23.891Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Changed active page"}
+{"level":30,"time":"2026-02-11T09:01:24.005Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method newPage"}
+{"level":30,"time":"2026-02-11T09:01:24.007Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method goTo"}
+{"level":30,"time":"2026-02-11T09:01:24.060Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method goTo"}
+{"level":30,"time":"2026-02-11T09:01:24.063Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-02-11T09:01:24.063Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-email\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:24.100Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-02-11T09:01:24.102Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:24.102Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-email\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:24.111Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:24.114Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:24.114Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-password\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:24.122Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:24.124Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:24.124Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-confirm\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:24.131Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:24.133Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-02-11T09:01:24.133Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Create account\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:24.154Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-02-11T09:01:24.157Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method click"}
+{"level":30,"time":"2026-02-11T09:01:24.157Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Create account\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:24.202Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method click"}
+{"level":30,"time":"2026-02-11T09:01:24.207Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-02-11T09:01:24.207Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"timeout: 10000 state: networkidle"}
+{"level":30,"time":"2026-02-11T09:01:25.254Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-02-11T09:01:25.259Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method click"}
+{"level":30,"time":"2026-02-11T09:01:25.259Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Log out\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:25.291Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method click"}
+{"level":30,"time":"2026-02-11T09:01:25.297Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-02-11T09:01:25.297Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"timeout: 10000 state: networkidle"}
+{"level":30,"time":"2026-02-11T09:01:25.298Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-02-11T09:01:25.306Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method goTo"}
+{"level":30,"time":"2026-02-11T09:01:25.374Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method goTo"}
+{"level":30,"time":"2026-02-11T09:01:25.377Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:25.377Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"login-email\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:25.401Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:25.403Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:25.403Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"login-password\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:25.409Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:25.413Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method click"}
+{"level":30,"time":"2026-02-11T09:01:25.413Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Log in\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:25.450Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method click"}
+{"level":30,"time":"2026-02-11T09:01:25.452Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-02-11T09:01:25.453Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"timeout: 10000 state: networkidle"}
+{"level":30,"time":"2026-02-11T09:01:26.185Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-02-11T09:01:26.190Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getText"}
+{"level":30,"time":"2026-02-11T09:01:26.191Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=alert in page."}
+{"level":30,"time":"2026-02-11T09:01:26.219Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Retrieved text for element role=alert containing Invalid email or password"}
+{"level":30,"time":"2026-02-11T09:01:26.219Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getText"}
+{"level":30,"time":"2026-02-11T09:01:26.223Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:26.224Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:26.225Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:26.226Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:26.227Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:26.228Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:26.230Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:26.230Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:26.232Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Changed active context: context=0701500a-931f-4fff-a58d-b3e57c5995fe"}
+{"level":30,"time":"2026-02-11T09:01:26.232Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Changing current active page: page=255d4da9-a16d-4560-9813-5e880cba6bc3"}
+{"level":30,"time":"2026-02-11T09:01:26.232Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Changed active page"}
+{"level":30,"time":"2026-02-11T09:01:26.233Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method closeContext"}
+{"level":30,"time":"2026-02-11T09:01:26.235Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Removed page=4979c87b-dc17-415f-a609-2f01370b7317 from context=0701500a-931f-4fff-a58d-b3e57c5995fe page stack"}
+{"level":30,"time":"2026-02-11T09:01:26.236Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method closeContext"}
+{"level":30,"time":"2026-02-11T09:01:26.243Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:26.244Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:26.248Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2026-02-11T09:01:26.248Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2026-02-11T09:01:26.252Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method newPage"}
+{"level":30,"time":"2026-02-11T09:01:26.252Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@3e49fdfeb861cfb5a0c7bc6b32d8e5bb\"},\"headless\":true,\"_contextStack\":[],\"id\":\"browser=43a52002-2e99-4b81-af0e-60495583921b\"}"}
+{"level":30,"time":"2026-02-11T09:01:26.257Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Setting default timeout for context context=8e4d1dca-5670-40f0-a902-ecb7474edb41 to 10000"}
+{"level":30,"time":"2026-02-11T09:01:26.257Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Changed active context: context=8e4d1dca-5670-40f0-a902-ecb7474edb41"}
+{"level":30,"time":"2026-02-11T09:01:26.288Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Video path: undefined"}
+{"level":30,"time":"2026-02-11T09:01:26.288Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Changed active page"}
+{"level":30,"time":"2026-02-11T09:01:26.423Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method newPage"}
+{"level":30,"time":"2026-02-11T09:01:26.426Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method goTo"}
+{"level":30,"time":"2026-02-11T09:01:26.501Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method goTo"}
+{"level":30,"time":"2026-02-11T09:01:26.505Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-02-11T09:01:26.505Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-email\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:26.562Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-02-11T09:01:26.565Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:26.565Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-email\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:26.575Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:26.578Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:26.579Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-password\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:26.585Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:26.588Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:26.588Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-confirm\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:26.595Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:26.598Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-02-11T09:01:26.598Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Create account\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:26.628Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-02-11T09:01:26.631Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method click"}
+{"level":30,"time":"2026-02-11T09:01:26.631Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Create account\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:26.659Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method click"}
+{"level":30,"time":"2026-02-11T09:01:26.664Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-02-11T09:01:26.664Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"timeout: 10000 state: networkidle"}
+{"level":30,"time":"2026-02-11T09:01:27.698Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-02-11T09:01:27.707Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getElement"}
+{"level":30,"time":"2026-02-11T09:01:27.707Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=banner >> text=/logout-744536@example.com/ in page."}
+{"level":30,"time":"2026-02-11T09:01:27.745Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getElement"}
+{"level":30,"time":"2026-02-11T09:01:27.752Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getElement"}
+{"level":30,"time":"2026-02-11T09:01:27.752Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Log out\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:27.761Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getElement"}
+{"level":30,"time":"2026-02-11T09:01:27.767Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method click"}
+{"level":30,"time":"2026-02-11T09:01:27.768Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Log out\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:27.799Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method click"}
+{"level":30,"time":"2026-02-11T09:01:27.802Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-02-11T09:01:27.802Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"timeout: 10000 state: networkidle"}
+{"level":30,"time":"2026-02-11T09:01:27.803Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-02-11T09:01:27.807Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getElement"}
+{"level":30,"time":"2026-02-11T09:01:27.807Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=link[name=\"Log in\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:27.822Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getElement"}
+{"level":30,"time":"2026-02-11T09:01:27.825Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getElement"}
+{"level":30,"time":"2026-02-11T09:01:27.825Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=link[name=\"Create account\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:27.831Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getElement"}
+{"level":30,"time":"2026-02-11T09:01:27.837Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:27.838Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:27.841Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:27.843Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:27.845Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:27.846Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:27.850Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:27.852Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:27.856Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Changed active context: context=8e4d1dca-5670-40f0-a902-ecb7474edb41"}
+{"level":30,"time":"2026-02-11T09:01:27.856Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Changing current active page: page=dabb185f-5f7e-4df0-8864-b310506c3710"}
+{"level":30,"time":"2026-02-11T09:01:27.856Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Changed active page"}
+{"level":30,"time":"2026-02-11T09:01:27.858Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method closeContext"}
+{"level":30,"time":"2026-02-11T09:01:27.861Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Removed page=9b1b776f-fb02-4a8b-87f9-efce809ab056 from context=8e4d1dca-5670-40f0-a902-ecb7474edb41 page stack"}
+{"level":30,"time":"2026-02-11T09:01:27.862Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method closeContext"}
+{"level":30,"time":"2026-02-11T09:01:27.865Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2026-02-11T09:01:27.881Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method closeBrowser"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (/home/florence/Code/toolMe/robot/.venv/lib/python3.13/site-packages/Browser/wrapper/index.js:12672:15)
@@ -265,162 +265,162 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
 =============================================================
-{"level":30,"time":"2026-02-11T08:29:01.851Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:01.851Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:01.856Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:01.857Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:01.858Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:01.859Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:01.862Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method newBrowser"}
-{"level":30,"time":"2026-02-11T08:29:01.923Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Adding browser to stack: chromium, version: 145.0.7632.6"}
-{"level":30,"time":"2026-02-11T08:29:01.923Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Adding 0 contexts to browser"}
-{"level":30,"time":"2026-02-11T08:29:01.923Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method newBrowser"}
-{"level":30,"time":"2026-02-11T08:29:01.926Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method newPage"}
-{"level":30,"time":"2026-02-11T08:29:01.926Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@e12c2d639566800f21e48e811157f9e5\"},\"headless\":true,\"_contextStack\":[],\"id\":\"browser=080803ea-28bd-4da6-8868-56ebb3d8a100\"}"}
-{"level":30,"time":"2026-02-11T08:29:01.928Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Setting default timeout for context context=69734c87-0ffb-48be-9a07-614dde1c932b to 10000"}
-{"level":30,"time":"2026-02-11T08:29:01.928Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Changed active context: context=69734c87-0ffb-48be-9a07-614dde1c932b"}
-{"level":30,"time":"2026-02-11T08:29:01.953Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Video path: undefined"}
-{"level":30,"time":"2026-02-11T08:29:01.953Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Changed active page"}
-{"level":30,"time":"2026-02-11T08:29:02.051Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method newPage"}
-{"level":30,"time":"2026-02-11T08:29:02.054Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method goTo"}
-{"level":30,"time":"2026-02-11T08:29:02.123Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method goTo"}
-{"level":30,"time":"2026-02-11T08:29:02.126Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method WaitForPageLoadState"}
-{"level":30,"time":"2026-02-11T08:29:02.126Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"timeout: 10000 state: networkidle"}
-{"level":30,"time":"2026-02-11T08:29:02.683Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method WaitForPageLoadState"}
-{"level":30,"time":"2026-02-11T08:29:02.694Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:02.698Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:02.701Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:02.703Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:02.706Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:02.707Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:02.712Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:02.713Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:02.715Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Changed active context: context=69734c87-0ffb-48be-9a07-614dde1c932b"}
-{"level":30,"time":"2026-02-11T08:29:02.715Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Changing current active page: page=117c2e91-436e-45f7-ba85-60475215410a"}
-{"level":30,"time":"2026-02-11T08:29:02.715Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Changed active page"}
-{"level":30,"time":"2026-02-11T08:29:02.717Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method closeContext"}
-{"level":30,"time":"2026-02-11T08:29:02.720Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Removed page=02cfed22-85b1-483e-8516-9875cb2f347f from context=69734c87-0ffb-48be-9a07-614dde1c932b page stack"}
-{"level":30,"time":"2026-02-11T08:29:02.721Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method closeContext"}
-{"level":30,"time":"2026-02-11T08:29:02.724Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:02.724Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:02.728Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method switchBrowser"}
-{"level":30,"time":"2026-02-11T08:29:02.728Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method switchBrowser"}
-{"level":30,"time":"2026-02-11T08:29:02.731Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method newPage"}
-{"level":30,"time":"2026-02-11T08:29:02.731Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@e12c2d639566800f21e48e811157f9e5\"},\"headless\":true,\"_contextStack\":[],\"id\":\"browser=080803ea-28bd-4da6-8868-56ebb3d8a100\"}"}
-{"level":30,"time":"2026-02-11T08:29:02.734Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Setting default timeout for context context=df755c1c-2779-436e-8a81-aefd4d4bd340 to 10000"}
-{"level":30,"time":"2026-02-11T08:29:02.734Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Changed active context: context=df755c1c-2779-436e-8a81-aefd4d4bd340"}
-{"level":30,"time":"2026-02-11T08:29:02.750Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Video path: undefined"}
-{"level":30,"time":"2026-02-11T08:29:02.750Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Changed active page"}
-{"level":30,"time":"2026-02-11T08:29:02.833Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method newPage"}
-{"level":30,"time":"2026-02-11T08:29:02.835Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method goTo"}
-{"level":30,"time":"2026-02-11T08:29:02.888Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method goTo"}
-{"level":30,"time":"2026-02-11T08:29:02.890Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method WaitForPageLoadState"}
-{"level":30,"time":"2026-02-11T08:29:02.890Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"timeout: 10000 state: networkidle"}
-{"level":30,"time":"2026-02-11T08:29:03.461Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method WaitForPageLoadState"}
-{"level":30,"time":"2026-02-11T08:29:03.474Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method goTo"}
-{"level":30,"time":"2026-02-11T08:29:03.527Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method goTo"}
-{"level":30,"time":"2026-02-11T08:29:03.532Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method waitForElementState"}
-{"level":30,"time":"2026-02-11T08:29:03.532Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-email\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:03.551Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method waitForElementState"}
-{"level":30,"time":"2026-02-11T08:29:03.553Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:03.553Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-email\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:03.564Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:03.568Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:03.568Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-password\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:03.575Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:03.578Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:03.578Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-confirm\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:03.585Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:03.588Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method waitForElementState"}
-{"level":30,"time":"2026-02-11T08:29:03.588Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Create account\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:03.607Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method waitForElementState"}
-{"level":30,"time":"2026-02-11T08:29:03.609Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method click"}
-{"level":30,"time":"2026-02-11T08:29:03.609Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Create account\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:03.631Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method click"}
-{"level":30,"time":"2026-02-11T08:29:03.633Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method WaitForPageLoadState"}
-{"level":30,"time":"2026-02-11T08:29:03.633Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"timeout: 10000 state: networkidle"}
-{"level":30,"time":"2026-02-11T08:29:04.658Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method WaitForPageLoadState"}
-{"level":30,"time":"2026-02-11T08:29:04.666Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method click"}
-{"level":30,"time":"2026-02-11T08:29:04.666Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Log out\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:04.702Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method click"}
-{"level":30,"time":"2026-02-11T08:29:04.707Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method goTo"}
-{"level":30,"time":"2026-02-11T08:29:04.761Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method goTo"}
-{"level":30,"time":"2026-02-11T08:29:04.763Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method WaitForPageLoadState"}
-{"level":30,"time":"2026-02-11T08:29:04.763Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"timeout: 10000 state: networkidle"}
-{"level":30,"time":"2026-02-11T08:29:05.256Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method WaitForPageLoadState"}
-{"level":30,"time":"2026-02-11T08:29:05.262Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:05.263Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"login-email\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:05.289Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:05.292Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:05.292Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"login-password\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:05.300Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:05.302Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method click"}
-{"level":30,"time":"2026-02-11T08:29:05.302Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Log in\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:05.352Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method click"}
-{"level":30,"time":"2026-02-11T08:29:05.357Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method WaitForPageLoadState"}
-{"level":30,"time":"2026-02-11T08:29:05.357Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"timeout: 10000 state: networkidle"}
-{"level":30,"time":"2026-02-11T08:29:05.357Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method WaitForPageLoadState"}
-{"level":30,"time":"2026-02-11T08:29:07.370Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getElement"}
-{"level":30,"time":"2026-02-11T08:29:07.370Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=banner >> text=/publish-221120@example.com/ in page."}
-{"level":30,"time":"2026-02-11T08:29:07.375Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getElement"}
-{"level":30,"time":"2026-02-11T08:29:07.378Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getElement"}
-{"level":30,"time":"2026-02-11T08:29:07.378Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Log out\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:07.382Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getElement"}
-{"level":30,"time":"2026-02-11T08:29:07.386Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:07.388Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:07.390Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:07.392Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:07.394Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:07.395Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:07.399Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:07.400Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:07.402Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Changed active context: context=df755c1c-2779-436e-8a81-aefd4d4bd340"}
-{"level":30,"time":"2026-02-11T08:29:07.402Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Changing current active page: page=be381228-570f-448f-8256-34fa92d842bd"}
-{"level":30,"time":"2026-02-11T08:29:07.402Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Changed active page"}
-{"level":30,"time":"2026-02-11T08:29:07.404Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method closeContext"}
-{"level":30,"time":"2026-02-11T08:29:07.405Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Removed page=bf954339-d59b-441b-8a4f-3c2837171b2f from context=df755c1c-2779-436e-8a81-aefd4d4bd340 page stack"}
-{"level":30,"time":"2026-02-11T08:29:07.406Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method closeContext"}
-{"level":30,"time":"2026-02-11T08:29:07.409Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:07.409Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:07.411Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method switchBrowser"}
-{"level":30,"time":"2026-02-11T08:29:07.411Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method switchBrowser"}
-{"level":30,"time":"2026-02-11T08:29:07.415Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method newPage"}
-{"level":30,"time":"2026-02-11T08:29:07.415Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@e12c2d639566800f21e48e811157f9e5\"},\"headless\":true,\"_contextStack\":[],\"id\":\"browser=080803ea-28bd-4da6-8868-56ebb3d8a100\"}"}
-{"level":30,"time":"2026-02-11T08:29:07.418Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Setting default timeout for context context=6f5b53c8-e7f8-40be-ad62-6c6abef9902c to 10000"}
-{"level":30,"time":"2026-02-11T08:29:07.418Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Changed active context: context=6f5b53c8-e7f8-40be-ad62-6c6abef9902c"}
-{"level":30,"time":"2026-02-11T08:29:07.443Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Video path: undefined"}
-{"level":30,"time":"2026-02-11T08:29:07.443Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Changed active page"}
-{"level":30,"time":"2026-02-11T08:29:07.580Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method newPage"}
-{"level":30,"time":"2026-02-11T08:29:07.582Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method goTo"}
-{"level":30,"time":"2026-02-11T08:29:07.641Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method goTo"}
-{"level":30,"time":"2026-02-11T08:29:07.643Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method WaitForPageLoadState"}
-{"level":30,"time":"2026-02-11T08:29:07.643Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"timeout: 10000 state: networkidle"}
-{"level":30,"time":"2026-02-11T08:29:08.211Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method WaitForPageLoadState"}
-{"level":30,"time":"2026-02-11T08:29:08.222Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getElement"}
-{"level":30,"time":"2026-02-11T08:29:08.222Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=banner >> text=/ToolMe/ in page."}
-{"level":30,"time":"2026-02-11T08:29:08.254Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getElement"}
-{"level":30,"time":"2026-02-11T08:29:08.257Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getElement"}
-{"level":30,"time":"2026-02-11T08:29:08.257Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=link[name=\"Log in\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:08.262Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getElement"}
-{"level":30,"time":"2026-02-11T08:29:08.264Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getElement"}
-{"level":30,"time":"2026-02-11T08:29:08.264Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=link[name=\"Create account\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:08.268Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getElement"}
-{"level":30,"time":"2026-02-11T08:29:08.271Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:08.272Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:08.274Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:08.275Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:08.278Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:08.279Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:08.282Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:08.284Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:08.285Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Changed active context: context=6f5b53c8-e7f8-40be-ad62-6c6abef9902c"}
-{"level":30,"time":"2026-02-11T08:29:08.285Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Changing current active page: page=8b078711-4923-4b7b-8f9d-6e29472d047e"}
-{"level":30,"time":"2026-02-11T08:29:08.285Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Changed active page"}
-{"level":30,"time":"2026-02-11T08:29:08.287Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method closeContext"}
-{"level":30,"time":"2026-02-11T08:29:08.288Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Removed page=f94229e5-7f8f-4bc7-a578-a147f7e01cd9 from context=6f5b53c8-e7f8-40be-ad62-6c6abef9902c page stack"}
-{"level":30,"time":"2026-02-11T08:29:08.289Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method closeContext"}
-{"level":30,"time":"2026-02-11T08:29:08.293Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method closeBrowser"}
-{"level":30,"time":"2026-02-11T08:29:08.312Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method closeBrowser"}
+{"level":30,"time":"2026-02-11T09:01:27.886Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:27.886Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:27.890Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:27.890Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:27.891Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:27.891Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:27.893Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2026-02-11T09:01:27.933Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Adding browser to stack: chromium, version: 145.0.7632.6"}
+{"level":30,"time":"2026-02-11T09:01:27.933Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2026-02-11T09:01:27.933Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method newBrowser"}
+{"level":30,"time":"2026-02-11T09:01:27.936Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method newPage"}
+{"level":30,"time":"2026-02-11T09:01:27.936Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@2911d2d1273cd3c4534b661d9c2cae90\"},\"headless\":true,\"_contextStack\":[],\"id\":\"browser=50987a6a-c74b-4f91-b7bd-94a73cabcd6c\"}"}
+{"level":30,"time":"2026-02-11T09:01:27.938Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Setting default timeout for context context=0d8d3eca-20bd-4667-ad25-ec3a60371ba2 to 10000"}
+{"level":30,"time":"2026-02-11T09:01:27.938Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Changed active context: context=0d8d3eca-20bd-4667-ad25-ec3a60371ba2"}
+{"level":30,"time":"2026-02-11T09:01:27.957Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Video path: undefined"}
+{"level":30,"time":"2026-02-11T09:01:27.957Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Changed active page"}
+{"level":30,"time":"2026-02-11T09:01:28.058Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method newPage"}
+{"level":30,"time":"2026-02-11T09:01:28.061Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method goTo"}
+{"level":30,"time":"2026-02-11T09:01:28.156Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method goTo"}
+{"level":30,"time":"2026-02-11T09:01:28.158Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-02-11T09:01:28.158Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"timeout: 10000 state: networkidle"}
+{"level":30,"time":"2026-02-11T09:01:28.733Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-02-11T09:01:28.752Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:28.759Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:28.763Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:28.766Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:28.769Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:28.771Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:28.774Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:28.776Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:28.778Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Changed active context: context=0d8d3eca-20bd-4667-ad25-ec3a60371ba2"}
+{"level":30,"time":"2026-02-11T09:01:28.778Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Changing current active page: page=2c8db12f-629f-4e80-911b-303e3c8f409e"}
+{"level":30,"time":"2026-02-11T09:01:28.778Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Changed active page"}
+{"level":30,"time":"2026-02-11T09:01:28.783Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method closeContext"}
+{"level":30,"time":"2026-02-11T09:01:28.786Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Removed page=8f1af3e7-90fb-4369-8c90-5618073cf605 from context=0d8d3eca-20bd-4667-ad25-ec3a60371ba2 page stack"}
+{"level":30,"time":"2026-02-11T09:01:28.788Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method closeContext"}
+{"level":30,"time":"2026-02-11T09:01:28.793Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:28.793Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:28.799Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2026-02-11T09:01:28.799Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2026-02-11T09:01:28.804Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method newPage"}
+{"level":30,"time":"2026-02-11T09:01:28.804Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@2911d2d1273cd3c4534b661d9c2cae90\"},\"headless\":true,\"_contextStack\":[],\"id\":\"browser=50987a6a-c74b-4f91-b7bd-94a73cabcd6c\"}"}
+{"level":30,"time":"2026-02-11T09:01:28.809Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Setting default timeout for context context=7a360ef3-3ce5-47c2-8201-0f2d3c669141 to 10000"}
+{"level":30,"time":"2026-02-11T09:01:28.809Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Changed active context: context=7a360ef3-3ce5-47c2-8201-0f2d3c669141"}
+{"level":30,"time":"2026-02-11T09:01:28.849Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Video path: undefined"}
+{"level":30,"time":"2026-02-11T09:01:28.849Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Changed active page"}
+{"level":30,"time":"2026-02-11T09:01:28.996Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method newPage"}
+{"level":30,"time":"2026-02-11T09:01:28.999Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method goTo"}
+{"level":30,"time":"2026-02-11T09:01:29.063Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method goTo"}
+{"level":30,"time":"2026-02-11T09:01:29.066Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-02-11T09:01:29.066Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"timeout: 10000 state: networkidle"}
+{"level":30,"time":"2026-02-11T09:01:29.640Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-02-11T09:01:29.654Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method goTo"}
+{"level":30,"time":"2026-02-11T09:01:29.714Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method goTo"}
+{"level":30,"time":"2026-02-11T09:01:29.717Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-02-11T09:01:29.717Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-email\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:29.743Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-02-11T09:01:29.745Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:29.746Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-email\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:29.756Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:29.760Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:29.760Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-password\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:29.768Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:29.771Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:29.771Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-confirm\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:29.778Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:29.780Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-02-11T09:01:29.780Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Create account\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:29.798Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-02-11T09:01:29.800Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method click"}
+{"level":30,"time":"2026-02-11T09:01:29.800Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Create account\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:29.843Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method click"}
+{"level":30,"time":"2026-02-11T09:01:29.845Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-02-11T09:01:29.845Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"timeout: 10000 state: networkidle"}
+{"level":30,"time":"2026-02-11T09:01:30.910Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-02-11T09:01:30.914Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method click"}
+{"level":30,"time":"2026-02-11T09:01:30.914Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Log out\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:30.930Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method click"}
+{"level":30,"time":"2026-02-11T09:01:30.933Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method goTo"}
+{"level":30,"time":"2026-02-11T09:01:31.004Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method goTo"}
+{"level":30,"time":"2026-02-11T09:01:31.008Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-02-11T09:01:31.008Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"timeout: 10000 state: networkidle"}
+{"level":30,"time":"2026-02-11T09:01:31.592Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-02-11T09:01:31.598Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:31.598Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"login-email\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:31.643Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:31.649Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:31.649Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"login-password\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:31.664Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:31.668Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method click"}
+{"level":30,"time":"2026-02-11T09:01:31.668Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Log in\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:31.737Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method click"}
+{"level":30,"time":"2026-02-11T09:01:31.742Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-02-11T09:01:31.742Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"timeout: 10000 state: networkidle"}
+{"level":30,"time":"2026-02-11T09:01:31.742Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-02-11T09:01:33.755Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getElement"}
+{"level":30,"time":"2026-02-11T09:01:33.756Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=banner >> text=/publish-324184@example.com/ in page."}
+{"level":30,"time":"2026-02-11T09:01:33.762Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getElement"}
+{"level":30,"time":"2026-02-11T09:01:33.766Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getElement"}
+{"level":30,"time":"2026-02-11T09:01:33.766Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Log out\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:33.771Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getElement"}
+{"level":30,"time":"2026-02-11T09:01:33.781Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:33.784Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:33.786Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:33.788Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:33.791Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:33.795Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:33.806Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:33.808Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:33.811Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Changed active context: context=7a360ef3-3ce5-47c2-8201-0f2d3c669141"}
+{"level":30,"time":"2026-02-11T09:01:33.811Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Changing current active page: page=d070b256-f08f-49d2-87ec-77e0dd6aa4b3"}
+{"level":30,"time":"2026-02-11T09:01:33.811Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Changed active page"}
+{"level":30,"time":"2026-02-11T09:01:33.813Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method closeContext"}
+{"level":30,"time":"2026-02-11T09:01:33.817Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Removed page=20c0adac-ee52-4778-9209-ba38ab12ee1c from context=7a360ef3-3ce5-47c2-8201-0f2d3c669141 page stack"}
+{"level":30,"time":"2026-02-11T09:01:33.820Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method closeContext"}
+{"level":30,"time":"2026-02-11T09:01:33.824Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:33.824Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:33.827Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2026-02-11T09:01:33.827Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2026-02-11T09:01:33.829Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method newPage"}
+{"level":30,"time":"2026-02-11T09:01:33.829Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@2911d2d1273cd3c4534b661d9c2cae90\"},\"headless\":true,\"_contextStack\":[],\"id\":\"browser=50987a6a-c74b-4f91-b7bd-94a73cabcd6c\"}"}
+{"level":30,"time":"2026-02-11T09:01:33.833Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Setting default timeout for context context=1f3af96e-049e-41b4-8506-56c41b5e7c48 to 10000"}
+{"level":30,"time":"2026-02-11T09:01:33.834Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Changed active context: context=1f3af96e-049e-41b4-8506-56c41b5e7c48"}
+{"level":30,"time":"2026-02-11T09:01:33.855Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Video path: undefined"}
+{"level":30,"time":"2026-02-11T09:01:33.855Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Changed active page"}
+{"level":30,"time":"2026-02-11T09:01:33.953Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method newPage"}
+{"level":30,"time":"2026-02-11T09:01:33.956Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method goTo"}
+{"level":30,"time":"2026-02-11T09:01:34.024Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method goTo"}
+{"level":30,"time":"2026-02-11T09:01:34.026Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-02-11T09:01:34.026Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"timeout: 10000 state: networkidle"}
+{"level":30,"time":"2026-02-11T09:01:34.604Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-02-11T09:01:34.616Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getElement"}
+{"level":30,"time":"2026-02-11T09:01:34.616Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=banner >> text=/ToolMe/ in page."}
+{"level":30,"time":"2026-02-11T09:01:34.639Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getElement"}
+{"level":30,"time":"2026-02-11T09:01:34.642Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getElement"}
+{"level":30,"time":"2026-02-11T09:01:34.642Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=link[name=\"Log in\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:34.649Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getElement"}
+{"level":30,"time":"2026-02-11T09:01:34.652Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getElement"}
+{"level":30,"time":"2026-02-11T09:01:34.652Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=link[name=\"Create account\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:34.659Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getElement"}
+{"level":30,"time":"2026-02-11T09:01:34.664Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:34.666Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:34.668Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:34.670Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:34.673Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:34.674Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:34.676Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:34.677Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:34.679Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Changed active context: context=1f3af96e-049e-41b4-8506-56c41b5e7c48"}
+{"level":30,"time":"2026-02-11T09:01:34.679Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Changing current active page: page=d887d5b7-98b0-4f8e-bcea-d12715bdcb75"}
+{"level":30,"time":"2026-02-11T09:01:34.679Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Changed active page"}
+{"level":30,"time":"2026-02-11T09:01:34.680Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method closeContext"}
+{"level":30,"time":"2026-02-11T09:01:34.682Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Removed page=ce0c390e-82f7-4d06-a773-986078671a99 from context=1f3af96e-049e-41b4-8506-56c41b5e7c48 page stack"}
+{"level":30,"time":"2026-02-11T09:01:34.685Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method closeContext"}
+{"level":30,"time":"2026-02-11T09:01:34.689Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2026-02-11T09:01:34.708Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method closeBrowser"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (/home/florence/Code/toolMe/robot/.venv/lib/python3.13/site-packages/Browser/wrapper/index.js:12672:15)
@@ -434,158 +434,158 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
 =============================================================
-{"level":30,"time":"2026-02-11T08:29:08.318Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:08.318Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:08.329Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:08.329Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:08.331Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method newBrowser"}
-{"level":30,"time":"2026-02-11T08:29:08.393Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Adding browser to stack: chromium, version: 145.0.7632.6"}
-{"level":30,"time":"2026-02-11T08:29:08.393Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Adding 0 contexts to browser"}
-{"level":30,"time":"2026-02-11T08:29:08.393Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method newBrowser"}
-{"level":30,"time":"2026-02-11T08:29:08.397Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method newPage"}
-{"level":30,"time":"2026-02-11T08:29:08.397Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@afd638e3e8cf44fd3aa40408e0ddfe1d\"},\"headless\":true,\"_contextStack\":[],\"id\":\"browser=6d9f2c79-1b75-4f64-9c90-5d0cf99e712e\"}"}
-{"level":30,"time":"2026-02-11T08:29:08.401Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Setting default timeout for context context=8ca26df2-8598-4abc-afe7-b08480877421 to 10000"}
-{"level":30,"time":"2026-02-11T08:29:08.401Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Changed active context: context=8ca26df2-8598-4abc-afe7-b08480877421"}
-{"level":30,"time":"2026-02-11T08:29:08.424Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Video path: undefined"}
-{"level":30,"time":"2026-02-11T08:29:08.424Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Changed active page"}
-{"level":30,"time":"2026-02-11T08:29:08.532Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method newPage"}
-{"level":30,"time":"2026-02-11T08:29:08.534Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method goTo"}
-{"level":30,"time":"2026-02-11T08:29:08.596Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method goTo"}
-{"level":30,"time":"2026-02-11T08:29:08.598Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:08.619Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:08.622Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getElement"}
-{"level":30,"time":"2026-02-11T08:29:08.622Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-email\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:08.637Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getElement"}
-{"level":30,"time":"2026-02-11T08:29:08.639Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getElement"}
-{"level":30,"time":"2026-02-11T08:29:08.639Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-password\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:08.642Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getElement"}
-{"level":30,"time":"2026-02-11T08:29:08.644Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getElement"}
-{"level":30,"time":"2026-02-11T08:29:08.644Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-confirm\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:08.646Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getElement"}
-{"level":30,"time":"2026-02-11T08:29:08.650Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:08.651Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:08.653Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:08.654Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:08.656Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Reload page with options: {\"waitUntil\": \"load\"}"}
-{"level":30,"time":"2026-02-11T08:29:08.694Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method waitForElementState"}
-{"level":30,"time":"2026-02-11T08:29:08.694Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-email\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:08.705Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method waitForElementState"}
-{"level":30,"time":"2026-02-11T08:29:08.708Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:08.708Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-email\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:08.718Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:08.721Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:08.721Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-password\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:08.733Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:08.735Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:08.735Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-confirm\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:08.745Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:08.750Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getDomProperty"}
-{"level":30,"time":"2026-02-11T08:29:08.750Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Create account\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:08.778Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Retrieved dom property for element role=button[name=\"Create account\"] containing true"}
-{"level":30,"time":"2026-02-11T08:29:08.779Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getDomProperty"}
-{"level":30,"time":"2026-02-11T08:29:08.783Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:08.784Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:08.787Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:08.789Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:08.791Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Reload page with options: {\"waitUntil\": \"load\"}"}
-{"level":30,"time":"2026-02-11T08:29:08.838Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method waitForElementState"}
-{"level":30,"time":"2026-02-11T08:29:08.839Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-email\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:08.852Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method waitForElementState"}
-{"level":30,"time":"2026-02-11T08:29:08.854Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:08.854Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-email\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:08.860Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:08.864Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:08.864Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-password\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:08.871Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:08.874Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:08.874Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-confirm\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:08.880Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:08.883Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getDomProperty"}
-{"level":30,"time":"2026-02-11T08:29:08.883Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Create account\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:08.894Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Retrieved dom property for element role=button[name=\"Create account\"] containing true"}
-{"level":30,"time":"2026-02-11T08:29:08.894Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getDomProperty"}
-{"level":30,"time":"2026-02-11T08:29:08.897Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:08.898Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:08.900Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:08.900Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:08.901Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Reload page with options: {\"waitUntil\": \"load\"}"}
-{"level":30,"time":"2026-02-11T08:29:08.928Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method waitForElementState"}
-{"level":30,"time":"2026-02-11T08:29:08.928Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-email\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:08.944Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method waitForElementState"}
-{"level":30,"time":"2026-02-11T08:29:08.946Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:08.946Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-email\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:08.955Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:08.958Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:08.958Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-password\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:08.967Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:08.969Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:08.969Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-confirm\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:08.975Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:08.977Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getDomProperty"}
-{"level":30,"time":"2026-02-11T08:29:08.977Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Create account\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:08.990Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Retrieved dom property for element role=button[name=\"Create account\"] containing true"}
-{"level":30,"time":"2026-02-11T08:29:08.990Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getDomProperty"}
-{"level":30,"time":"2026-02-11T08:29:08.994Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:08.995Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:08.997Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:08.998Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:09.000Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Reload page with options: {\"waitUntil\": \"load\"}"}
-{"level":30,"time":"2026-02-11T08:29:09.030Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method waitForElementState"}
-{"level":30,"time":"2026-02-11T08:29:09.030Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-email\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:09.043Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method waitForElementState"}
-{"level":30,"time":"2026-02-11T08:29:09.045Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:09.045Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-email\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:09.051Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:09.054Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:09.054Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-password\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:09.061Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:09.064Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:09.064Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-confirm\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:09.071Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:09.074Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method waitForElementState"}
-{"level":30,"time":"2026-02-11T08:29:09.074Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Create account\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:09.089Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method waitForElementState"}
-{"level":30,"time":"2026-02-11T08:29:09.093Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getDomProperty"}
-{"level":30,"time":"2026-02-11T08:29:09.093Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Create account\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:09.102Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Retrieved dom property for element role=button[name=\"Create account\"] containing false"}
-{"level":30,"time":"2026-02-11T08:29:09.102Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getDomProperty"}
-{"level":30,"time":"2026-02-11T08:29:09.107Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:09.108Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:09.110Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:09.110Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:09.113Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Reload page with options: {\"waitUntil\": \"load\"}"}
-{"level":30,"time":"2026-02-11T08:29:09.143Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method waitForElementState"}
-{"level":30,"time":"2026-02-11T08:29:09.143Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-email\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:09.153Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method waitForElementState"}
-{"level":30,"time":"2026-02-11T08:29:09.156Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:09.156Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-email\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:09.162Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:09.164Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:09.164Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-password\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:09.171Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:09.174Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:09.174Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-confirm\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:09.182Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
-{"level":30,"time":"2026-02-11T08:29:09.184Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method waitForElementState"}
-{"level":30,"time":"2026-02-11T08:29:09.184Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Create account\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:09.198Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method waitForElementState"}
-{"level":30,"time":"2026-02-11T08:29:09.200Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method click"}
-{"level":30,"time":"2026-02-11T08:29:09.200Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Create account\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:09.233Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method click"}
-{"level":30,"time":"2026-02-11T08:29:09.235Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method WaitForPageLoadState"}
-{"level":30,"time":"2026-02-11T08:29:09.236Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"timeout: 10000 state: networkidle"}
-{"level":30,"time":"2026-02-11T08:29:10.247Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method WaitForPageLoadState"}
-{"level":30,"time":"2026-02-11T08:29:10.258Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getElement"}
-{"level":30,"time":"2026-02-11T08:29:10.259Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=banner >> text=/robot-637236@example.com/ in page."}
-{"level":30,"time":"2026-02-11T08:29:10.265Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getElement"}
-{"level":30,"time":"2026-02-11T08:29:10.269Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getElement"}
-{"level":30,"time":"2026-02-11T08:29:10.269Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Log out\"] in page."}
-{"level":30,"time":"2026-02-11T08:29:10.274Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getElement"}
-{"level":30,"time":"2026-02-11T08:29:10.281Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:10.283Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:10.289Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method closeBrowser"}
-{"level":30,"time":"2026-02-11T08:29:10.293Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Removed page=1300d191-6f2d-4379-bcd6-258698b29448 from context=8ca26df2-8598-4abc-afe7-b08480877421 page stack"}
-{"level":30,"time":"2026-02-11T08:29:10.315Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method closeBrowser"}
+{"level":30,"time":"2026-02-11T09:01:34.712Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:34.712Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:34.721Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:34.721Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:34.723Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2026-02-11T09:01:34.774Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Adding browser to stack: chromium, version: 145.0.7632.6"}
+{"level":30,"time":"2026-02-11T09:01:34.774Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2026-02-11T09:01:34.775Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method newBrowser"}
+{"level":30,"time":"2026-02-11T09:01:34.782Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method newPage"}
+{"level":30,"time":"2026-02-11T09:01:34.782Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@7be2bdff26ed376f04f94f7c85a53423\"},\"headless\":true,\"_contextStack\":[],\"id\":\"browser=21f83191-3a3f-4fb6-bd46-f8ea15940699\"}"}
+{"level":30,"time":"2026-02-11T09:01:34.788Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Setting default timeout for context context=d40ae2f2-b1d7-41cf-9e8a-45492f61484f to 10000"}
+{"level":30,"time":"2026-02-11T09:01:34.788Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Changed active context: context=d40ae2f2-b1d7-41cf-9e8a-45492f61484f"}
+{"level":30,"time":"2026-02-11T09:01:34.836Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Video path: undefined"}
+{"level":30,"time":"2026-02-11T09:01:34.836Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Changed active page"}
+{"level":30,"time":"2026-02-11T09:01:34.966Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method newPage"}
+{"level":30,"time":"2026-02-11T09:01:34.968Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method goTo"}
+{"level":30,"time":"2026-02-11T09:01:35.047Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method goTo"}
+{"level":30,"time":"2026-02-11T09:01:35.050Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:35.084Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:35.092Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getElement"}
+{"level":30,"time":"2026-02-11T09:01:35.092Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-email\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:35.119Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getElement"}
+{"level":30,"time":"2026-02-11T09:01:35.121Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getElement"}
+{"level":30,"time":"2026-02-11T09:01:35.121Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-password\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:35.123Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getElement"}
+{"level":30,"time":"2026-02-11T09:01:35.126Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getElement"}
+{"level":30,"time":"2026-02-11T09:01:35.127Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-confirm\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:35.129Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getElement"}
+{"level":30,"time":"2026-02-11T09:01:35.137Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:35.139Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:35.142Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:35.143Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:35.146Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Reload page with options: {\"waitUntil\": \"load\"}"}
+{"level":30,"time":"2026-02-11T09:01:35.207Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-02-11T09:01:35.207Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-email\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:35.234Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-02-11T09:01:35.237Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:35.237Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-email\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:35.246Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:35.249Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:35.249Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-password\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:35.255Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:35.257Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:35.257Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-confirm\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:35.264Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:35.266Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getDomProperty"}
+{"level":30,"time":"2026-02-11T09:01:35.266Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Create account\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:35.285Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Retrieved dom property for element role=button[name=\"Create account\"] containing true"}
+{"level":30,"time":"2026-02-11T09:01:35.285Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getDomProperty"}
+{"level":30,"time":"2026-02-11T09:01:35.289Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:35.290Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:35.291Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:35.292Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:35.294Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Reload page with options: {\"waitUntil\": \"load\"}"}
+{"level":30,"time":"2026-02-11T09:01:35.347Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-02-11T09:01:35.347Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-email\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:35.370Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-02-11T09:01:35.372Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:35.373Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-email\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:35.378Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:35.380Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:35.380Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-password\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:35.387Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:35.390Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:35.390Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-confirm\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:35.397Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:35.399Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getDomProperty"}
+{"level":30,"time":"2026-02-11T09:01:35.399Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Create account\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:35.420Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Retrieved dom property for element role=button[name=\"Create account\"] containing true"}
+{"level":30,"time":"2026-02-11T09:01:35.420Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getDomProperty"}
+{"level":30,"time":"2026-02-11T09:01:35.430Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:35.432Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:35.434Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:35.435Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:35.437Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Reload page with options: {\"waitUntil\": \"load\"}"}
+{"level":30,"time":"2026-02-11T09:01:35.485Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-02-11T09:01:35.486Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-email\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:35.505Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-02-11T09:01:35.507Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:35.507Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-email\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:35.513Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:35.516Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:35.516Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-password\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:35.522Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:35.525Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:35.525Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-confirm\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:35.534Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:35.542Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getDomProperty"}
+{"level":30,"time":"2026-02-11T09:01:35.542Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Create account\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:35.562Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Retrieved dom property for element role=button[name=\"Create account\"] containing true"}
+{"level":30,"time":"2026-02-11T09:01:35.562Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getDomProperty"}
+{"level":30,"time":"2026-02-11T09:01:35.567Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:35.569Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:35.573Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:35.575Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:35.579Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Reload page with options: {\"waitUntil\": \"load\"}"}
+{"level":30,"time":"2026-02-11T09:01:35.631Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-02-11T09:01:35.631Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-email\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:35.649Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-02-11T09:01:35.650Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:35.651Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-email\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:35.657Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:35.660Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:35.660Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-password\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:35.667Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:35.670Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:35.670Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-confirm\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:35.678Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:35.680Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-02-11T09:01:35.680Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Create account\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:35.697Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-02-11T09:01:35.701Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getDomProperty"}
+{"level":30,"time":"2026-02-11T09:01:35.701Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Create account\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:35.706Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Retrieved dom property for element role=button[name=\"Create account\"] containing false"}
+{"level":30,"time":"2026-02-11T09:01:35.706Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getDomProperty"}
+{"level":30,"time":"2026-02-11T09:01:35.710Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:35.711Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:35.712Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:35.713Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:35.716Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Reload page with options: {\"waitUntil\": \"load\"}"}
+{"level":30,"time":"2026-02-11T09:01:35.773Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-02-11T09:01:35.773Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-email\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:35.798Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-02-11T09:01:35.800Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:35.801Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-email\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:35.816Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:35.822Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:35.822Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-password\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:35.834Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:35.836Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:35.836Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with [id=\"signup-confirm\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:35.842Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method fillText"}
+{"level":30,"time":"2026-02-11T09:01:35.846Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-02-11T09:01:35.846Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Create account\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:35.882Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-02-11T09:01:35.892Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method click"}
+{"level":30,"time":"2026-02-11T09:01:35.892Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Create account\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:35.937Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method click"}
+{"level":30,"time":"2026-02-11T09:01:35.941Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-02-11T09:01:35.941Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"timeout: 10000 state: networkidle"}
+{"level":30,"time":"2026-02-11T09:01:37.046Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-02-11T09:01:37.056Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getElement"}
+{"level":30,"time":"2026-02-11T09:01:37.056Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=banner >> text=/robot-259689@example.com/ in page."}
+{"level":30,"time":"2026-02-11T09:01:37.063Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getElement"}
+{"level":30,"time":"2026-02-11T09:01:37.066Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getElement"}
+{"level":30,"time":"2026-02-11T09:01:37.066Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Strict mode is enabled, find Locator with role=button[name=\"Log out\"] in page."}
+{"level":30,"time":"2026-02-11T09:01:37.071Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getElement"}
+{"level":30,"time":"2026-02-11T09:01:37.079Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:37.080Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:37.083Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2026-02-11T09:01:37.086Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Removed page=b08a48d7-7adc-4c05-910d-ebcd1ba708a1 from context=d40ae2f2-b1d7-41cf-9e8a-45492f61484f page stack"}
+{"level":30,"time":"2026-02-11T09:01:37.114Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method closeBrowser"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (/home/florence/Code/toolMe/robot/.venv/lib/python3.13/site-packages/Browser/wrapper/index.js:12672:15)
@@ -599,7 +599,7 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
 =============================================================
-{"level":30,"time":"2026-02-11T08:29:10.321Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:10.321Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-02-11T08:29:10.347Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"Start of node method closeAllBrowsers"}
-{"level":30,"time":"2026-02-11T08:29:10.348Z","pid":109448,"hostname":"florence-XPS-15-9530","msg":"End of node method closeAllBrowsers"}
+{"level":30,"time":"2026-02-11T09:01:37.117Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:37.117Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-02-11T09:01:37.141Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2026-02-11T09:01:37.142Z","pid":141655,"hostname":"florence-XPS-15-9530","msg":"End of node method closeAllBrowsers"}

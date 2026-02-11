@@ -61,9 +61,9 @@ export function HomePage() {
         </div>
 
         {loading && (
-          <p className="text-stone-500" role="status" aria-live="polite">
+          <output className="text-stone-500" aria-live="polite">
             Loading projects…
-          </p>
+          </output>
         )}
 
         {error && (
