@@ -19,3 +19,16 @@ ${HEADER_CREATE_ACCOUNT}     Create account
 ${HEADER_LOGOUT}             Log out
 ${PUBLISH_CTA}               Publish a project
 ${BRAND_NAME}                ToolMe
+
+# Publish form & project detail (EN)
+${PUBLISH_TITLE_ID}          publish-title
+${PUBLISH_DOMAIN_ID}         publish-domain
+${PUBLISH_SHORT_ID}          publish-short
+${PUBLISH_FULL_ID}           publish-full
+${PUBLISH_DEADLINE_ID}       publish-deadline
+${PUBLISH_DELIVERY_ID}       publish-delivery
+${PUBLISH_SUBMIT_TEXT}       Publish project
+${PROJECT_EDIT_LINK}         Edit
+${PROJECT_DELETE_BUTTON}     Delete
+${PROJECT_MY_AD_TAG}         My ad
+${ACCOUNT_PAGE_TITLE}        My listings

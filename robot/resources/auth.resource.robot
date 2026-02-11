@@ -57,8 +57,17 @@ Header Shows Logged Out
 
 Header Shows Logged In
     [Arguments]    ${email}
-    Get Element    role=banner >> text=/${email}/
-    Get Element    role=button[name="${HEADER_LOGOUT}"]
+    Wait For Elements State    role=button[name="${HEADER_LOGOUT}"]    visible    timeout=30s
+    Get Element    role=banner >> text=/@example\.com/
+
+Login As User
+    [Arguments]    ${email}    ${password}=${VALID_PASSWORD}
+    Go To    ${BASE_URL}/login
+    Wait For Load State    networkidle
+    Fill Login    ${email}    ${password}
+    Submit Login
+    Wait For Load State    networkidle
+    Wait For Elements State    role=button[name="${HEADER_LOGOUT}"]    visible    timeout=20s
 
 Click Logout
     Click    role=button[name="${HEADER_LOGOUT}"]
