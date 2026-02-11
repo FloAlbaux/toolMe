@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Translate } from './Translate'
 import { LanguageSelector } from './LanguageSelector'
-import { useAuth } from '../context/AuthContext'
+import { useAuth } from '../context/useAuth'
 
 export function Header() {
   const { isAuthenticated, email, logout } = useAuth()

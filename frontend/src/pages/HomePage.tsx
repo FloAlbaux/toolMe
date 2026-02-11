@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useTransition } from 'react'
 import { Link } from 'react-router-dom'
 import { Translate } from '../components/Translate'
 import { LandingHighlight } from '../components/LandingHighlight'
@@ -10,11 +10,14 @@ export function HomePage() {
   const [projects, setProjects] = useState<Project[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+  const [, startTransition] = useTransition()
 
   useEffect(() => {
     let cancelled = false
-    setLoading(true)
-    setError(null)
+    startTransition(() => {
+      setLoading(true)
+      setError(null)
+    })
     fetchProjects()
       .then((data) => {
         if (!cancelled) {

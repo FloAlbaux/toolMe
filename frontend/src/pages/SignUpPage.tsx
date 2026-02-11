@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Translate } from '../components/Translate'
 import { signUp } from '../api/auth'
-import { useAuth } from '../context/AuthContext'
+import { useAuth } from '../context/useAuth'
 import { isValidEmail } from '../utils'
 
 const MIN_PASSWORD_LENGTH = 12
