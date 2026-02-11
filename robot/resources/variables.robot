@@ -33,5 +33,15 @@ ${PUBLISH_SUBMIT_TEXT}       Publish project
 ${PROJECT_EDIT_LINK}         Edit
 ${PROJECT_DELETE_BUTTON}     Delete
 ${PROJECT_MY_AD_TAG}         My ad
+${PROJECT_APPLY_CTA}         Propose a deliverable
 ${ACCOUNT_PAGE_TITLE}        My listings
 ${ACCOUNT_EMPTY_TEXT}        You haven't published any listing yet
+
+# Apply / submission (EN)
+${APPLY_MESSAGE_ID}          apply-message
+${APPLY_LINK_ID}             apply-link
+${APPLY_SUBMIT_TEXT}         Submit
+${APPLY_SUCCESS_TITLE}       Submission sent
+${MY_SUBMISSIONS_TITLE}      My submissions
+${SUBMISSION_DETAIL_THREAD}  Message thread
+${SUBMISSION_DETAIL_SEND}    Send
