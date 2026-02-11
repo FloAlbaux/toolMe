@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest'
 import type { Project } from '../types/project'
 import { mockProjects } from './mockProjects'
 
-const requiredKeys: (keyof Project)[] = ['id', 'title', 'domain', 'shortDescription', 'fullDescription', 'deadline']
+const requiredKeys: (keyof Project)[] = ['id', 'title', 'domain', 'shortDescription', 'fullDescription', 'deadline', 'createdAt']
 
 describe('mockProjects', () => {
   it('exports a non-empty array', () => {

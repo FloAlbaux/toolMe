@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from pydantic import BaseModel, Field
 
 
@@ -25,5 +27,6 @@ class ProjectUpdate(BaseModel):
 
 class ProjectResponse(ProjectBase):
     id: str
+    created_at: datetime  # serialized as ISO string in JSON
 
     model_config = {"from_attributes": True}

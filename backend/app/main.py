@@ -2,6 +2,7 @@ from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from sqlalchemy import text
 
 from app.database import AsyncSessionLocal, engine
 from app.models.base import Base
@@ -15,6 +16,13 @@ async def lifespan(app: FastAPI):
     # Create tables
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
+        # Add created_at to existing projects table if missing (migration)
+        await conn.execute(
+            text(
+                "ALTER TABLE projects ADD COLUMN IF NOT EXISTS created_at "
+                "TIMESTAMPTZ NOT NULL DEFAULT now()"
+            )
+        )
     # Seed if empty
     async with AsyncSessionLocal() as db:
         await seed_if_empty(db)
