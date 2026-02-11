@@ -1,8 +1,11 @@
 import { Link } from 'react-router-dom'
 import { Translate } from './Translate'
 import { LanguageSelector } from './LanguageSelector'
+import { useAuth } from '../context/AuthContext'
 
 export function Header() {
+  const { isAuthenticated, email, logout } = useAuth()
+
   return (
     <header
       className="border-b border-stone-200 bg-white"
@@ -25,12 +28,35 @@ export function Header() {
           />
         </div>
         <div className="flex items-center gap-4">
-          <Link
-            to="/signup"
-            className="text-[var(--color-toolme-primary)] font-medium hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-toolme-primary)] focus-visible:ring-offset-2 rounded"
-          >
-            <Translate tid="auth.signUp.createAccount" />
-          </Link>
+          {isAuthenticated ? (
+            <>
+              <span className="text-stone-600 text-sm truncate max-w-[180px]" title={email ?? undefined}>
+                {email}
+              </span>
+              <button
+                type="button"
+                onClick={() => logout()}
+                className="text-[var(--color-toolme-primary)] font-medium hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-toolme-primary)] focus-visible:ring-offset-2 rounded"
+              >
+                <Translate tid="auth.logout" />
+              </button>
+            </>
+          ) : (
+            <>
+              <Link
+                to="/login"
+                className="text-[var(--color-toolme-primary)] font-medium hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-toolme-primary)] focus-visible:ring-offset-2 rounded"
+              >
+                <Translate tid="auth.login" />
+              </Link>
+              <Link
+                to="/signup"
+                className="text-[var(--color-toolme-primary)] font-medium hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-toolme-primary)] focus-visible:ring-offset-2 rounded"
+              >
+                <Translate tid="auth.signUp.createAccount" />
+              </Link>
+            </>
+          )}
           <LanguageSelector />
         </div>
       </div>

@@ -42,7 +42,10 @@ def auth_headers(client: TestClient):
     """Create a user, log in, return headers with Bearer token for protected routes."""
     email = f"test-{uuid.uuid4().hex}@example.com"
     password = "testpass123"
-    r = client.post("/auth/signup", json={"email": email, "password": password})
+    r = client.post(
+        "/auth/signup",
+        json={"email": email, "password": password, "password_confirm": password},
+    )
     assert r.status_code == 201, r.text
     r2 = client.post("/auth/login", json={"email": email, "password": password})
     assert r2.status_code == 200, r.text

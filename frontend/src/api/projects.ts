@@ -1,4 +1,5 @@
 import { getApiBaseUrl } from './config'
+import { getStoredToken } from './auth'
 import {
   mapProjectFromApi,
   type Project,
@@ -8,6 +9,15 @@ import {
 } from '../types/project'
 
 const base = () => getApiBaseUrl() + '/projects'
+
+function authHeaders(): Record<string, string> {
+  const headers: Record<string, string> = { 'Content-Type': 'application/json' }
+  const token = getStoredToken()
+  if (token) {
+    headers.Authorization = `Bearer ${token}`
+  }
+  return headers
+}
 
 function toCreatePayload(input: ProjectCreateInput) {
   return {
@@ -55,7 +65,7 @@ export async function fetchProjectById(id: string): Promise<Project | null> {
 export async function createProject(input: ProjectCreateInput): Promise<Project> {
   const res = await fetch(base(), {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: authHeaders(),
     body: JSON.stringify(toCreatePayload(input)),
   })
   if (!res.ok) {
@@ -68,7 +78,7 @@ export async function createProject(input: ProjectCreateInput): Promise<Project>
 export async function updateProject(id: string, input: ProjectUpdateInput): Promise<Project | null> {
   const res = await fetch(`${base()}/${id}`, {
     method: 'PUT',
-    headers: { 'Content-Type': 'application/json' },
+    headers: authHeaders(),
     body: JSON.stringify(toUpdatePayload(input)),
   })
   if (res.status === 404) {
@@ -82,7 +92,10 @@ export async function updateProject(id: string, input: ProjectUpdateInput): Prom
 }
 
 export async function deleteProject(id: string): Promise<boolean> {
-  const res = await fetch(`${base()}/${id}`, { method: 'DELETE' })
+  const res = await fetch(`${base()}/${id}`, {
+    method: 'DELETE',
+    headers: authHeaders(),
+  })
   if (res.status === 404) {
     return false
   }

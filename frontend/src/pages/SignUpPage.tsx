@@ -2,19 +2,31 @@ import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Translate } from '../components/Translate'
 import { signUp } from '../api/auth'
+import { useAuth } from '../context/AuthContext'
+import { isValidEmail } from '../utils'
 
-const MIN_PASSWORD_LENGTH = 8
+const MIN_PASSWORD_LENGTH = 12
 
 /**
  * Create account (sign up). Part 1 of auth flow.
  */
 export function SignUpPage() {
   const navigate = useNavigate()
+  const { login } = useAuth()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
+
+  const emailValid = isValidEmail(email)
+  const passwordsMatch = password === confirmPassword
+  const passwordLongEnough = password.length >= MIN_PASSWORD_LENGTH
+  const ctaDisabled =
+    loading ||
+    !emailValid ||
+    !passwordLongEnough ||
+    !passwordsMatch
 
   function handleSubmit(e: { preventDefault: () => void }) {
     e.preventDefault()
@@ -28,9 +40,15 @@ export function SignUpPage() {
       setError('auth.signUp.passwordsDoNotMatch')
       return
     }
+    if (!emailValid) {
+      setError('auth.signUp.invalidEmail')
+      return
+    }
 
     setLoading(true)
-    signUp({ email: email.trim(), password })
+    const trimmedEmail = email.trim()
+    signUp({ email: trimmedEmail, password, password_confirm: confirmPassword })
+      .then(() => login({ email: trimmedEmail, password }))
       .then(() => {
         navigate('/', { replace: true })
       })
@@ -118,7 +136,7 @@ export function SignUpPage() {
         <div className="flex flex-col gap-3 pt-2">
           <button
             type="submit"
-            disabled={loading}
+            disabled={ctaDisabled}
             className="w-full rounded-md bg-[var(--color-toolme-primary)] px-4 py-2 text-white font-medium hover:bg-[var(--color-toolme-primary-hover)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-toolme-primary)] focus-visible:ring-offset-2 disabled:opacity-60 disabled:pointer-events-none"
           >
             {loading ? '…' : <Translate tid="auth.signUp.submit" />}

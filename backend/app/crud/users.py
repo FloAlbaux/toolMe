@@ -3,16 +3,18 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.auth import hash_password
 from app.models.user import User
-from app.schemas.user import UserCreate, UserResponse
+from app.schemas.user import UserCreate, UserResponse, UserSignUp
 
 
 def _row_to_response(row: User) -> UserResponse:
     return UserResponse(id=row.id, email=row.email)
 
 
-async def create_user(db: AsyncSession, payload: UserCreate) -> UserResponse:
+async def create_user(
+    db: AsyncSession, payload: UserCreate | UserSignUp
+) -> UserResponse:
     user = User(
-        email=payload.email.lower().strip(),
+        email=payload.email,
         password_hash=hash_password(payload.password),
     )
     db.add(user)

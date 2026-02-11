@@ -2,6 +2,8 @@ import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Routes, Route } from 'react-router-dom'
 import { Layout } from './components/Layout'
+import { RequireAuth } from './components/RequireAuth'
+import { AuthProvider } from './context/AuthContext'
 import { HomePage } from './pages/HomePage'
 import { ProjectDetailPage } from './pages/ProjectDetailPage'
 import { PublishPage } from './pages/PublishPage'
@@ -25,15 +27,24 @@ export default function App() {
   useDocumentLang()
 
   return (
-    <Layout>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/project/:id" element={<ProjectDetailPage />} />
-        <Route path="/project/:id/apply" element={<ProjectApplyPage />} />
-        <Route path="/publish" element={<PublishPage />} />
-        <Route path="/signup" element={<SignUpPage />} />
-        <Route path="/login" element={<LoginPage />} />
-      </Routes>
-    </Layout>
+    <AuthProvider>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/project/:id" element={<ProjectDetailPage />} />
+          <Route path="/project/:id/apply" element={<ProjectApplyPage />} />
+          <Route
+            path="/publish"
+            element={
+              <RequireAuth>
+                <PublishPage />
+              </RequireAuth>
+            }
+          />
+          <Route path="/signup" element={<SignUpPage />} />
+          <Route path="/login" element={<LoginPage />} />
+        </Routes>
+      </Layout>
+    </AuthProvider>
   )
 }
