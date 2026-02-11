@@ -7,10 +7,14 @@ import { useAuth } from '../context/useAuth'
 import { fetchProjects } from '../api/projects'
 import type { Project } from '../types/project'
 
+const PAGE_SIZE = 12
+
 export function HomePage() {
   const { userId } = useAuth()
   const [projects, setProjects] = useState<Project[]>([])
+  const [total, setTotal] = useState(0)
   const [loading, setLoading] = useState(true)
+  const [loadingMore, setLoadingMore] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [, startTransition] = useTransition()
 
@@ -20,14 +24,11 @@ export function HomePage() {
       setLoading(true)
       setError(null)
     })
-
-    fetchProjects().then((projects) => {
+    fetchProjects({ skip: 0, limit: PAGE_SIZE })
+      .then(({ projects: list, total: t }) => {
         if (!cancelled) {
-          const byNewest = [...projects].sort(
-            (a, b) =>
-              new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
-          )
-          setProjects(byNewest)
+          setProjects(list)
+          setTotal(t)
         }
       })
       .catch((err) => {
@@ -44,6 +45,23 @@ export function HomePage() {
       cancelled = true
     }
   }, [])
+
+  async function loadMore() {
+    if (loadingMore || projects.length >= total) return
+    setLoadingMore(true)
+    try {
+      const { projects: next, total: t } = await fetchProjects({
+        skip: projects.length,
+        limit: PAGE_SIZE,
+      })
+      setProjects((prev) => [...prev, ...next])
+      setTotal(t)
+    } finally {
+      setLoadingMore(false)
+    }
+  }
+
+  const hasMore = projects.length < total
 
   return (
     <>
@@ -82,21 +100,39 @@ export function HomePage() {
         )}
 
         {!loading && !error && projects.length > 0 && (
-          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 list-none p-0 m-0">
-            {projects.map((project) => (
-              <li key={project.id}>
-                <Link
-                  to={`/project/${project.id}`}
-                  className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-toolme-primary)] focus-visible:ring-offset-2 rounded-xl"
+          <>
+            <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 list-none p-0 m-0">
+              {projects.map((project) => (
+                <li key={project.id}>
+                  <Link
+                    to={`/project/${project.id}`}
+                    className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-toolme-primary)] focus-visible:ring-offset-2 rounded-xl"
+                  >
+                    <ProjectCard
+                      project={project}
+                      isOwner={!!userId && project.ownerId === userId}
+                    />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            {hasMore && (
+              <div className="mt-8 flex justify-center">
+                <button
+                  type="button"
+                  onClick={loadMore}
+                  disabled={loadingMore}
+                  className="rounded-md border border-stone-300 bg-white px-5 py-2.5 text-stone-700 font-medium hover:bg-stone-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-toolme-primary)] focus-visible:ring-offset-2 disabled:opacity-60 disabled:pointer-events-none"
                 >
-                  <ProjectCard
-                    project={project}
-                    isOwner={!!userId && project.ownerId === userId}
-                  />
-                </Link>
-              </li>
-            ))}
-          </ul>
+                  {loadingMore ? (
+                    <Translate tid="projects.loadingMore" />
+                  ) : (
+                    <Translate tid="projects.loadMore" />
+                  )}
+                </button>
+              </div>
+            )}
+          </>
         )}
       </section>
     </>

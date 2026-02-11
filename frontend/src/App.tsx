@@ -6,12 +6,14 @@ import { RequireAuth } from './components/RequireAuth'
 import { AuthProvider } from './context/AuthContext'
 import { AccountPage } from './pages/AccountPage'
 import { HomePage } from './pages/HomePage'
+import { MySubmissionsPage } from './pages/MySubmissionsPage'
 import { ProjectDetailPage } from './pages/ProjectDetailPage'
-import { PublishPage } from './pages/PublishPage'
 import { ProjectApplyPage } from './pages/ProjectApplyPage'
+import { PublishPage } from './pages/PublishPage'
 import { SignUpPage } from './pages/SignUpPage'
 import { LoginPage } from './pages/LoginPage'
 import { ProjectEditPage } from './pages/ProjectEditPage'
+import { SubmissionDetailPage } from './pages/SubmissionDetailPage'
 
 function useDocumentLang() {
   const { i18n } = useTranslation()
@@ -34,9 +36,18 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/account" element={<RequireAuth><AccountPage /></RequireAuth>} />
+          <Route path="/my-submissions" element={<RequireAuth><MySubmissionsPage /></RequireAuth>} />
+          <Route path="/submission/:id" element={<RequireAuth><SubmissionDetailPage /></RequireAuth>} />
           <Route path="/project/:id" element={<ProjectDetailPage />} />
           <Route path="/project/:id/edit" element={<RequireAuth><ProjectEditPage /></RequireAuth>} />
-          <Route path="/project/:id/apply" element={<ProjectApplyPage />} />
+          <Route
+            path="/project/:id/apply"
+            element={
+              <RequireAuth>
+                <ProjectApplyPage />
+              </RequireAuth>
+            }
+          />
           <Route
             path="/publish"
             element={

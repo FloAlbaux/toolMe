@@ -1,8 +1,8 @@
-from sqlalchemy import select
+from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.models.project import Project
-from app.schemas.project import ProjectCreate, ProjectResponse, ProjectUpdate
+from app.schemas.project import ProjectCreate, ProjectListResponse, ProjectResponse, ProjectUpdate
 
 
 def _row_to_response(row: Project) -> ProjectResponse:
@@ -19,12 +19,28 @@ def _row_to_response(row: Project) -> ProjectResponse:
     )
 
 
-async def list_projects(db: AsyncSession) -> list[ProjectResponse]:
+async def count_projects(db: AsyncSession) -> int:
+    result = await db.execute(select(func.count()).select_from(Project))
+    return result.scalar_one() or 0
+
+
+async def list_projects(
+    db: AsyncSession,
+    skip: int = 0,
+    limit: int = 20,
+) -> ProjectListResponse:
+    total = await count_projects(db)
     result = await db.execute(
-        select(Project).order_by(Project.created_at.desc())
+        select(Project)
+        .order_by(Project.created_at.desc())
+        .offset(skip)
+        .limit(limit)
     )
     rows = result.scalars().all()
-    return [_row_to_response(r) for r in rows]
+    return ProjectListResponse(
+        items=[_row_to_response(r) for r in rows],
+        total=total,
+    )
 
 
 async def list_projects_by_owner(

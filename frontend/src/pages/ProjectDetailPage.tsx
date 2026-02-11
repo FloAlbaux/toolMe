@@ -5,7 +5,9 @@ import { ProjectOwnerActions } from '../components/ProjectOwnerActions'
 import { Translate } from '../components/Translate'
 import { useAuth } from '../context/useAuth'
 import { fetchProjectById, deleteProject } from '../api/projects'
+import { fetchProjectSubmissions, setSubmissionCoherent } from '../api/submissions'
 import type { Project } from '../types/project'
+import type { Submission } from '../types/submission'
 
 function formatDeadline(iso: string): string {
   try {
@@ -25,6 +27,8 @@ export function ProjectDetailPage() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [deleting, setDeleting] = useState(false)
+  const [submissions, setSubmissions] = useState<Submission[]>([])
+  const [coherentUpdating, setCoherentUpdating] = useState<string | null>(null)
   const [, startTransition] = useTransition()
 
   const isOwner = !!userId && !!project && project.ownerId === userId
@@ -75,6 +79,30 @@ export function ProjectDetailPage() {
       cancelled = true
     }
   }, [id])
+
+  useEffect(() => {
+    if (!isOwner || !id) return
+    let cancelled = false
+    fetchProjectSubmissions(id)
+      .then((data) => {
+        if (!cancelled) setSubmissions(data)
+      })
+      .catch(() => {})
+    return () => {
+      cancelled = true
+    }
+  }, [isOwner, id])
+
+  async function handleSetCoherent(submissionId: string, coherent: boolean) {
+    setCoherentUpdating(submissionId)
+    try {
+      await setSubmissionCoherent(submissionId, coherent)
+      const data = await fetchProjectSubmissions(id!)
+      setSubmissions(data)
+    } finally {
+      setCoherentUpdating(null)
+    }
+  }
 
   if (loading) {
     return (
@@ -152,6 +180,67 @@ export function ProjectDetailPage() {
           <p className="mt-2 text-stone-700 leading-relaxed whitespace-pre-wrap">
             {project.deliveryInstructions}
           </p>
+        </div>
+      )}
+
+      {isOwner && submissions.length > 0 && (
+        <div className="mt-8 pt-6 border-t border-stone-200">
+          <h2 className="text-lg font-medium text-stone-900">
+            <Translate tid="projectDetail.submissionsHeading" /> ({submissions.length})
+          </h2>
+          <ul className="mt-3 space-y-2">
+            {submissions.map((s) => (
+              <li
+                key={s.id}
+                className="flex flex-wrap items-center gap-2 rounded-lg border border-stone-200 bg-stone-50/50 px-3 py-2"
+              >
+                <Link
+                  to={`/submission/${s.id}`}
+                  className="inline-flex items-center gap-1.5 text-[var(--color-toolme-primary)] font-medium hover:underline"
+                >
+                  <Translate tid="projectDetail.submissionLink" /> · {s.messageCount}{' '}
+                  <Translate tid="mySubmissions.messages" />
+                  {s.unreadCount > 0 && (
+                    <span
+                      className="inline-block h-2.5 w-2.5 shrink-0 rounded-full bg-red-500"
+                      title={t('mySubmissions.unreadCount', { count: s.unreadCount })}
+                      aria-label={t('mySubmissions.unreadCount', { count: s.unreadCount })}
+                    />
+                  )}
+                </Link>
+                {s.coherent === null && (
+                  <>
+                    <button
+                      type="button"
+                      onClick={() => handleSetCoherent(s.id, true)}
+                      disabled={coherentUpdating === s.id}
+                      className="rounded bg-green-600 px-2 py-1 text-xs text-white hover:bg-green-700 disabled:opacity-60"
+                    >
+                      <Translate tid="submissionDetail.markCoherent" />
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => handleSetCoherent(s.id, false)}
+                      disabled={coherentUpdating === s.id}
+                      className="rounded bg-amber-600 px-2 py-1 text-xs text-white hover:bg-amber-700 disabled:opacity-60"
+                    >
+                      <Translate tid="submissionDetail.markNotCoherent" />
+                    </button>
+                  </>
+                )}
+                {s.coherent === true && (
+                  <span className="text-sm text-green-600">
+                    <Translate tid="mySubmissions.coherent" />
+                  </span>
+                )}
+                {s.coherent === false && (
+                  <span className="text-sm text-amber-600">
+                    <Translate tid="mySubmissions.notCoherent" />
+                  </span>
+                )}
+              </li>
+            ))}
+          </ul>
         </div>
       )}
 

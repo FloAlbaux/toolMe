@@ -32,3 +32,8 @@ class User(Base):
         back_populates="owner",
         cascade="all, delete-orphan",
     )
+    submissions_as_learner: Mapped[list["Submission"]] = relationship(
+        "Submission",
+        back_populates="learner",
+        cascade="all, delete-orphan",
+    )
