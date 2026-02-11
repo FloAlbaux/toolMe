@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom'
 import { Translate } from '../components/Translate'
 import { LandingHighlight } from '../components/LandingHighlight'
 import { ProjectCard } from '../components/ProjectCard'
+import { useAuth } from '../context/useAuth'
 import { fetchProjects } from '../api/projects'
 import type { Project } from '../types/project'
 
 export function HomePage() {
+  const { userId } = useAuth()
   const [projects, setProjects] = useState<Project[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
@@ -87,7 +89,10 @@ export function HomePage() {
                   to={`/project/${project.id}`}
                   className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-toolme-primary)] focus-visible:ring-offset-2 rounded-xl"
                 >
-                  <ProjectCard project={project} />
+                  <ProjectCard
+                    project={project}
+                    isOwner={!!userId && project.ownerId === userId}
+                  />
                 </Link>
               </li>
             ))}

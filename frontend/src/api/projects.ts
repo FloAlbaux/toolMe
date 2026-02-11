@@ -45,6 +45,16 @@ export async function fetchProjects(): Promise<Project[]> {
   return raw.map(mapProjectFromApi)
 }
 
+/** Projects owned by the current user (requires auth). */
+export async function fetchMyProjects(): Promise<Project[]> {
+  const res = await fetch(`${base()}/me`, fetchOpts)
+  if (!res.ok) {
+    throw new Error(`Failed to fetch my projects: ${res.status}`)
+  }
+  const raw: ProjectApiResponse[] = await res.json()
+  return raw.map(mapProjectFromApi)
+}
+
 export async function fetchProjectById(id: string): Promise<Project | null> {
   const res = await fetch(`${base()}/${id}`, fetchOpts)
   if (res.status === 404) {

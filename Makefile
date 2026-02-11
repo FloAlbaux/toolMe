@@ -1,6 +1,6 @@
 BACKEND_PORT ?= 8030
 
-.PHONY: help install install-frontend install-backend install-robot dev dev-frontend dev-backend db-up db-down db-clean up down test test-frontend test-backend test-robot isort coverage build clean fuzz-sqli fuzz-auth-sqli fuzz-xss
+.PHONY: help install install-frontend install-backend install-robot dev dev-frontend dev-backend dev-backend-e2e db-up db-down db-clean up down test test-frontend test-backend test-robot isort coverage build clean fuzz-sqli fuzz-auth-sqli fuzz-xss
 
 help:
 	@echo "ToolMe — Makefile"
@@ -12,15 +12,16 @@ help:
 	@echo "  dev              Run frontend + backend (dev servers)"
 	@echo "  dev-frontend     Run Vite dev server (http://localhost:5173)"
 	@echo "  dev-backend      Run FastAPI (port $(BACKEND_PORT)); needs Postgres (make db-up)"
-	@echo "  db-up            Start PostgreSQL with Docker Compose (port 5432)"
-	@echo "  db-down          Stop PostgreSQL"
+	@echo "  db-up            Start PostgreSQL in Docker (port 5432). Run this before make dev-backend."
+	@echo "  docker-up        Alias for db-up"
+	@echo "  docker-down      Stop PostgreSQL"
 	@echo "  db-clean         Stop PostgreSQL and remove data volume (fresh DB on next db-up)"
 	@echo "  up               Start db + api in Docker (ports 5432, 8030)"
 	@echo "  down             Stop all containers"
 	@echo "  test             Run all tests (frontend + backend)"
 	@echo "  test-frontend    Vitest in frontend/"
 	@echo "  test-backend     Pytest in backend/ (needs Postgres: make db-up)"
-	@echo "  test-robot       Robot Framework E2E (needs frontend + backend running)"
+	@echo "  test-robot       Robot Framework E2E (needs frontend + backend; use 'make dev-backend-e2e' to avoid 429 on signup)"
 	@echo "  isort            Sort backend imports (app/ tests/)"
 	@echo "  coverage         Backend pytest with coverage report"
 	@echo "  build            Build frontend for production"
@@ -29,10 +30,10 @@ help:
 	@echo "  fuzz-auth-sqli   Run SQLi fuzzing on auth login (email + password; needs API on $(BACKEND_PORT))"
 	@echo "  fuzz-xss        Run XSS fuzzing on homepage ?q= (dev only; needs frontend on 5173)"
 
-db-up:
+docker-up:
 	docker compose up -d db
 
-db-down:
+docker-down:
 	docker compose down
 
 db-clean:
@@ -64,6 +65,10 @@ dev-frontend:
 
 dev-backend:
 	cd backend && uv run uvicorn app.main:app --reload --host 0.0.0.0 --port $(BACKEND_PORT)
+
+# Backend with relaxed auth rate limit for E2E (Robot) tests; use this before make test-robot
+dev-backend-e2e:
+	cd backend && RATE_LIMIT_AUTH=1000/minute uv run uvicorn app.main:app --reload --host 0.0.0.0 --port $(BACKEND_PORT)
 
 test: test-frontend test-backend
 

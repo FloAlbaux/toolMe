@@ -30,6 +30,12 @@ export function Header() {
         <div className="flex items-center gap-4">
           {isAuthenticated ? (
             <>
+              <Link
+                to="/account"
+                className="text-[var(--color-toolme-primary)] font-medium hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-toolme-primary)] focus-visible:ring-offset-2 rounded"
+              >
+                <Translate tid="account.title" />
+              </Link>
               <span className="text-stone-600 text-sm truncate max-w-[180px]" title={email ?? undefined}>
                 {email}
               </span>

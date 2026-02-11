@@ -24,6 +24,11 @@
       "error": "Une erreur s'est produite. Réessayez."
     }
   },
+  "account": {
+    "title": "Mes annonces",
+    "empty": "Vous n'avez pas encore publié d'annonce.",
+    "backToHome": "Retour à l'accueil"
+  },
   "brand": {
     "name": "ToolMe",
     "tagline": "Le bac à sable où tes projets comptent."
@@ -45,7 +50,8 @@
   "projects": {
     "heading": "Projets",
     "deadlineLabel": "Date limite",
-    "publishCta": "Créer une annonce"
+    "publishCta": "Créer une annonce",
+    "myAdTag": "Mon annonce"
   },
   "publishPage": {
     "title": "Publier un projet",
@@ -66,7 +72,12 @@
     "domainLabel": "Domaine",
     "deliveryInstructionsLabel": "Comment livrer",
     "notFound": "Projet introuvable",
-    "applyCta": "Propose un rendu"
+    "applyCta": "Propose un rendu",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "deleteConfirm": "Supprimer cette annonce ?",
+    "deleted": "Annonce supprimée.",
+    "editProject": "Modifier l'annonce"
   },
   "applyPage": {
     "comingSoonTitle": "Proposer un rendu",

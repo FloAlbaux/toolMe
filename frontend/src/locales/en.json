@@ -24,6 +24,11 @@
       "error": "Something went wrong. Try again."
     }
   },
+  "account": {
+    "title": "My listings",
+    "empty": "You haven't published any listing yet.",
+    "backToHome": "Back to home"
+  },
   "brand": {
     "name": "ToolMe",
     "tagline": "The sandbox where your projects matter."
@@ -45,7 +50,8 @@
   "projects": {
     "heading": "Projects",
     "deadlineLabel": "Deadline",
-    "publishCta": "Publish a project"
+    "publishCta": "Publish a project",
+    "myAdTag": "My ad"
   },
   "publishPage": {
     "title": "Publish a project",
@@ -66,7 +72,12 @@
     "domainLabel": "Domain",
     "deliveryInstructionsLabel": "How to deliver",
     "notFound": "Project not found",
-    "applyCta": "Propose a deliverable"
+    "applyCta": "Propose a deliverable",
+    "edit": "Edit",
+    "delete": "Delete",
+    "deleteConfirm": "Delete this listing?",
+    "deleted": "Listing deleted.",
+    "editProject": "Edit listing"
   },
   "applyPage": {
     "comingSoonTitle": "Propose a deliverable",

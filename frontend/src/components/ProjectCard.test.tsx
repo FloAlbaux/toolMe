@@ -11,6 +11,7 @@ const project: Project = {
   fullDescription: '',
   deadline: '2026-06-15',
   createdAt: '2026-02-10T12:00:00.000Z',
+  ownerId: 'owner-1',
 }
 
 describe('ProjectCard', () => {
@@ -37,5 +38,15 @@ describe('ProjectCard', () => {
     const article = screen.getByRole('article', { name: 'Test project' })
     expect(article).toBeInTheDocument()
     expect(article).toHaveAttribute('aria-labelledby', 'project-title-test-1')
+  })
+
+  it('shows My ad tag when isOwner is true', () => {
+    render(<ProjectCard project={project} isOwner />)
+    expect(screen.getByText(/my ad/i)).toBeInTheDocument()
+  })
+
+  it('does not show My ad tag when isOwner is false', () => {
+    render(<ProjectCard project={project} isOwner={false} />)
+    expect(screen.queryByText(/my ad/i)).not.toBeInTheDocument()
   })
 })

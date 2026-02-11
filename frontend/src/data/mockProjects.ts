@@ -11,6 +11,7 @@ export const mockProjects: Project[] = [
     deadline: '2026-03-15',
     deliveryInstructions: 'Share the link to your contributed pages or a short summary in a single document (PDF or Markdown).',
     createdAt: '2026-02-01T10:00:00.000Z',
+    ownerId: 'user-1',
   },
   {
     id: '2',
@@ -22,6 +23,7 @@ export const mockProjects: Project[] = [
     deadline: '2026-04-01',
     deliveryInstructions: 'Provide a repo link or prototype URL plus a one-page contribution guide.',
     createdAt: '2026-02-05T14:00:00.000Z',
+    ownerId: 'user-2',
   },
   {
     id: '3',
@@ -33,6 +35,7 @@ export const mockProjects: Project[] = [
     deadline: '2026-03-31',
     deliveryInstructions: 'Deliver a Markdown or PDF checklist and, if you like, a short "how to use" guide.',
     createdAt: '2026-02-10T09:00:00.000Z',
+    ownerId: 'user-1',
   },
 ]
 
@@ -47,6 +50,7 @@ export function toProjectApiResponse(p: Project): ProjectApiResponse {
     deadline: p.deadline,
     delivery_instructions: p.deliveryInstructions ?? null,
     created_at: p.createdAt,
+    user_id: p.ownerId,
   }
 }
 
