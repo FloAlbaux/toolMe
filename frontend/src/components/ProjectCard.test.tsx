@@ -1,14 +1,16 @@
 import { describe, it, expect } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import { ProjectCard } from './ProjectCard'
-import type { Project } from '../data/mockProjects'
+import type { Project } from '../types/project'
 
 const project: Project = {
   id: 'test-1',
   title: 'Test project',
   domain: 'Testing',
   shortDescription: 'A test project for unit tests.',
+  fullDescription: '',
   deadline: '2026-06-15',
+  createdAt: '2026-02-10T12:00:00.000Z',
 }
 
 describe('ProjectCard', () => {

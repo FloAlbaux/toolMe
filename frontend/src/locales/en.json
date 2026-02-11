@@ -26,8 +26,18 @@
     "publishCta": "Publish a project"
   },
   "publishPage": {
-    "comingSoonTitle": "Publish a project",
-    "comingSoonBody": "The form to create and publish your project will be available soon (Epic 3)."
+    "title": "Publish a project",
+    "titleLabel": "Title",
+    "domainLabel": "Domain",
+    "shortDescriptionLabel": "Short description",
+    "fullDescriptionLabel": "Full description",
+    "deadlineLabel": "Deadline",
+    "deliveryInstructionsLabel": "Delivery instructions (optional)",
+    "submit": "Publish project",
+    "backToProjects": "Back to projects",
+    "success": "Project published.",
+    "viewProject": "View project",
+    "error": "Failed to publish project."
   },
   "projectDetail": {
     "backToProjects": "Back to projects",

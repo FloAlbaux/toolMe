@@ -1,15 +1,76 @@
+import { useEffect, useState, useTransition } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { Translate } from '../components/Translate'
-import { getProjectById } from '../data/mockProjects'
+import { fetchProjectById } from '../api/projects'
+import type { Project } from '../types/project'
 
 /**
  * Placeholder for project application / submit solution flow (Epic 4).
  */
 export function ProjectApplyPage() {
   const { id } = useParams<{ id: string }>()
-  const project = id ? getProjectById(id) : undefined
+  const [project, setProject] = useState<Project | null | undefined>(undefined)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+  const [, startTransition] = useTransition()
 
-  if (!project) {
+  useEffect(() => {
+    if (!id) {
+      startTransition(() => {
+        setProject(null)
+        setLoading(false)
+      })
+      return
+    }
+    let cancelled = false
+    startTransition(() => {
+      setLoading(true)
+      setError(null)
+    })
+    fetchProjectById(id)
+      .then((data) => {
+        if (!cancelled) {
+          setProject(data)
+        }
+      })
+      .catch((err) => {
+        if (!cancelled) {
+          setError(err instanceof Error ? err.message : 'Failed to load project')
+        }
+      })
+      .finally(() => {
+        if (!cancelled) {
+          setLoading(false)
+        }
+      })
+    return () => {
+      cancelled = true
+    }
+  }, [id])
+
+  if (loading) {
+    return (
+      <p className="text-stone-500" role="status" aria-live="polite">
+        Loading…
+      </p>
+    )
+  }
+
+  if (error) {
+    return (
+      <div className="rounded-xl border border-red-200 bg-red-50 p-4 text-red-800" role="alert">
+        <p>{error}</p>
+        <Link
+          to="/"
+          className="mt-4 inline-block text-[var(--color-toolme-primary)] font-medium hover:underline"
+        >
+          <Translate tid="projectDetail.backToProjects" />
+        </Link>
+      </div>
+    )
+  }
+
+  if (project == null) {
     return (
       <div className="rounded-xl border border-stone-200 bg-white p-8 text-center">
         <p className="text-stone-600">

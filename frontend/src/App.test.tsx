@@ -1,8 +1,17 @@
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import { BrowserRouter } from 'react-router-dom'
 import App from './App'
 import { mockProjects } from './data/mockProjects'
+import * as projectsApi from './api/projects'
+
+vi.mock('./api/projects', async (importOriginal) => {
+  const actual = await importOriginal<typeof projectsApi>()
+  return {
+    ...actual,
+    fetchProjects: vi.fn(),
+  }
+})
 
 function renderApp() {
   return render(
@@ -13,6 +22,10 @@ function renderApp() {
 }
 
 describe('App', () => {
+  beforeEach(() => {
+    vi.mocked(projectsApi.fetchProjects).mockResolvedValue(mockProjects)
+  })
+
   it('renders ToolMe identity', () => {
     renderApp()
     expect(screen.getByRole('heading', { level: 1, name: 'ToolMe' })).toBeInTheDocument()
@@ -31,10 +44,11 @@ describe('App', () => {
     expect(screen.getByText('A sandbox with you, not above you.')).toBeInTheDocument()
   })
 
-  it('renders projects section with all mock project cards', () => {
+  it('renders projects section with all mock project cards', async () => {
     renderApp()
     expect(screen.getByRole('heading', { level: 2, name: 'Projects' })).toBeInTheDocument()
-    expect(screen.getAllByRole('article')).toHaveLength(mockProjects.length)
+    const articles = await screen.findAllByRole('article')
+    expect(articles).toHaveLength(mockProjects.length)
     mockProjects.forEach((project) => {
       expect(screen.getByRole('heading', { level: 3, name: project.title })).toBeInTheDocument()
       expect(screen.getByText(project.shortDescription)).toBeInTheDocument()

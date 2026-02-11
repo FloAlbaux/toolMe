@@ -1,5 +1,5 @@
 import { Translate } from './Translate'
-import type { Project } from '../data/mockProjects'
+import type { Project } from '../types/project'
 
 type ProjectCardProps = {
   project: Project
