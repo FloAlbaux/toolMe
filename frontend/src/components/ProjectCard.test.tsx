@@ -39,4 +39,14 @@ describe('ProjectCard', () => {
     expect(article).toBeInTheDocument()
     expect(article).toHaveAttribute('aria-labelledby', 'project-title-test-1')
   })
+
+  it('shows My ad tag when isOwner is true', () => {
+    render(<ProjectCard project={project} isOwner />)
+    expect(screen.getByText(/my ad/i)).toBeInTheDocument()
+  })
+
+  it('does not show My ad tag when isOwner is false', () => {
+    render(<ProjectCard project={project} isOwner={false} />)
+    expect(screen.queryByText(/my ad/i)).not.toBeInTheDocument()
+  })
 })

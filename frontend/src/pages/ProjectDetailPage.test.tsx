@@ -13,8 +13,9 @@ vi.mock('../api/projects', async (importOriginal) => {
   }
 })
 
+const mockUseAuth = vi.fn()
 vi.mock('../context/useAuth', () => ({
-  useAuth: () => ({ userId: null }),
+  useAuth: () => mockUseAuth(),
 }))
 
 function renderDetail(id: string) {
@@ -29,6 +30,7 @@ function renderDetail(id: string) {
 
 describe('ProjectDetailPage', () => {
   beforeEach(() => {
+    mockUseAuth.mockReturnValue({ userId: null })
     vi.mocked(projectsApi.fetchProjectById).mockImplementation(async (id: string) => {
       const project = mockProjects.find((p) => p.id === id)
       return project ?? null
@@ -58,5 +60,23 @@ describe('ProjectDetailPage', () => {
     expect(await screen.findByText(/Project not found/i)).toBeInTheDocument()
     const backLink = screen.getByRole('link', { name: /back to projects/i })
     expect(backLink).toHaveAttribute('href', '/')
+  })
+
+  it('renders Edit and Delete when current user is owner', async () => {
+    const project = mockProjects[0]
+    mockUseAuth.mockReturnValue({ userId: project.ownerId })
+    renderDetail(project.id)
+    expect(await screen.findByRole('heading', { level: 1, name: project.title })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /edit/i })).toHaveAttribute('href', `/project/${project.id}/edit`)
+    expect(screen.getByRole('button', { name: /delete/i })).toBeInTheDocument()
+  })
+
+  it('does not render Edit or Delete when current user is not owner', async () => {
+    const project = mockProjects[0]
+    mockUseAuth.mockReturnValue({ userId: 'other-user-id' })
+    renderDetail(project.id)
+    expect(await screen.findByRole('heading', { level: 1, name: project.title })).toBeInTheDocument()
+    expect(screen.queryByRole('link', { name: /edit/i })).not.toBeInTheDocument()
+    expect(screen.queryByRole('button', { name: /delete/i })).not.toBeInTheDocument()
   })
 })
