@@ -18,10 +18,10 @@ export function HomePage() {
       setLoading(true)
       setError(null)
     })
-    fetchProjects()
-      .then((data) => {
+
+    fetchProjects().then((projects) => {
         if (!cancelled) {
-          const byNewest = [...data].sort(
+          const byNewest = [...projects].sort(
             (a, b) =>
               new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
           )

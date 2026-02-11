@@ -105,5 +105,5 @@ jobs:
         working-directory: backend
 
       - name: Test
-        run: uv run pytest -v --cov=app --cov-report=term-missing
+        run: uv run pytest -v --cov=app --cov-report=term-missing --cov-fail-under=80
         working-directory: backend

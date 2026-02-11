@@ -22,53 +22,16 @@ async def lifespan(app: FastAPI):
     # Create tables (users first, then projects with user_id FK)
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
-        # Migration: add created_at to projects if missing
+        # Add created_at to existing projects table if missing (migration)
         await conn.execute(
             text(
                 "ALTER TABLE projects ADD COLUMN IF NOT EXISTS created_at "
                 "TIMESTAMPTZ NOT NULL DEFAULT now()"
             )
         )
-        # Migration: add user_id to projects if missing (nullable first)
-        await conn.execute(
-            text(
-                "ALTER TABLE projects ADD COLUMN IF NOT EXISTS user_id "
-                "VARCHAR(36) REFERENCES users(id) ON DELETE CASCADE"
-            )
-        )
-    # Backfill user_id for existing projects and seed (M-3: only when RUN_SEED)
-    if RUN_SEED:
-        async with AsyncSessionLocal() as db:
-            from sqlalchemy import select, update
-
-            from app.auth import hash_password
-            from app.config import SEED_PASSWORD
-            from app.seed import SEED_USER_EMAIL
-
-            result = await db.execute(
-                select(Project).where(Project.user_id.is_(None)).limit(1)
-            )
-            if result.scalar_one_or_none() is not None:
-                seed_user = User(
-                    email=SEED_USER_EMAIL,
-                    password_hash=hash_password(SEED_PASSWORD),
-                )
-                db.add(seed_user)
-                await db.flush()
-                await db.execute(
-                    update(Project)
-                    .where(Project.user_id.is_(None))
-                    .values(user_id=seed_user.id)
-                )
-                await db.commit()
-            await seed_if_empty(db)
-    # Enforce user_id NOT NULL after backfill
-    async with engine.begin() as conn:
-        await conn.execute(
-            text(
-                "ALTER TABLE projects ALTER COLUMN user_id SET NOT NULL"
-            )
-        )
+    # Seed if empty
+    async with AsyncSessionLocal() as db:
+        await seed_if_empty(db)
     yield
     await engine.dispose()
 
