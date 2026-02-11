@@ -1,18 +1,23 @@
+import uuid
+
 import pytest
 from fastapi.testclient import TestClient
+from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from app.auth import create_access_token
 from app.database import AsyncSessionLocal, engine
 from app.main import app
 from app.models.base import Base
 from app.models.project import Project  # noqa: F401 - register with Base
+from app.models.user import User  # noqa: F401 - register with Base
 from app.seed import seed_if_empty
 
 
 @pytest.fixture
 def client():
     """FastAPI test client. Lifespan runs on first request (tables + seed)."""
-    with TestClient(app) as c:
+    with TestClient(app, raise_server_exceptions=False) as c:
         yield c
 
 
@@ -30,3 +35,25 @@ async def db_session(ensure_tables):
     """Async DB session for direct crud tests."""
     async with AsyncSessionLocal() as session:
         yield session
+
+
+@pytest.fixture
+def auth_headers(client: TestClient):
+    """Create a user, log in, return headers with Bearer token for protected routes."""
+    email = f"test-{uuid.uuid4().hex}@example.com"
+    password = "testpass123"
+    r = client.post("/auth/signup", json={"email": email, "password": password})
+    assert r.status_code == 201, r.text
+    r2 = client.post("/auth/login", json={"email": email, "password": password})
+    assert r2.status_code == 200, r.text
+    token = r2.json()["access_token"]
+    return {"Authorization": f"Bearer {token}"}
+
+
+@pytest.fixture
+async def seed_user_id(db_session: AsyncSession):
+    """Return the seed user id for crud tests (seed_if_empty creates this user)."""
+    result = await db_session.execute(select(User).limit(1))
+    user = result.scalar_one_or_none()
+    assert user is not None, "Seed user should exist after ensure_tables"
+    return user.id

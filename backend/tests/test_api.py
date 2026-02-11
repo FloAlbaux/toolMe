@@ -49,21 +49,24 @@ def test_get_project_not_found(client: TestClient):
     assert r.json()["detail"] == "Project not found"
 
 
-def test_create_project_db_error_triggers_rollback():
+def test_create_project_db_error_triggers_rollback(client: TestClient, auth_headers):
     """Title > 500 chars triggers DB constraint; get_db rollback path is exercised."""
-    with TestClient(app, raise_server_exceptions=False) as c:
-        payload = {
-            "title": "x" * 501,
-            "domain": "D",
-            "short_description": "S",
-            "full_description": "F",
-            "deadline": "2026-12-31",
-        }
-        r = c.post("/projects", json=payload)
+    payload = {
+        "title": "x" * 501,
+        "domain": "D",
+        "short_description": "S",
+        "full_description": "F",
+        "deadline": "2026-12-31",
+    }
+    r = client.post(
+        "/projects",
+        json=payload,
+        headers=auth_headers,
+    )
     assert r.status_code == 500
 
 
-def test_create_project(client: TestClient):
+def test_create_project(client: TestClient, auth_headers):
     payload = {
         "title": "Test project",
         "domain": "Testing",
@@ -71,7 +74,7 @@ def test_create_project(client: TestClient):
         "full_description": "Full description",
         "deadline": "2026-12-31",
     }
-    r = client.post("/projects", json=payload)
+    r = client.post("/projects", json=payload, headers=auth_headers)
     assert r.status_code == 201
     data = r.json()
     assert data["title"] == payload["title"]
@@ -79,7 +82,7 @@ def test_create_project(client: TestClient):
     assert "id" in data
 
 
-def test_create_project_with_delivery_instructions(client: TestClient):
+def test_create_project_with_delivery_instructions(client: TestClient, auth_headers):
     payload = {
         "title": "With instructions",
         "domain": "D",
@@ -88,13 +91,12 @@ def test_create_project_with_delivery_instructions(client: TestClient):
         "deadline": "2026-12-31",
         "delivery_instructions": "Send a PDF to example@test.com",
     }
-    r = client.post("/projects", json=payload)
+    r = client.post("/projects", json=payload, headers=auth_headers)
     assert r.status_code == 201
     assert r.json()["delivery_instructions"] == payload["delivery_instructions"]
 
 
-def test_update_project(client: TestClient):
-    # Create then update
+def test_update_project(client: TestClient, auth_headers):
     payload = {
         "title": "To update",
         "domain": "D",
@@ -102,18 +104,32 @@ def test_update_project(client: TestClient):
         "full_description": "F",
         "deadline": "2026-12-31",
     }
-    r = client.post("/projects", json=payload)
+    r = client.post("/projects", json=payload, headers=auth_headers)
     assert r.status_code == 201
     project_id = r.json()["id"]
-    r2 = client.put(f"/projects/{project_id}", json={"title": "Updated title"})
+    r2 = client.put(
+        f"/projects/{project_id}",
+        json={"title": "Updated title"},
+        headers=auth_headers,
+    )
     assert r2.status_code == 200
     assert r2.json()["title"] == "Updated title"
 
 
-def test_update_project_multiple_fields(client: TestClient):
-    r = client.get("/projects")
-    assert r.status_code == 200
-    project_id = r.json()[0]["id"]
+def test_update_project_multiple_fields(client: TestClient, auth_headers):
+    r = client.post(
+        "/projects",
+        json={
+            "title": "Original",
+            "domain": "D",
+            "short_description": "S",
+            "full_description": "F",
+            "deadline": "2026-12-31",
+        },
+        headers=auth_headers,
+    )
+    assert r.status_code == 201
+    project_id = r.json()["id"]
     r2 = client.put(
         f"/projects/{project_id}",
         json={
@@ -121,6 +137,7 @@ def test_update_project_multiple_fields(client: TestClient):
             "domain": "New domain",
             "delivery_instructions": "Updated instructions",
         },
+        headers=auth_headers,
     )
     assert r2.status_code == 200
     data = r2.json()
@@ -129,7 +146,7 @@ def test_update_project_multiple_fields(client: TestClient):
     assert data["delivery_instructions"] == "Updated instructions"
 
 
-def test_delete_project(client: TestClient):
+def test_delete_project(client: TestClient, auth_headers):
     payload = {
         "title": "To delete",
         "domain": "D",
@@ -137,10 +154,10 @@ def test_delete_project(client: TestClient):
         "full_description": "F",
         "deadline": "2026-12-31",
     }
-    r = client.post("/projects", json=payload)
+    r = client.post("/projects", json=payload, headers=auth_headers)
     assert r.status_code == 201
     project_id = r.json()["id"]
-    r2 = client.delete(f"/projects/{project_id}")
+    r2 = client.delete(f"/projects/{project_id}", headers=auth_headers)
     assert r2.status_code == 204
     r3 = client.get(f"/projects/{project_id}")
     assert r3.status_code == 404

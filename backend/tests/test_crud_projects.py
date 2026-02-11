@@ -42,7 +42,7 @@ async def test_get_project_not_found(db_session: AsyncSession):
 
 
 @pytest.mark.asyncio
-async def test_create_project(db_session: AsyncSession):
+async def test_create_project(db_session: AsyncSession, seed_user_id: str):
     payload = ProjectCreate(
         title="CRUD test",
         domain="Test",
@@ -51,7 +51,7 @@ async def test_create_project(db_session: AsyncSession):
         deadline="2026-12-31",
         delivery_instructions="Optional instructions",
     )
-    out = await create_project(db_session, payload)
+    out = await create_project(db_session, payload, seed_user_id)
     await db_session.commit()
     assert out.id
     assert out.title == payload.title
@@ -59,7 +59,7 @@ async def test_create_project(db_session: AsyncSession):
 
 
 @pytest.mark.asyncio
-async def test_update_project(db_session: AsyncSession):
+async def test_update_project(db_session: AsyncSession, seed_user_id: str):
     payload = ProjectCreate(
         title="To update",
         domain="D",
@@ -67,12 +67,13 @@ async def test_update_project(db_session: AsyncSession):
         full_description="F",
         deadline="2026-12-31",
     )
-    created = await create_project(db_session, payload)
+    created = await create_project(db_session, payload, seed_user_id)
     await db_session.commit()
     updated = await update_project(
         db_session,
         created.id,
         ProjectUpdate(title="Updated title", domain="New domain"),
+        seed_user_id,
     )
     await db_session.commit()
     assert updated is not None
@@ -81,18 +82,19 @@ async def test_update_project(db_session: AsyncSession):
 
 
 @pytest.mark.asyncio
-async def test_update_project_not_found(db_session: AsyncSession):
+async def test_update_project_not_found(db_session: AsyncSession, seed_user_id: str):
     out = await update_project(
         db_session,
         "00000000-0000-0000-0000-000000000000",
         ProjectUpdate(title="Noop"),
+        seed_user_id,
     )
     await db_session.commit()
     assert out is None
 
 
 @pytest.mark.asyncio
-async def test_delete_project(db_session: AsyncSession):
+async def test_delete_project(db_session: AsyncSession, seed_user_id: str):
     payload = ProjectCreate(
         title="To delete",
         domain="D",
@@ -100,16 +102,18 @@ async def test_delete_project(db_session: AsyncSession):
         full_description="F",
         deadline="2026-12-31",
     )
-    created = await create_project(db_session, payload)
+    created = await create_project(db_session, payload, seed_user_id)
     await db_session.commit()
-    ok = await delete_project(db_session, created.id)
+    ok = await delete_project(db_session, created.id, seed_user_id)
     await db_session.commit()
     assert ok is True
     assert await get_project(db_session, created.id) is None
 
 
 @pytest.mark.asyncio
-async def test_delete_project_not_found(db_session: AsyncSession):
-    ok = await delete_project(db_session, "00000000-0000-0000-0000-000000000000")
+async def test_delete_project_not_found(db_session: AsyncSession, seed_user_id: str):
+    ok = await delete_project(
+        db_session, "00000000-0000-0000-0000-000000000000", seed_user_id
+    )
     await db_session.commit()
     assert ok is False

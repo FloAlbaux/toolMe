@@ -3,7 +3,11 @@
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from app.auth import hash_password
 from app.models.project import Project
+from app.models.user import User
+
+SEED_USER_EMAIL = "seed@toolme.local"
 
 SEED_PROJECTS = [
     {
@@ -36,12 +40,27 @@ SEED_PROJECTS = [
 ]
 
 
+async def _get_or_create_seed_user(db: AsyncSession) -> User:
+    result = await db.execute(select(User).where(User.email == SEED_USER_EMAIL))
+    user = result.scalar_one_or_none()
+    if user is not None:
+        return user
+    user = User(
+        email=SEED_USER_EMAIL,
+        password_hash=hash_password("seed-change-me"),
+    )
+    db.add(user)
+    await db.flush()
+    return user
+
+
 async def seed_if_empty(db: AsyncSession) -> None:
     result = await db.execute(select(Project).limit(1))
     if result.scalar_one_or_none() is not None:
         return
+    seed_user = await _get_or_create_seed_user(db)
     for data in SEED_PROJECTS:
-        project = Project(**data)
+        project = Project(**data, user_id=seed_user.id)
         db.add(project)
     await db.flush()
     await db.commit()
